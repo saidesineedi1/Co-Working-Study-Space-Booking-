@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Workspace Hub Co-Working &amp; Study</title>
+  <meta name="description" content="The future of focused workspace is arriving. Join the waitlist for exclusive opening passes, priority study cabins, and founding member perks.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="coming-soon.css">
+
+  <script>
+    // Immediate Theme & Direction Initialization to prevent FOUC
+    (function () {
+      const savedTheme = localStorage.getItem('nexus_theme') || 'light';
+      const savedDir = localStorage.getItem('nexus_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body class="cs-body">
+
+  <div class="cs-ambient" aria-hidden="true">
+    <div class="cs-ambient-glow cs-glow-tl"></div>
+    <div class="cs-ambient-glow cs-glow-bl"></div>
+  </div>
+
+  <div class="cs-top-actions">
+    <button id="csDirBtn" class="cs-circle-btn" title="Toggle RTL/LTR" aria-label="Toggle text direction">
+      <span class="cs-dir-text">LTR</span>
+    </button>
+    <button id="csThemeBtn" class="cs-circle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle color theme">
+      <svg class="cs-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="cs-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <main class="cs-viewport-container">
+    <div class="cs-card">
+
+      <div class="cs-badge-row">
+        <div class="cs-pill-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+          </svg>
+          <span>UNVEILING SOON &bull; FLAGSHIP STUDY &amp; CO-WORK SANCTUM</span>
+        </div>
+      </div>
+
+      <h1 class="cs-title">
+        The Future of Focused Workspace Is<br>Arriving
+      </h1>
+
+      <p class="cs-desc">
+        Our master architects and acoustic engineers are finalizing our newest state-of-the-art co-working and study sanctum. Prepare your mind for effortless deep work.
+      </p>
+
+      <div class="cs-countdown-row" aria-label="Grand Opening Countdown">
+        <div class="cs-squircle-box">
+          <span id="csDays" class="cs-digit">24</span>
+          <span class="cs-label">DAYS</span>
+        </div>
+
+        <div class="cs-colon">:</div>
+
+        <div class="cs-squircle-box">
+          <span id="csHours" class="cs-digit">17</span>
+          <span class="cs-label">HOURS</span>
+        </div>
+
+        <div class="cs-colon">:</div>
+
+        <div class="cs-squircle-box">
+          <span id="csMinutes" class="cs-digit">59</span>
+          <span class="cs-label">MINUTES</span>
+        </div>
+
+        <div class="cs-colon">:</div>
+
+        <div class="cs-squircle-box">
+          <span id="csSeconds" class="cs-digit">56</span>
+          <span class="cs-label">SECONDS</span>
+        </div>
+      </div>
+
+      <form id="csWaitlistForm" class="cs-waitlist-form" novalidate>
+        <div class="cs-pill-input-bar">
+          <div class="cs-mail-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </div>
+          <input 
+            type="email" 
+            id="csEmailInput" 
+            class="cs-input-field" 
+            placeholder="Enter your email for early access..." 
+            required
+            autocomplete="email"
+          >
+          <button type="submit" id="csSubmitBtn" class="cs-join-btn">
+            <span>Join Waitlist</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <div id="csAlertMessage" class="cs-alert-box" style="display: none;" role="alert"></div>
+
+      <div class="cs-guarantee-row">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <span>Receive a 20% launch voucher &bull; Zero spam</span>
+      </div>
+
+      <div class="cs-home-row">
+        <a href="index.html" class="cs-back-home-btn" title="Return to Workspace Hub Homepage">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="coming-soon.js"></script>
+</body>
+</html>

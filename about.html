@@ -1,0 +1,910 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Hub | About Us – Our Story, People &amp; Values</title>
+  <meta name="description" content="Discover our journey, mission, team, and guiding principles. More than a workspace—a community place to grow.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body class="about-page">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="brand-identity">
+        <div class="brand-logo-mark">
+          <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-name-wrap">
+          <span class="brand-title">WORKSPACE HUB</span>
+          <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Home</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <div>
+                  <strong>Home 1</strong>
+                  <p>Premium Poster Redesign</p>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item">
+                <div>
+                  <strong>Home 2</strong>
+                  <p>Editorial Grid Experience</p>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Services.html" class="nav-link">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Pricing.html" class="nav-link">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link nav-dashboard-link">
+              <span>Dashboard</span>
+              <span class="pulse-indicator"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="rtlToggleBtn" class="control-btn" title="Toggle RTL/LTR" aria-label="Toggle text direction">
+          <span class="btn-text-badge">LTR</span>
+        </button>
+
+        <button id="themeToggleBtn" class="control-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="login.html" id="headerLoginBtn" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span id="loginBtnText">Login</span>
+        </a>
+
+        <button id="mobileMenuToggle" class="mobile-toggle-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <div class="brand-identity">
+          <div class="brand-logo-mark">
+            <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-name-wrap">
+            <span class="brand-title">WORKSPACE HUB</span>
+            <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-link" onclick="closeMobileDrawer()">Home 1 (Poster Redesign)</a></li>
+          <li><a href="home2.html" class="mobile-link" onclick="closeMobileDrawer()">Home 2 (Editorial Grid)</a></li>
+          <li><a href="about.html" class="mobile-link active" onclick="closeMobileDrawer()">About Us</a></li>
+          <li><a href="Services.html" class="mobile-link" onclick="closeMobileDrawer()">Services</a></li>
+          <li><a href="Pricing.html" class="mobile-link" onclick="closeMobileDrawer()">Pricing &amp; Plans</a></li>
+          <li><a href="contact.html" class="mobile-link" onclick="closeMobileDrawer()">Contact</a></li>
+          <li>
+            <a href="dashboard.html" class="mobile-link mobile-dashboard-btn" onclick="closeMobileDrawer()">
+              Member Dashboard
+            </a>
+          </li>
+        </ul>
+        <div class="drawer-footer-actions">
+          <button class="btn-primary btn-full-width" onclick="closeMobileDrawer()">
+            Login to Member Portal
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="about-hero-section" id="about-hero">
+      <div class="about-hero-bg-overlay"></div>
+      <div class="container about-hero-container">
+        
+        <div class="about-hero-text">
+          <div class="about-hero-kicker">
+            <span class="about-kicker-dot"></span>
+            <span>ABOUT OUR SPACE</span>
+          </div>
+
+          <h1 class="about-hero-title">
+            More Than a Workspace. <span class="about-hero-highlight">A Place to</span> <span class="text-terracotta">Grow.</span>
+          </h1>
+
+          <p class="about-hero-desc">
+            We create inspiring environments where students, freelancers and professionals come together to focus, connect and achieve more.
+          </p>
+
+          <div class="about-hero-cta-group">
+            <a href="index.html#spaces" class="btn-primary">
+              <span>Explore Our Spaces</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="contact.html" class="btn-secondary">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <div class="about-hero-badge-strip">
+            <div class="badge-strip-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Built for High Cognitive Output</span>
+            </div>
+            <div class="badge-strip-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <span>Community of 500+ Ambitious Makers</span>
+            </div>
+            <div class="badge-strip-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>Curated for Deep Work &amp; Acoustic Comfort</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about-section-mv" id="about-mission-vision">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-kicker">CORE PURPOSE</div>
+          <h2 class="section-title">What Drives Everything We Do</h2>
+          <p class="section-subtitle">
+            Our twin pillars of intentional space design and community empowerment.
+          </p>
+        </div>
+
+        <div class="about-mv-grid">
+          
+          <div class="about-mv-card card-mission">
+            <div class="mv-card-top">
+              <div class="mv-icon-wrapper mission-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              </div>
+              <span class="mv-tag-label">OUR PURPOSE</span>
+            </div>
+
+            <h3 class="mv-headline">Our Mission</h3>
+            <p class="mv-body-text">
+              To provide accessible, flexible and inspiring workspaces that help students, freelancers and professionals achieve their goals through better environments, meaningful connections and productive experiences.
+            </p>
+
+            <div class="mv-highlights-list">
+              <div class="mv-chip">
+                <span class="mv-chip-check">✓</span>
+                <span>Frictionless Access for All</span>
+              </div>
+              <div class="mv-chip">
+                <span class="mv-chip-check">✓</span>
+                <span>Calm Ergonomic Environments</span>
+              </div>
+              <div class="mv-chip">
+                <span class="mv-chip-check">✓</span>
+                <span>Productive Daily Flow</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-mv-card card-vision">
+            <div class="mv-card-top">
+              <div class="mv-icon-wrapper vision-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <span class="mv-tag-label light-tag">LOOKING FORWARD</span>
+            </div>
+
+            <h3 class="mv-headline light-headline">Our Vision</h3>
+            <p class="mv-body-text light-body">
+              To build a community-driven workspace ecosystem where creativity, collaboration and learning come together to shape better opportunities for everyone.
+            </p>
+
+            <div class="mv-highlights-list">
+              <div class="mv-chip vision-chip">
+                <span class="mv-chip-check">✓</span>
+                <span>Ecosystem for Creators</span>
+              </div>
+              <div class="mv-chip vision-chip">
+                <span class="mv-chip-check">✓</span>
+                <span>Lifelong Academic Growth</span>
+              </div>
+              <div class="mv-chip vision-chip">
+                <span class="mv-chip-check">✓</span>
+                <span>Shared Sustainable Success</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about-section-journey" id="about-journey">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-kicker">OUR MILESTONES</div>
+          <h2 class="section-title">Our Journey of Creating Better Workspaces</h2>
+          <p class="section-subtitle">
+            How a simple conviction evolved into a premier sanctuary for focus and breakthrough.
+          </p>
+        </div>
+
+        <div class="about-journey-timeline">
+          <div class="about-timeline-track" aria-hidden="true"></div>
+
+          <div class="about-milestones-grid">
+            
+            <div class="about-milestone-item">
+              <div class="milestone-indicator-circle">
+                <span class="milestone-number">01</span>
+              </div>
+              <div class="milestone-card">
+                <span class="milestone-tag">FOUNDATION</span>
+                <h4 class="milestone-title">The Beginning</h4>
+                <p class="milestone-text">
+                  Our idea started with a simple belief: everyone deserves a comfortable place to work and learn.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-milestone-item">
+              <div class="milestone-indicator-circle">
+                <span class="milestone-number">02</span>
+              </div>
+              <div class="milestone-card">
+                <span class="milestone-tag">ARCHITECTURE</span>
+                <h4 class="milestone-title">Building Our Spaces</h4>
+                <p class="milestone-text">
+                  We focused on creating modern coworking areas, quiet study zones and professional meeting spaces.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-milestone-item">
+              <div class="milestone-indicator-circle">
+                <span class="milestone-number">03</span>
+              </div>
+              <div class="milestone-card">
+                <span class="milestone-tag">EXPANSION</span>
+                <h4 class="milestone-title">Growing Our Community</h4>
+                <p class="milestone-text">
+                  We brought together students, freelancers, entrepreneurs and working professionals under one roof.
+                </p>
+              </div>
+            </div>
+
+            <div class="about-milestone-item">
+              <div class="milestone-indicator-circle">
+                <span class="milestone-number">04</span>
+              </div>
+              <div class="milestone-card">
+                <span class="milestone-tag">INNOVATION</span>
+                <h4 class="milestone-title">Looking Ahead</h4>
+                <p class="milestone-text">
+                  We continue improving our workspace experience with flexible bookings, better facilities and community-focused services.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about-section-team" id="about-team">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-kicker">LEADERSHIP &amp; COMMUNITY</div>
+          <h2 class="section-title">The People Behind the Space</h2>
+          <p class="section-subtitle">
+            A passionate team dedicated to creating comfortable, inspiring and productive workspaces.
+          </p>
+        </div>
+
+        <div class="about-team-grid">
+          
+          <div class="about-team-card">
+            <div class="team-portrait-box">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85" alt="Marcus Vance - Founder & CEO" class="team-photo" onerror="this.onerror=null;this.src='asstes/user-4.jpg';">
+              <div class="team-social-overlay">
+                <a href="#" class="team-social-btn" aria-label="LinkedIn" onclick="event.preventDefault();"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="#" class="team-social-btn" aria-label="Email" onclick="event.preventDefault();"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-accent-stripe"></div>
+              <h3 class="team-name">Marcus Vance</h3>
+              <span class="team-role">Founder &amp; CEO</span>
+              <p class="team-bio">
+                Passionate about architectural productivity, Marcus founded Workspace Hub to reinvent flexible workspaces for the modern remote era.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-team-card">
+            <div class="team-portrait-box">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85" alt="Priya Sharma - Operations Manager" class="team-photo" onerror="this.onerror=null;this.src='asstes/user-3.jpg';">
+              <div class="team-social-overlay">
+                <a href="#" class="team-social-btn" aria-label="LinkedIn" onclick="event.preventDefault();"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="#" class="team-social-btn" aria-label="Email" onclick="event.preventDefault();"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-accent-stripe"></div>
+              <h3 class="team-name">Priya Sharma</h3>
+              <span class="team-role">Operations Manager</span>
+              <p class="team-bio">
+                Ensuring seamless day-to-day facilities, 99.9% redundant fiber uptime, and acoustic comfort across all building floors.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-team-card">
+            <div class="team-portrait-box">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=85" alt="Liam O'Connor - Community Manager" class="team-photo" onerror="this.onerror=null;this.src='asstes/user-2.jpg';">
+              <div class="team-social-overlay">
+                <a href="#" class="team-social-btn" aria-label="LinkedIn" onclick="event.preventDefault();"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="#" class="team-social-btn" aria-label="Email" onclick="event.preventDefault();"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-accent-stripe"></div>
+              <h3 class="team-name">Liam O'Connor</h3>
+              <span class="team-role">Community Manager</span>
+              <p class="team-bio">
+                Connecting founders with collaborators, hosting Friday fireside chats, and maintaining an encouraging atmosphere.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-team-card">
+            <div class="team-portrait-box">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=85" alt="Sophia Lin - Workspace Experience Manager" class="team-photo" onerror="this.onerror=null;this.src='asstes/user-1.jpg';">
+              <div class="team-social-overlay">
+                <a href="#" class="team-social-btn" aria-label="LinkedIn" onclick="event.preventDefault();"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="#" class="team-social-btn" aria-label="Email" onclick="event.preventDefault();"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <div class="team-accent-stripe"></div>
+              <h3 class="team-name">Sophia Lin</h3>
+              <span class="team-role">Workspace Experience Manager</span>
+              <p class="team-bio">
+                Curating ergonomic Herman Miller seating, air filtration, artisanal bean-to-cup coffee, and silent study etiquette.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about-section-principles" id="about-principles">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-kicker">OUR STANDARDS</div>
+          <h2 class="section-title">The Principles That Shape Our Experience</h2>
+          <p class="section-subtitle">
+            Every detail of our workspace is designed around comfort, productivity, trust and community.
+          </p>
+        </div>
+
+        <div class="about-principles-grid">
+          
+          <div class="about-principle-card">
+            <div class="principle-top-row">
+              <span class="principle-num">01</span>
+              <div class="principle-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+            </div>
+            <div class="principle-accent-line"></div>
+            <h3 class="principle-title">Productivity First</h3>
+            <p class="principle-desc">
+              Spaces designed to help members stay focused and achieve more with zero noise leakage and ergonomic layouts.
+            </p>
+          </div>
+
+          <div class="about-principle-card">
+            <div class="principle-top-row">
+              <span class="principle-num">02</span>
+              <div class="principle-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+            </div>
+            <div class="principle-accent-line"></div>
+            <h3 class="principle-title">Comfort &amp; Wellbeing</h3>
+            <p class="principle-desc">
+              Comfortable seating, peaceful surroundings and thoughtfully designed interiors with filtered natural daylight.
+            </p>
+          </div>
+
+          <div class="about-principle-card">
+            <div class="principle-top-row">
+              <span class="principle-num">03</span>
+              <div class="principle-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+            </div>
+            <div class="principle-accent-line"></div>
+            <h3 class="principle-title">Community &amp; Collaboration</h3>
+            <p class="principle-desc">
+              An environment that encourages networking, teamwork and shared learning across diverse creative fields.
+            </p>
+          </div>
+
+          <div class="about-principle-card">
+            <div class="principle-top-row">
+              <span class="principle-num">04</span>
+              <div class="principle-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+            </div>
+            <div class="principle-accent-line"></div>
+            <h3 class="principle-title">Flexibility</h3>
+            <p class="principle-desc">
+              Workspace choices and booking options that adapt to different needs—from hourly study blocks to dedicated suites.
+            </p>
+          </div>
+
+          <div class="about-principle-card">
+            <div class="principle-top-row">
+              <span class="principle-num">05</span>
+              <div class="principle-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <div class="principle-accent-line"></div>
+            <h3 class="principle-title">Quality &amp; Reliability</h3>
+            <p class="principle-desc">
+              Consistent facilities, reliable 1 Gbps redundant internet and professionally maintained clean environments.
+            </p>
+          </div>
+
+          <div class="about-principle-card">
+            <div class="principle-top-row">
+              <span class="principle-num">06</span>
+              <div class="principle-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+            </div>
+            <div class="principle-accent-line"></div>
+            <h3 class="principle-title">Safety &amp; Trust</h3>
+            <p class="principle-desc">
+              A welcoming and secure environment with 24/7 biometric locks, monitored spaces, and private lockers for peace of mind.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about-section-cta">
+      <div class="container">
+        
+        <div class="about-closing-card">
+          <div class="about-cta-bg-layer"></div>
+          <div class="about-cta-terracotta-frame"></div>
+          
+          <div class="about-cta-content">
+            <div class="about-cta-copy">
+              <span class="about-cta-pill">START YOUR JOURNEY</span>
+              <h2 class="about-cta-heading">Find Your Place. Discover Your Potential.</h2>
+              <p class="about-cta-description">
+                Whether you are studying, building a business or collaborating with a team, we have a space designed for your next step.
+              </p>
+              <div class="about-cta-perks">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instant Digital Pass</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Zero Lock-In Contracts</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Biometric Access</span>
+              </div>
+            </div>
+
+            <div class="about-cta-action-box">
+              <div class="about-cta-status">
+                <span class="about-cta-pulse"></span>
+                <span>Tours &amp; Day Passes Available Today</span>
+              </div>
+              <div class="about-cta-buttons">
+                <a href="index.html#spaces" class="btn-primary btn-full-width">
+                  <span>Explore Our Spaces</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <button class="btn-secondary about-cta-outline-btn btn-full-width" onclick="openBookingModal('all')">
+                  <span>Book a Space</span>
+                </button>
+              </div>
+              <span class="about-cta-note">Complimentary high-speed fiber &amp; artisan coffee included.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer-contact">
+    <div class="container">
+
+      <div class="footer-columns-grid">
+
+        <div class="footer-col col-brand">
+          <div class="brand-identity footer-brand">
+            <div class="brand-logo-mark">
+              <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-name-wrap">
+              <span class="brand-title light-text">WORKSPACE HUB</span>
+              <span class="brand-subtitle light-text">CO-WORK &amp; STUDY</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            High-performance co-working and solitary study sanctuary engineered for makers, founders, and academic
+            achievers.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="Services.html">Services Overview</a></li>
+            <li><a href="Services Details.html?service=open-desk">Open Desks</a></li>
+            <li><a href="Services Details.html?service=private-cabin">Private Cabins</a></li>
+            <li><a href="Services Details.html?service=meeting-room">Meeting Rooms</a></li>
+            <li><a href="Services Details.html?service=dedicated-desk">Dedicated Desks</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="Pricing.html">Pricing Plans</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="#hero"
+                onclick="openGenericModal('404 Page Preview', 'The page you are looking for has been moved or workspace expired. Click below to return home.')">404
+                Page</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>420 Innovation Way, Suite 500, Tech Quarter</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>hello@workspacehub.com</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 849-WORK</span>
+            </li>
+          </ul>
+          <div class="footer-help-links">
+            <a href="#hero"
+              onclick="openGenericModal('Help & Support', 'Our concierge support team is available on site Mon-Sat 08:00 - 20:00 and 24/7 via member chat.')">Help
+              &amp; Support</a>
+            <span class="sep">•</span>
+            <a href="#hero"
+              onclick="openGenericModal('Frequently Asked Questions', 'Q: Are day passes available?<br>A: Yes, daily access starts from $25.<br><br>Q: Is high-speed internet included?<br>A: Yes, 1 Gbps fiber on all tiers.')">FAQ</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; 2026 Workspace Hub Co-Working &amp; Study Space Booking. All rights reserved.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#hero"
+            onclick="openGenericModal('Privacy Policy', 'Your personal and biometric verification data is strictly encrypted and never shared.')">Privacy
+            Policy</a>
+          <a href="#hero"
+            onclick="openGenericModal('Terms & Conditions', 'Bookings can be rescheduled up to 2 hours before scheduled slot.')">Terms
+            &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="dashboardModal" aria-hidden="true">
+    <div class="modal-dialog dashboard-dialog" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
+      <div class="dashboard-header-bar">
+        <div>
+          <span class="user-greeting-pill">AUTHENTICATED MEMBER</span>
+          <h2 id="dashTitle" class="dashboard-main-heading">Welcome Back, Alex Morgan</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeDashboardModal()" aria-label="Close dashboard">&times;</button>
+      </div>
+
+      <div class="dashboard-body-grid">
+        
+        <div class="dash-card live-status-card">
+          <h4 class="dash-card-title">Live Workspace Availability</h4>
+          <div class="dash-capacity-grid">
+            <div class="capacity-box">
+              <span class="capacity-val text-aqua">12</span>
+              <span class="capacity-label">Open Desks Left</span>
+            </div>
+            <div class="capacity-box">
+              <span class="capacity-val text-terracotta">2</span>
+              <span class="capacity-label">Private Cabins Left</span>
+            </div>
+            <div class="capacity-box">
+              <span class="capacity-val">3</span>
+              <span class="capacity-label">Meeting Rooms Free</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card membership-status-card">
+          <div class="flex-between">
+            <h4 class="dash-card-title">Current Membership</h4>
+            <span class="status-badge-active">Active</span>
+          </div>
+          <div class="membership-info-box">
+            <div class="plan-name-tag">PRO DEDICATED DESK</div>
+            <p class="plan-renew">Renews on: <strong>Nov 28, 2026</strong> • $180/mo</p>
+            <div class="credits-bar-wrap">
+              <div class="credits-label">
+                <span>Meeting Room Credits</span>
+                <span>8 / 10 Hours Used</span>
+              </div>
+              <div class="credits-progress"><div class="progress-fill" style="width: 80%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card full-col-card">
+          <div class="reservations-header">
+            <h4 class="dash-card-title">Your Reservations</h4>
+            <button class="btn-primary btn-sm" onclick="closeDashboardModal(); openBookingModal('all');">
+              + New Reservation
+            </button>
+          </div>
+          
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Space Type</th>
+                  <th>Date &amp; Time</th>
+                  <th>Seat / Room #</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="bookingsTableBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dash-card full-col-card">
+          <h4 class="dash-card-title">Invoices &amp; Receipts</h4>
+          <div class="invoices-list">
+            <div class="invoice-item">
+              <div>
+                <strong>Invoice #NX-2026-1049</strong>
+                <p>Monthly Dedicated Desk — Oct 28, 2026</p>
+              </div>
+              <div class="invoice-actions">
+                <span class="invoice-price">$180.00</span>
+                <button class="btn-secondary btn-sm" onclick="downloadInvoiceMock('NX-2026-1049')">
+                  Download PDF
+                </button>
+              </div>
+            </div>
+            <div class="invoice-item">
+              <div>
+                <strong>Invoice #NX-2026-0922</strong>
+                <p>Executive Meeting Room (3 hrs) — Oct 14, 2026</p>
+              </div>
+              <div class="invoice-actions">
+                <span class="invoice-price">$105.00</span>
+                <button class="btn-secondary btn-sm" onclick="downloadInvoiceMock('NX-2026-0922')">
+                  Download PDF
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog booking-dialog" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close booking">&times;</button>
+      
+      <div class="booking-dialog-header">
+        <span class="booking-step-badge">INSTANT RESERVATION</span>
+        <h3 id="bookingTitle" class="modal-title">Book Your Workspace</h3>
+        <p class="modal-sub">Select your space, schedule your time, and lock in your seat immediately.</p>
+      </div>
+
+      <form id="spaceBookingForm" onsubmit="handleConfirmBooking(event)">
+        <div class="booking-section">
+          <label class="form-label">1. Choose Space Category</label>
+          <div class="space-type-selector">
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="open-desk" checked onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Open Desk</strong>
+                <span>$5 / hour</span>
+              </div>
+            </label>
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="private-cabin" onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Private Cabin</strong>
+                <span>$18 / hour</span>
+              </div>
+            </label>
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="meeting-room" onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Meeting Room</strong>
+                <span>$35 / hour</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="booking-section form-row-2">
+          <div class="form-group">
+            <label for="bookingDate" class="form-label">2. Booking Date</label>
+            <input type="date" id="bookingDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="bookingTime" class="form-label">3. Start Time Slot</label>
+            <select id="bookingTime" class="form-input" required>
+              <option value="09:00 AM">09:00 AM - Morning Slot</option>
+              <option value="11:00 AM">11:00 AM - Midday Slot</option>
+              <option value="02:00 PM">02:00 PM - Afternoon Slot</option>
+              <option value="04:00 PM">04:00 PM - Evening Slot</option>
+              <option value="06:00 PM">06:00 PM - Night Owl Slot</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-section">
+          <label for="bookingDuration" class="form-label">4. Duration</label>
+          <select id="bookingDuration" class="form-input" onchange="updateBookingPricing()">
+            <option value="1">1 Hour</option>
+            <option value="2">2 Hours</option>
+            <option value="4" selected>4 Hours (Half Day)</option>
+            <option value="8">8 Hours (Full Day Pass)</option>
+          </select>
+        </div>
+
+        <div class="booking-summary-box">
+          <div class="summary-line">
+            <span>Selected Space:</span>
+            <strong id="summarySpaceName">Open Desk</strong>
+          </div>
+          <div class="summary-line">
+            <span>Calculated Total:</span>
+            <span class="summary-total-price" id="summaryPrice">$20.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full-width">
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="genericModal" aria-hidden="true">
+    <div class="modal-dialog generic-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeGenericModal()" aria-label="Close">&times;</button>
+      <h3 id="genericModalTitle" class="modal-title">Space Details</h3>
+      <div id="genericModalBody" class="modal-body-content"></div>
+      <div class="modal-footer-cta">
+        <button class="btn-primary" onclick="closeGenericModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="about.js"></script>
+</body>
+</html>

@@ -1,0 +1,1548 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Hub | Member Dashboard &amp; Workspace Booking</title>
+  <meta name="description" content="Customer member portal for booking desks and cabins by date and time, managing reservations, upgrading memberships, and downloading invoices.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout" id="dashboardLayout">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Member Navigation">
+      
+      <div class="sidebar-brand-wrap">
+        <a href="index.html" class="sidebar-brand-link" title="Back to Workspace Hub Home">
+          <div class="brand-logo-mark">
+            <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-title">WORKSPACE HUB</span>
+            <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+          </div>
+        </a>
+        <button id="sidebarCloseBtn" class="sidebar-close-btn" aria-label="Close sidebar">&times;</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          
+          <li class="sidebar-item">
+            <button class="sidebar-link active" data-tab="overview" onclick="switchTab('overview')">
+              <span class="sidebar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </span>
+              <span class="sidebar-label">Overview</span>
+            </button>
+          </li>
+
+          <li class="sidebar-item">
+            <button class="sidebar-link" data-tab="book" onclick="switchTab('book')">
+              <span class="sidebar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><line x1="12" y1="7" x2="12" y2="13"/><line x1="9" y1="10" x2="15" y2="10"/></svg>
+              </span>
+              <span class="sidebar-label">Book a Space</span>
+              <span class="sidebar-badge-accent">New</span>
+            </button>
+          </li>
+
+          <li class="sidebar-item">
+            <button class="sidebar-link" data-tab="reservations" onclick="switchTab('reservations')">
+              <span class="sidebar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+              <span class="sidebar-label">My Reservations</span>
+              <span class="sidebar-count-badge" id="sidebarBookingCount">0</span>
+            </button>
+          </li>
+
+          <li class="sidebar-item">
+            <button class="sidebar-link" data-tab="membership" onclick="switchTab('membership')">
+              <span class="sidebar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </span>
+              <span class="sidebar-label">Membership</span>
+            </button>
+          </li>
+
+          <li class="sidebar-item">
+            <button class="sidebar-link" data-tab="invoices" onclick="switchTab('invoices')">
+              <span class="sidebar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </span>
+              <span class="sidebar-label">Invoices</span>
+            </button>
+          </li>
+
+          <li class="sidebar-item">
+            <button class="sidebar-link" data-tab="profile" onclick="switchTab('profile')">
+              <span class="sidebar-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <span class="sidebar-label">Profile &amp; Settings</span>
+            </button>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        
+        <div class="sidebar-user-card" onclick="switchTab('profile')">
+          <div class="user-avatar-wrap">
+            <img src="assets/user-1.jpg" alt="Member Avatar" id="sidebarUserAvatar" onerror="this.onerror=null;this.src='asstes/user-1.jpg';">
+            <span class="user-status-dot" title="Active Member"></span>
+          </div>
+          <div class="user-meta-wrap">
+            <span class="user-name" id="sidebarUserName">Alex Morgan</span>
+            <span class="user-plan-tag" id="sidebarUserPlan">Pro Dedicated</span>
+          </div>
+        </div>
+
+        <button class="sidebar-action-btn" onclick="openSupportModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>Help &amp; Support</span>
+        </button>
+
+        <button class="sidebar-action-btn btn-logout" onclick="handleLogout()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          <span>Sign Out</span>
+        </button>
+
+      </div>
+
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="closeSidebarDrawer()"></div>
+
+    <div class="dashboard-main-wrapper">
+      
+      <header class="dashboard-topbar">
+        
+        <div class="topbar-left">
+          <button id="dashboardMobileToggle" class="mobile-toggle-btn" aria-label="Toggle Sidebar Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <div class="topbar-title-block">
+            <nav class="topbar-breadcrumb" aria-label="Breadcrumb">
+              <a href="index.html">Workspace Hub</a>
+              <span class="breadcrumb-sep">/</span>
+              <span>Member Portal</span>
+              <span class="breadcrumb-sep">/</span>
+              <span id="breadcrumbCurrent" class="breadcrumb-active">Overview</span>
+            </nav>
+            <h1 class="topbar-title" id="topbarTitle">Dashboard Overview</h1>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          
+          <button id="dashRtlBtn" class="control-btn" title="Toggle RTL/LTR" onclick="toggleDirection()">
+            <span class="btn-text-badge">LTR</span>
+          </button>
+
+          <button id="dashThemeBtn" class="control-btn" title="Toggle Dark/Light Mode" onclick="toggleTheme()">
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+
+          <div class="notification-wrap">
+            <button id="dashNotificationBtn" class="control-btn notif-bell-btn" title="View Notifications" onclick="toggleNotificationsPanel(event)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notif-badge" id="notificationBadge">2</span>
+            </button>
+
+            <div class="notifications-panel" id="notificationsPanel">
+              <div class="notif-header">
+                <h3>Member Notifications</h3>
+                <button class="notif-mark-read" onclick="markAllNotificationsRead()">Mark all as read</button>
+              </div>
+              <div class="notif-list" id="notificationsList">
+              </div>
+              <div class="notif-footer">
+                <span class="notif-sync-text">Synchronized with campus reservation system</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-menu-wrap">
+            <button class="profile-menu-btn" id="dashProfileTrigger" onclick="toggleProfileMenu(event)">
+              <div class="profile-avatar">
+                <img src="assets/user-1.jpg" alt="Member Avatar" id="topbarAvatar" onerror="this.onerror=null;this.src='asstes/user-1.jpg';">
+              </div>
+              <div class="profile-info-text">
+                <span class="profile-name" id="topbarUserName">Alex Morgan</span>
+                <span class="profile-role" id="topbarUserPlan">Pro Member</span>
+              </div>
+              <svg class="profile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+
+            <div class="profile-dropdown" id="profileDropdown">
+              <div class="dropdown-user-header">
+                <strong id="dropdownUserFullName">Alex Morgan</strong>
+                <span id="dropdownUserEmail">alex.morgan@workspace.com</span>
+              </div>
+              <div class="dropdown-divider"></div>
+              <ul class="dropdown-list">
+                <li>
+                  <button onclick="switchTab('profile'); closeProfileMenu()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span>My Profile</span>
+                  </button>
+                </li>
+                <li>
+                  <button onclick="switchTab('profile'); closeProfileMenu()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Account Settings</span>
+                  </button>
+                </li>
+                <li>
+                  <button onclick="openSupportModal(); closeProfileMenu()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    <span>Help &amp; Support</span>
+                  </button>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li>
+                  <button class="dropdown-logout" onclick="handleLogout()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    <span>Sign Out</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </header>
+
+      <main class="dashboard-content" id="dashboardContent">
+
+        <section class="dashboard-view active" id="view-overview">
+          
+          <div class="overview-welcome-card">
+            <div class="welcome-text-wrap">
+              <span class="welcome-kicker">MEMBER DASHBOARD</span>
+              <h2 class="welcome-title" id="welcomeMemberName">Welcome Back, Alex Morgan!</h2>
+              <p class="welcome-desc">
+                Here's an overview of your workspace activities and upcoming reservations. Everything is set up for your productive workday.
+              </p>
+              <div class="welcome-actions">
+                <button class="btn-primary" onclick="switchTab('book')">
+                  <span>Book a Space</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <button class="btn-secondary" onclick="switchTab('reservations')">
+                  <span>View My Bookings</span>
+                </button>
+              </div>
+            </div>
+            <div class="welcome-graphic">
+              <div class="welcome-graphic-frame">
+                <img src="assets/hero-editorial.jpg" alt="Workspace Hub Campus Interior" class="welcome-img" onerror="this.onerror=null;this.src='asstes/hero-editorial.jpg';">
+                <div class="welcome-badge-live">
+                  <span class="pulse-dot"></span>
+                  <span>Campus Open • Fiber Active</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-stats-grid">
+            
+            <div class="stat-card" onclick="switchTab('reservations', 'upcoming')">
+              <div class="stat-icon-wrap icon-aqua">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div class="stat-content">
+                <span class="stat-label">Upcoming Bookings</span>
+                <div class="stat-value" id="statUpcomingCount">1</div>
+                <span class="stat-subtext">Next session scheduled</span>
+              </div>
+            </div>
+
+            <div class="stat-card" onclick="switchTab('reservations', 'active')">
+              <div class="stat-icon-wrap icon-terracotta">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="stat-content">
+                <span class="stat-label">Active Bookings</span>
+                <div class="stat-value" id="statActiveCount">1</div>
+                <span class="stat-subtext text-terracotta">Checked in at Desk #14</span>
+              </div>
+            </div>
+
+            <div class="stat-card" onclick="switchTab('reservations', 'completed')">
+              <div class="stat-icon-wrap icon-brown">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="stat-content">
+                <span class="stat-label">Completed Bookings</span>
+                <div class="stat-value" id="statCompletedCount">2</div>
+                <span class="stat-subtext">32 total hours logged</span>
+              </div>
+            </div>
+
+            <div class="stat-card" onclick="switchTab('membership')">
+              <div class="stat-icon-wrap icon-dark">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="stat-content">
+                <span class="stat-label">Membership Status</span>
+                <div class="stat-value text-plan" id="statPlanName">Pro Dedicated</div>
+                <span class="stat-subtext text-success">● Active • Renews Dec 1</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="overview-split-layout">
+            
+            <div class="overview-main-col">
+              
+              <div class="dashboard-panel">
+                <div class="panel-header">
+                  <div class="panel-title-wrap">
+                    <h3 class="panel-title">Upcoming Reservations Preview</h3>
+                    <p class="panel-subtitle">Your reserved workspace slots scheduled for the coming days.</p>
+                  </div>
+                  <button class="panel-link-btn" onclick="switchTab('reservations')">
+                    <span>View All Reservations</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                </div>
+
+                <div class="upcoming-preview-list" id="overviewUpcomingList">
+                </div>
+              </div>
+
+              <div class="dashboard-panel">
+                <div class="panel-header">
+                  <div class="panel-title-wrap">
+                    <h3 class="panel-title">Recent Activity</h3>
+                    <p class="panel-subtitle">A live record of your bookings, payments, and account events.</p>
+                  </div>
+                </div>
+
+                <div class="activity-feed" id="overviewActivityFeed">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="overview-side-col">
+              
+              <div class="dashboard-panel panel-quick-actions">
+                <h3 class="panel-title">Quick Actions</h3>
+                <p class="panel-subtitle">Instant reservation shortcuts</p>
+                <div class="quick-action-buttons">
+                  <button class="quick-action-btn" onclick="startQuickBooking('open-desk')">
+                    <div class="qa-icon">🪑</div>
+                    <div class="qa-text">
+                      <strong>Book an Open Desk</strong>
+                      <span>From $5/hr or $25/day</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+
+                  <button class="quick-action-btn" onclick="startQuickBooking('private-cabin')">
+                    <div class="qa-icon">🏢</div>
+                    <div class="qa-text">
+                      <strong>Reserve a Private Cabin</strong>
+                      <span>Acoustic privacy • 1-4 team</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+
+                  <button class="quick-action-btn" onclick="startQuickBooking('meeting-room')">
+                    <div class="qa-icon">📽️</div>
+                    <div class="qa-text">
+                      <strong>Book a Meeting Room</strong>
+                      <span>4K Display • Video Conf</span>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="dashboard-panel panel-membership-summary">
+                <div class="membership-summary-badge">ACTIVE PLAN</div>
+                <h3 class="ms-plan-title" id="msPlanTitle">Pro Dedicated Desk</h3>
+                <p class="ms-plan-price" id="msPlanPrice">$180.00 / month</p>
+                <div class="ms-detail-row">
+                  <span>Billing Cycle:</span>
+                  <strong>Monthly (Renews Dec 01)</strong>
+                </div>
+                <div class="ms-detail-row">
+                  <span>Campus Access:</span>
+                  <strong>24/7 Keycard + NFC</strong>
+                </div>
+                <div class="ms-detail-row">
+                  <span>Meeting Room Credits:</span>
+                  <strong>8 / 10 hrs used</strong>
+                </div>
+                
+                <button class="btn-primary btn-full-width" style="margin-top: 16px;" onclick="switchTab('membership')">
+                  <span>Manage Membership</span>
+                </button>
+              </div>
+
+              <div class="dashboard-panel panel-concierge-card">
+                <div class="concierge-avatar-row">
+                  <img src="assets/faq-workspace.jpg" alt="Concierge Desk" class="concierge-thumb" onerror="this.onerror=null;this.src='asstes/faq-workspace.jpg';">
+                  <div>
+                    <strong>Campus Concierge</strong>
+                    <span class="concierge-status">On Duty (Front Desk)</span>
+                  </div>
+                </div>
+                <p class="concierge-text">
+                  Need an HDMI adapter, catering for your meeting room, or technical support?
+                </p>
+                <div class="concierge-contacts">
+                  <a href="tel:+18008499675" class="concierge-contact-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>+1 (800) 849-WORK</span>
+                  </a>
+                  <button class="concierge-btn-sm" onclick="openSupportModal()">Chat Concierge</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="dashboard-view" id="view-book">
+          
+          <div class="booking-engine-wrapper">
+            
+            <div class="view-header">
+              <span class="view-kicker">REAL-TIME RESERVATION</span>
+              <h2 class="view-title">Book a Workspace</h2>
+              <p class="view-subtitle">
+                Select your preferred workspace type, choose your date and time slot, check live availability, and confirm your booking instantly.
+              </p>
+            </div>
+
+            <div class="booking-stepper">
+              <div class="step-indicator active" id="stepIndicator1">
+                <span class="step-num">1</span>
+                <span class="step-title">Workspace</span>
+              </div>
+              <div class="step-line" id="stepLine1"></div>
+              <div class="step-indicator" id="stepIndicator2">
+                <span class="step-num">2</span>
+                <span class="step-title">Date &amp; Time</span>
+              </div>
+              <div class="step-line" id="stepLine2"></div>
+              <div class="step-indicator" id="stepIndicator3">
+                <span class="step-num">3</span>
+                <span class="step-title">Capacity &amp; Add-ons</span>
+              </div>
+              <div class="step-line" id="stepLine3"></div>
+              <div class="step-indicator" id="stepIndicator4">
+                <span class="step-num">4</span>
+                <span class="step-title">Confirm</span>
+              </div>
+            </div>
+
+            <form id="nexusBookingEngineForm" onsubmit="handleBookingFormSubmit(event)">
+              
+              <div class="booking-step-panel active" id="bookingStep1">
+                <h3 class="step-heading">Step 1: Choose Your Workspace Category</h3>
+                <p class="step-subtext">Click on any workspace to inspect its amenities and select it for reservation.</p>
+
+                <div class="workspace-selection-grid">
+                  
+                  <div class="space-select-card active" data-space-key="open-desk" onclick="selectWorkspaceCard('open-desk')">
+                    <div class="space-card-img-wrap">
+                      <img src="assets/open-desk.jpg" alt="Open Desk" class="space-card-img" onerror="this.onerror=null;this.src='asstes/open-desk.jpg';">
+                      <span class="space-card-rate-badge">$5/hr • $25/day</span>
+                    </div>
+                    <div class="space-card-body">
+                      <div class="space-card-header">
+                        <h4>Open Desk</h4>
+                        <span class="space-status-pill available">● Available</span>
+                      </div>
+                      <p class="space-card-desc">Flexible hot-desk in our vibrant, natural-light collaborative atrium. Ergonomic chair, dual power outlets &amp; gigabit fiber.</p>
+                      <ul class="space-amenities-tags">
+                        <li>1 Person</li>
+                        <li>High-Speed WiFi</li>
+                        <li>Silent Pods</li>
+                        <li>Free Coffee</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="space-select-card" data-space-key="private-cabin" onclick="selectWorkspaceCard('private-cabin')">
+                    <div class="space-card-img-wrap">
+                      <img src="assets/private-cabin.jpg" alt="Private Cabin" class="space-card-img" onerror="this.onerror=null;this.src='asstes/private-cabin.jpg';">
+                      <span class="space-card-rate-badge">$35/hr • $550/mo</span>
+                    </div>
+                    <div class="space-card-body">
+                      <div class="space-card-header">
+                        <h4>Private Cabin</h4>
+                        <span class="space-status-pill available">● Available</span>
+                      </div>
+                      <p class="space-card-desc">Acoustically insulated private office suite. Ideal for focused teams, executive calls, confidential work, and small sprints.</p>
+                      <ul class="space-amenities-tags">
+                        <li>1–4 Persons</li>
+                        <li>Keycard Lock</li>
+                        <li>Whiteboard</li>
+                        <li>Monitor Ready</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="space-select-card" data-space-key="meeting-room" onclick="selectWorkspaceCard('meeting-room')">
+                    <div class="space-card-img-wrap">
+                      <img src="assets/meeting-room.jpg" alt="Meeting Room" class="space-card-img" onerror="this.onerror=null;this.src='asstes/meeting-room.jpg';">
+                      <span class="space-card-rate-badge">$40/hr</span>
+                    </div>
+                    <div class="space-card-body">
+                      <div class="space-card-header">
+                        <h4>Meeting Room</h4>
+                        <span class="space-status-pill available">● Available</span>
+                      </div>
+                      <p class="space-card-desc">State-of-the-art conference studio equipped with a 65" 4K presentation display, video conferencing bar, and smart whiteboard.</p>
+                      <ul class="space-amenities-tags">
+                        <li>Up to 12 Persons</li>
+                        <li>4K Video Bar</li>
+                        <li>Conference Phone</li>
+                        <li>Catering Option</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="space-select-card" data-space-key="dedicated-desk" onclick="selectWorkspaceCard('dedicated-desk')">
+                    <div class="space-card-img-wrap">
+                      <img src="assets/dedicated-desk.jpg" alt="Dedicated Desk" class="space-card-img" onerror="this.onerror=null;this.src='asstes/dedicated-desk.jpg';">
+                      <span class="space-card-rate-badge">$180/month</span>
+                    </div>
+                    <div class="space-card-body">
+                      <div class="space-card-header">
+                        <h4>Dedicated Desk</h4>
+                        <span class="space-status-pill available">● Available</span>
+                      </div>
+                      <p class="space-card-desc">Your personal reserved desk that remains yours 24/7. Includes lockable pedestal filing cabinet and dual-arm monitor mount.</p>
+                      <ul class="space-amenities-tags">
+                        <li>1 Person</li>
+                        <li>Lockable Storage</li>
+                        <li>24/7 NFC Keycard</li>
+                        <li>Mail Service</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="space-select-card" data-space-key="study-zone" onclick="selectWorkspaceCard('study-zone')">
+                    <div class="space-card-img-wrap">
+                      <img src="assets/study-zone.jpg" alt="Study Zone" class="space-card-img" onerror="this.onerror=null;this.src='asstes/study-zone.jpg';">
+                      <span class="space-card-rate-badge">$4/hr</span>
+                    </div>
+                    <div class="space-card-body">
+                      <div class="space-card-header">
+                        <h4>Study Zone</h4>
+                        <span class="space-status-pill available">● Available</span>
+                      </div>
+                      <p class="space-card-desc">Deep focus library carrel with zero-noise enforcement, individual warm reading lamp, acoustic dividers, and power strips.</p>
+                      <ul class="space-amenities-tags">
+                        <li>1 Person</li>
+                        <li>Strict Silence</li>
+                        <li>Desk Lamp</li>
+                        <li>Power Strip</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="step-nav-buttons">
+                  <div></div>
+                  <button type="button" class="btn-primary" onclick="goToBookingStep(2)">
+                    <span>Next: Select Date &amp; Time</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="booking-step-panel" id="bookingStep2">
+                <h3 class="step-heading">Step 2: Choose Date &amp; Available Time Slot</h3>
+                <p class="step-subtext">Operating hours: 08:00 AM – 09:00 PM (Monday to Friday) | 09:00 AM – 06:00 PM (Saturday &amp; Sunday)</p>
+
+                <div class="step2-split-grid">
+                  
+                  <div class="date-selection-box">
+                    <div class="form-group">
+                      <label for="bookingDatePicker" class="form-label">
+                        <strong>Select Booking Date</strong>
+                        <span class="required-star">*</span>
+                      </label>
+                      <input type="date" id="bookingDatePicker" class="form-input" required onchange="handleDateChange()">
+                      <span class="field-hint">Past dates are disabled automatically. Select today or any future date.</span>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 20px;">
+                      <label for="bookingDurationSelect" class="form-label">
+                        <strong>Session Duration</strong>
+                      </label>
+                      <select id="bookingDurationSelect" class="form-select" onchange="handleDurationChange()">
+                        <option value="1">1 Hour Session</option>
+                        <option value="2" selected>2 Hours Session</option>
+                        <option value="4">Half Day (4 Hours)</option>
+                        <option value="8">Full Day (8 Hours)</option>
+                      </select>
+                    </div>
+
+                    <div class="campus-hours-pill">
+                      <div class="ch-icon">🕒</div>
+                      <div class="ch-text">
+                        <strong>Operating Schedule</strong>
+                        <span>Weekdays: 8 AM – 9 PM • Weekends: 9 AM – 6 PM</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="slots-selection-box">
+                    <div class="slots-header">
+                      <strong>Available Start Time Slots</strong>
+                      <span class="slots-live-badge">Live Inventory Check</span>
+                    </div>
+
+                    <div class="time-slots-grid" id="timeSlotsGrid">
+                    </div>
+
+                    <div class="slot-legend">
+                      <div class="legend-item"><span class="legend-dot available"></span> Available</div>
+                      <div class="legend-item"><span class="legend-dot selected"></span> Selected</div>
+                      <div class="legend-item"><span class="legend-dot booked"></span> Booked / Conflict</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="step-nav-buttons">
+                  <button type="button" class="btn-secondary" onclick="goToBookingStep(1)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    <span>Back</span>
+                  </button>
+                  <button type="button" class="btn-primary" onclick="goToBookingStep(3)">
+                    <span>Next: Capacity &amp; Add-ons</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="booking-step-panel" id="bookingStep3">
+                <h3 class="step-heading">Step 3: Specify Capacity &amp; Workspace Add-ons</h3>
+                <p class="step-subtext">Customize your workspace setup with hardware, beverages, and meeting accessories.</p>
+
+                <div class="step3-options-wrapper">
+                  
+                  <div class="capacity-selector-card">
+                    <div class="capacity-text">
+                      <strong id="capacityTitle">Number of Attendees</strong>
+                      <span class="capacity-subtitle" id="capacitySubtitle">Maximum permitted capacity for this space: 1 person</span>
+                    </div>
+                    <div class="capacity-counter">
+                      <button type="button" class="counter-btn" onclick="adjustCapacity(-1)">-</button>
+                      <input type="number" id="bookingAttendees" value="1" min="1" max="1" readonly class="counter-input">
+                      <button type="button" class="counter-btn" onclick="adjustCapacity(1)">+</button>
+                    </div>
+                  </div>
+
+                  <div class="addons-list-card">
+                    <h4 class="addons-title">Enhance Your Workspace Experience</h4>
+                    
+                    <div class="addon-item">
+                      <label class="addon-label" for="addonMonitor">
+                        <input type="checkbox" id="addonMonitor" class="addon-checkbox" onchange="updateBookingCalculation()">
+                        <div class="addon-info">
+                          <strong>4K Ultra-Sharp Display &amp; USB-C Hub (+$5.00)</strong>
+                          <p>Dell 27" 4K USB-C monitor with 90W power delivery, HDMI cable and ergonomic monitor stand.</p>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="addon-item">
+                      <label class="addon-label" for="addonCoffee">
+                        <input type="checkbox" id="addonCoffee" class="addon-checkbox" onchange="updateBookingCalculation()">
+                        <div class="addon-info">
+                          <strong>Barista Coffee &amp; Snack Package (+$4.00)</strong>
+                          <p>Unlimited hand-crafted specialty coffee, artisan teas, and organic breakfast pastries from our cafe.</p>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="addon-item">
+                      <label class="addon-label" for="addonWhiteboard">
+                        <input type="checkbox" id="addonWhiteboard" class="addon-checkbox" onchange="updateBookingCalculation()">
+                        <div class="addon-info">
+                          <strong>Whiteboard &amp; Presentation Kit (+$10.00)</strong>
+                          <p>Mobile magnetic glass whiteboard, dry-erase markers, Post-It notes, and wireless presenter remote.</p>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="addon-item">
+                      <label class="addon-label" for="addonGuest">
+                        <input type="checkbox" id="addonGuest" class="addon-checkbox" onchange="updateBookingCalculation()">
+                        <div class="addon-info">
+                          <strong>Guest Day Pass (+$12.00)</strong>
+                          <p>Grant building reception keycard access and campus WiFi credentials for one visiting client or partner.</p>
+                        </div>
+                      </label>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="step-nav-buttons">
+                  <button type="button" class="btn-secondary" onclick="goToBookingStep(2)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    <span>Back</span>
+                  </button>
+                  <button type="button" class="btn-primary" onclick="goToBookingStep(4)">
+                    <span>Next: Review &amp; Confirm</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="booking-step-panel" id="bookingStep4">
+                <h3 class="step-heading">Step 4: Review Booking Summary &amp; Confirm</h3>
+                <p class="step-subtext">Please review all reservation details before confirming. A booking confirmation and invoice will be generated immediately.</p>
+
+                <div class="summary-confirmation-grid">
+                  
+                  <div class="summary-details-card">
+                    <div class="sd-header">
+                      <div class="sd-space-thumb">
+                        <img src="assets/open-desk.jpg" alt="Space Thumbnail" id="summarySpaceImg" onerror="this.onerror=null;this.src='asstes/open-desk.jpg';">
+                      </div>
+                      <div class="sd-space-meta">
+                        <span class="sd-space-badge" id="summaryCategoryBadge">Open Desk</span>
+                        <h4 class="sd-space-name" id="summarySpaceName">Open Desk (Zone B - Silent Pod)</h4>
+                        <span class="sd-space-rate" id="summarySpaceRate">$5.00 / hour</span>
+                      </div>
+                    </div>
+
+                    <div class="sd-breakdown-list">
+                      <div class="sd-row">
+                        <span class="sd-label">Booking Date:</span>
+                        <strong class="sd-val" id="summaryDate">Today</strong>
+                      </div>
+                      <div class="sd-row">
+                        <span class="sd-label">Reserved Time:</span>
+                        <strong class="sd-val" id="summaryTime">02:00 PM – 04:00 PM (2 Hours)</strong>
+                      </div>
+                      <div class="sd-row">
+                        <span class="sd-label">Capacity / Attendees:</span>
+                        <strong class="sd-val" id="summaryAttendees">1 Person</strong>
+                      </div>
+                      <div class="sd-row">
+                        <span class="sd-label">Assigned Seat / Area:</span>
+                        <strong class="sd-val" id="summarySeat">Desk #14 (Hot Desk Area)</strong>
+                      </div>
+                      <div class="sd-row">
+                        <span class="sd-label">Selected Add-ons:</span>
+                        <span class="sd-val" id="summaryAddons">None</span>
+                      </div>
+                    </div>
+
+                    <div class="sd-price-table">
+                      <div class="pt-row">
+                        <span>Workspace Base Charge:</span>
+                        <span id="priceBase">$10.00</span>
+                      </div>
+                      <div class="pt-row">
+                        <span>Add-ons Total:</span>
+                        <span id="priceAddons">$0.00</span>
+                      </div>
+                      <div class="pt-row">
+                        <span>City Commercial Tax (8.5%):</span>
+                        <span id="priceTax">$0.85</span>
+                      </div>
+                      <div class="pt-row pt-total">
+                        <strong>Grand Total Due:</strong>
+                        <strong class="total-highlight" id="priceTotal">$10.85</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="summary-action-card">
+                    <h4 class="sa-title">Reservation Holder</h4>
+                    <div class="sa-member-pill">
+                      <img src="assets/user-1.jpg" alt="Member Avatar" id="summaryMemberAvatar" onerror="this.onerror=null;this.src='asstes/user-1.jpg';">
+                      <div class="sa-member-info">
+                        <strong id="summaryMemberName">Alex Morgan</strong>
+                        <span id="summaryMemberEmail">alex.morgan@workspace.com</span>
+                        <span class="sa-plan-tag" id="summaryMemberPlan">Pro Dedicated Member</span>
+                      </div>
+                    </div>
+
+                    <div class="cancellation-policy-box">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      <div>
+                        <strong>Free Cancellation Policy</strong>
+                        <p>Cancel or reschedule without penalty up to 2 hours before your session start time directly in your dashboard.</p>
+                      </div>
+                    </div>
+
+                    <div class="terms-checkbox-wrap">
+                      <label class="checkbox-label" for="bookingTermsConsent">
+                        <input type="checkbox" id="bookingTermsConsent" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">
+                          I agree to the <a href="#" onclick="openSupportModal(); return false;">Workspace Hub Campus Guidelines</a> and confirm this booking.
+                        </span>
+                      </label>
+                    </div>
+
+                    <button type="submit" id="confirmBookingBtn" class="btn-primary btn-full-width">
+                      <span class="btn-text">Confirm Reservation</span>
+                      <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span class="spinner-icon" aria-hidden="true"></span>
+                    </button>
+
+                    <div class="sa-guarantee-note">
+                      🔒 Instant confirmation • Keycard access code automatically generated
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="step-nav-buttons" style="margin-top: 24px;">
+                  <button type="button" class="btn-secondary" onclick="goToBookingStep(3)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    <span>Back</span>
+                  </button>
+                  <div></div>
+                </div>
+
+              </div>
+
+            </form>
+
+            <div class="booking-success-screen" id="bookingSuccessScreen" style="display: none;">
+              <div class="success-icon-badge">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="success-kicker">RESERVATION CONFIRMED</span>
+              <h2 class="success-title">Your Workspace is Booked!</h2>
+              <p class="success-desc">
+                We have reserved your space and generated your digital access pass. A confirmation email and itemized invoice have been added to your account.
+              </p>
+
+              <div class="confirmed-pass-card">
+                <div class="pass-header">
+                  <div>
+                    <span class="pass-label">BOOKING REFERENCE</span>
+                    <h3 class="pass-ref" id="confirmedRef">BK-724</h3>
+                  </div>
+                  <div class="pass-qr-box">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><line x1="14" y1="14" x2="14" y2="14.01"/><line x1="14" y1="17" x2="14" y2="20"/><line x1="17" y1="14" x2="20" y2="14"/><line x1="20" y1="17" x2="20" y2="20"/></svg>
+                  </div>
+                </div>
+                <div class="pass-body">
+                  <div class="pb-row">
+                    <span>Workspace:</span>
+                    <strong id="confirmedSpace">Open Desk (Zone B - Silent Pod)</strong>
+                  </div>
+                  <div class="pb-row">
+                    <span>Scheduled Time:</span>
+                    <strong id="confirmedTime">Nov 5, 2026 • 02:00 PM – 04:00 PM</strong>
+                  </div>
+                  <div class="pb-row">
+                    <span>Access PIN:</span>
+                    <strong class="text-terracotta" id="confirmedPin">#8849</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="success-buttons">
+                <button class="btn-primary" onclick="switchTab('reservations')">
+                  <span>View in My Reservations</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <button class="btn-secondary" onclick="resetBookingEngine()">
+                  <span>Book Another Space</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="dashboard-view" id="view-reservations">
+          
+          <div class="view-header">
+            <span class="view-kicker">RESERVATION MANAGEMENT</span>
+            <h2 class="view-title">My Reservations</h2>
+            <p class="view-subtitle">View and manage all your workspace bookings in one place.</p>
+          </div>
+
+          <div class="reservations-controls-bar">
+            
+            <div class="res-filter-tabs">
+              <button class="res-tab-btn active" data-res-filter="all" onclick="filterReservations('all')">
+                <span>All Bookings</span>
+                <span class="tab-count" id="countResAll">0</span>
+              </button>
+              <button class="res-tab-btn" data-res-filter="upcoming" onclick="filterReservations('upcoming')">
+                <span>Upcoming</span>
+                <span class="tab-count" id="countResUpcoming">0</span>
+              </button>
+              <button class="res-tab-btn" data-res-filter="active" onclick="filterReservations('active')">
+                <span>Active</span>
+                <span class="tab-count" id="countResActive">0</span>
+              </button>
+              <button class="res-tab-btn" data-res-filter="completed" onclick="filterReservations('completed')">
+                <span>Completed</span>
+                <span class="tab-count" id="countResCompleted">0</span>
+              </button>
+              <button class="res-tab-btn" data-res-filter="cancelled" onclick="filterReservations('cancelled')">
+                <span>Cancelled</span>
+                <span class="tab-count" id="countResCancelled">0</span>
+              </button>
+            </div>
+
+            <div class="res-search-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="resSearchInput" placeholder="Search by ID or space..." onkeyup="handleReservationSearch(event)">
+            </div>
+
+          </div>
+
+          <div class="reservations-cards-grid" id="reservationsGrid">
+          </div>
+
+        </section>
+
+        <section class="dashboard-view" id="view-membership">
+          
+          <div class="view-header">
+            <span class="view-kicker">MEMBERSHIP &amp; BILLING</span>
+            <h2 class="view-title">Membership Management</h2>
+            <p class="view-subtitle">Review active plan privileges, monitor allowance meters, renew, or upgrade your membership.</p>
+          </div>
+
+          <div class="current-membership-card">
+            <div class="cm-left">
+              <div class="cm-badge-row">
+                <span class="badge-status-active">● Active Membership</span>
+                <span class="cm-id-tag">Member ID: NX-884920</span>
+              </div>
+              <h3 class="cm-plan-name" id="cmPlanName">Pro Dedicated Desk</h3>
+              <p class="cm-plan-desc">Permanent desk setup with private lockable storage, unlimited gigabit fiber, 24/7 keycard access, and monthly meeting room credits.</p>
+              
+              <div class="cm-benefits-grid">
+                <div class="benefit-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>24/7 Campus Keycard + NFC Access</span>
+                </div>
+                <div class="benefit-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>10 Free Meeting Room Hours / month</span>
+                </div>
+                <div class="benefit-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Business Mailing Address &amp; Reception</span>
+                </div>
+                <div class="benefit-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Unlimited Barista Coffee &amp; Artisan Tea</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cm-right">
+              <div class="cm-billing-box">
+                <span class="cb-label">CURRENT BILLING CYCLE</span>
+                <div class="cb-price" id="cmPlanPrice">$180.00 <span class="cb-period">/ month</span></div>
+                <span class="cb-renews" id="cmRenewDate">Auto-renews on Dec 01, 2026</span>
+                
+                <div class="cm-actions-stack">
+                  <button class="btn-primary btn-full-width" onclick="openPlanModal('renew')">
+                    <span>Renew Membership</span>
+                  </button>
+                  <button class="btn-secondary btn-full-width" onclick="scrollToAvailablePlans()">
+                    <span>Upgrade Plan</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="meters-section-card">
+            <h3 class="meters-title">Monthly Usage &amp; Allowances</h3>
+            <div class="meters-grid">
+              
+              <div class="meter-box">
+                <div class="meter-header">
+                  <span>Meeting Room Credits</span>
+                  <strong>8 / 10 Hours</strong>
+                </div>
+                <div class="meter-progress-track">
+                  <div class="meter-progress-bar" style="width: 80%;"></div>
+                </div>
+                <span class="meter-sub">2 hours remaining this billing cycle</span>
+              </div>
+
+              <div class="meter-box">
+                <div class="meter-header">
+                  <span>Laser Printing &amp; Scanning</span>
+                  <strong>45 / 150 Pages</strong>
+                </div>
+                <div class="meter-progress-track">
+                  <div class="meter-progress-bar" style="width: 30%;"></div>
+                </div>
+                <span class="meter-sub">105 pages remaining</span>
+              </div>
+
+              <div class="meter-box">
+                <div class="meter-header">
+                  <span>Guest Day Passes</span>
+                  <strong>2 / 4 Passes Used</strong>
+                </div>
+                <div class="meter-progress-track">
+                  <div class="meter-progress-bar" style="width: 50%;"></div>
+                </div>
+                <span class="meter-sub">2 passes remaining</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="available-plans-section" id="availablePlansSection">
+            <div class="section-heading-wrap">
+              <span class="view-kicker">CHANGE OR UPGRADE</span>
+              <h3 class="section-title">Explore Available Membership Plans</h3>
+              <p class="section-subtitle">Consistent pricing sourced directly from our master rates. Switch anytime with prorated billing.</p>
+            </div>
+
+            <div class="dashboard-plans-grid">
+              
+              <div class="dash-plan-card" data-plan-id="hourly-pass">
+                <div class="dp-header">
+                  <span class="dp-kicker">FLEXIBLE ACCESS</span>
+                  <h4 class="dp-title">Hourly Pass</h4>
+                  <div class="dp-price">$5 <span>/ hour</span></div>
+                  <p class="dp-billing-desc">Minimum 2-hour session • Pay as you go</p>
+                </div>
+                <ul class="dp-features">
+                  <li>Open desk hot-seating in public zone</li>
+                  <li>Gigabit fiber internet</li>
+                  <li>Power outlets &amp; ergonomic seating</li>
+                  <li>Campus cafe access</li>
+                </ul>
+                <div class="dp-btn-wrap">
+                  <button class="btn-secondary btn-full-width" onclick="selectPlanToUpgrade('hourly-pass', 'Hourly Pass', '$5/hour')">
+                    Switch to Plan
+                  </button>
+                </div>
+              </div>
+
+              <div class="dash-plan-card" data-plan-id="daily-pass">
+                <div class="dp-header">
+                  <span class="dp-kicker">SINGLE DAY</span>
+                  <h4 class="dp-title">Daily Pass</h4>
+                  <div class="dp-price">$25 <span>/ day</span></div>
+                  <p class="dp-billing-desc">Full day access from 8 AM – 9 PM</p>
+                </div>
+                <ul class="dp-features">
+                  <li>Full day access to hot-desk areas</li>
+                  <li>Locker storage for single day</li>
+                  <li>1 hour phone booth credit</li>
+                  <li>Free artisanal drip coffee</li>
+                </ul>
+                <div class="dp-btn-wrap">
+                  <button class="btn-secondary btn-full-width" onclick="selectPlanToUpgrade('daily-pass', 'Daily Pass', '$25/day')">
+                    Switch to Plan
+                  </button>
+                </div>
+              </div>
+
+              <div class="dash-plan-card active-plan-card" data-plan-id="monthly-membership">
+                <div class="dp-current-badge">CURRENT ACTIVE PLAN</div>
+                <div class="dp-header">
+                  <span class="dp-kicker">MOST POPULAR</span>
+                  <h4 class="dp-title">Monthly Membership</h4>
+                  <div class="dp-price">$180 <span>/ month</span></div>
+                  <p class="dp-billing-desc">Billed monthly ($180) • Cancel anytime</p>
+                </div>
+                <ul class="dp-features">
+                  <li>24/7 keycard &amp; NFC smartphone access</li>
+                  <li>Permanent dedicated desk assigned</li>
+                  <li>10 free meeting room hours / mo</li>
+                  <li>Business address &amp; mail reception</li>
+                </ul>
+                <div class="dp-btn-wrap">
+                  <button class="btn-primary btn-full-width" disabled>
+                    Current Plan
+                  </button>
+                </div>
+              </div>
+
+              <div class="dash-plan-card" data-plan-id="private-workspace">
+                <div class="dp-header">
+                  <span class="dp-kicker">TEAM SUITE</span>
+                  <h4 class="dp-title">Private Workspace</h4>
+                  <div class="dp-price">$550 <span>/ month</span></div>
+                  <p class="dp-billing-desc">Billed monthly • Up to 4 team members</p>
+                </div>
+                <ul class="dp-features">
+                  <li>Lockable acoustic private cabin suite</li>
+                  <li>24/7 keycard access for up to 4 members</li>
+                  <li>20 free meeting room hours / mo</li>
+                  <li>Custom branding on office door</li>
+                </ul>
+                <div class="dp-btn-wrap">
+                  <button class="btn-secondary btn-full-width" onclick="selectPlanToUpgrade('private-workspace', 'Private Workspace', '$550/month')">
+                    Upgrade to Suite
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="dashboard-panel" style="margin-top: 32px;">
+            <div class="panel-header">
+              <div class="panel-title-wrap">
+                <h3 class="panel-title">Membership History</h3>
+                <p class="panel-subtitle">Archived record of previous subscription cycles and plan renewals.</p>
+              </div>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Billing Date</th>
+                    <th>Plan Name</th>
+                    <th>Billing Period</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Invoice</th>
+                  </tr>
+                </thead>
+                <tbody id="membershipHistoryTable">
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="dashboard-view" id="view-invoices">
+          
+          <div class="view-header">
+            <span class="view-kicker">FINANCIAL RECORDS</span>
+            <h2 class="view-title">My Invoices</h2>
+            <p class="view-subtitle">Access and download your workspace booking and membership invoices.</p>
+          </div>
+
+          <div class="reservations-controls-bar">
+            
+            <div class="res-filter-tabs">
+              <button class="res-tab-btn active" data-inv-filter="all" onclick="filterInvoices('all')">
+                <span>All Invoices</span>
+                <span class="tab-count" id="countInvAll">0</span>
+              </button>
+              <button class="res-tab-btn" data-inv-filter="paid" onclick="filterInvoices('paid')">
+                <span>Paid</span>
+                <span class="tab-count" id="countInvPaid">0</span>
+              </button>
+              <button class="res-tab-btn" data-inv-filter="pending" onclick="filterInvoices('pending')">
+                <span>Pending</span>
+                <span class="tab-count" id="countInvPending">0</span>
+              </button>
+              <button class="res-tab-btn" data-inv-filter="refunded" onclick="filterInvoices('refunded')">
+                <span>Refunded</span>
+                <span class="tab-count" id="countInvRefunded">0</span>
+              </button>
+            </div>
+
+            <div class="res-search-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="invSearchInput" placeholder="Search by invoice number or ref..." onkeyup="handleInvoiceSearch(event)">
+            </div>
+
+          </div>
+
+          <div class="dashboard-panel" style="padding: 0; overflow: hidden;">
+            <div class="table-responsive">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Booking / Ref</th>
+                    <th>Issue Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Payment Status</th>
+                    <th style="text-align: right;">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="invoicesTableBody">
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="dashboard-view" id="view-profile">
+          
+          <div class="view-header">
+            <span class="view-kicker">ACCOUNT MANAGEMENT</span>
+            <h2 class="view-title">Profile &amp; Settings</h2>
+            <p class="view-subtitle">Manage your personal credentials, contact details, security credentials, and workspace preferences.</p>
+          </div>
+
+          <div class="profile-cards-grid">
+            
+            <div class="dashboard-panel profile-panel">
+              <div class="panel-header">
+                <div class="panel-title-wrap">
+                  <h3 class="panel-title">Personal Information</h3>
+                  <p class="panel-subtitle">Update your personal contact details and public member identity.</p>
+                </div>
+              </div>
+
+              <form id="profileInfoForm" onsubmit="handleProfileUpdate(event)">
+                
+                <div class="profile-avatar-row">
+                  <div class="avatar-preview-wrap">
+                    <img src="assets/user-1.jpg" alt="Profile Photo" id="profileFormAvatar" onerror="this.onerror=null;this.src='asstes/user-1.jpg';">
+                  </div>
+                  <div class="avatar-controls">
+                    <strong>Member Profile Photo</strong>
+                    <p>JPG or PNG under 2MB. Displayed on member access list.</p>
+                    <div class="avatar-buttons">
+                      <button type="button" class="btn-secondary btn-sm" onclick="cycleAvatar()">Change Avatar</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="profFullName" class="form-label">Full Name <span class="required-star">*</span></label>
+                    <input type="text" id="profFullName" class="form-input" required value="Alex Morgan">
+                  </div>
+                  <div class="form-group">
+                    <label for="profEmail" class="form-label">Email Address <span class="required-star">*</span></label>
+                    <input type="email" id="profEmail" class="form-input" required value="alex.morgan@workspace.com">
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="profPhone" class="form-label">Phone Number</label>
+                    <input type="tel" id="profPhone" class="form-input" value="+1 (555) 389-2041">
+                  </div>
+                  <div class="form-group">
+                    <label for="profCompany" class="form-label">Company / Studio</label>
+                    <input type="text" id="profCompany" class="form-input" value="Morgan Design Studio">
+                  </div>
+                </div>
+
+                <div class="form-actions-right">
+                  <button type="submit" class="btn-primary">
+                    <span>Save Profile Changes</span>
+                  </button>
+                </div>
+
+              </form>
+            </div>
+
+            <div class="dashboard-panel profile-panel">
+              <div class="panel-header">
+                <div class="panel-title-wrap">
+                  <h3 class="panel-title">Security &amp; Password</h3>
+                  <p class="panel-subtitle">Ensure your account remains safe with strong credentials.</p>
+                </div>
+              </div>
+
+              <form id="profileSecurityForm" onsubmit="handlePasswordUpdate(event)">
+                
+                <div class="form-group">
+                  <label for="currentPassword" class="form-label">Current Password</label>
+                  <input type="password" id="currentPassword" class="form-input" placeholder="••••••••••••" required>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="newPassword" class="form-label">New Password</label>
+                    <input type="password" id="newPassword" class="form-input" placeholder="Minimum 8 characters" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" class="form-input" placeholder="Repeat new password" required>
+                  </div>
+                </div>
+
+                <div class="form-actions-right">
+                  <button type="submit" class="btn-primary">
+                    <span>Update Password</span>
+                  </button>
+                </div>
+
+              </form>
+
+              <div class="security-meta-box">
+                <div class="sm-item">
+                  <div class="sm-dot active"></div>
+                  <div>
+                    <strong>Two-Factor Authentication (2FA)</strong>
+                    <p>Protect your account with SMS or Authenticator verification during sign-in.</p>
+                  </div>
+                  <button class="btn-secondary btn-sm" onclick="showToast('2FA settings updated for your account', 'success')">Configure</button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="dashboard-panel profile-panel" style="grid-column: 1 / -1;">
+              <div class="panel-header">
+                <div class="panel-title-wrap">
+                  <h3 class="panel-title">Preferences &amp; Notifications</h3>
+                  <p class="panel-subtitle">Customize theme, orientation, and reservation notifications.</p>
+                </div>
+              </div>
+
+              <div class="preferences-grid">
+                
+                <div class="pref-item">
+                  <div class="pref-meta">
+                    <strong>Theme Interface</strong>
+                    <p>Toggle between Light Mode (#F7F5F0) and Dark Mode (Deep Charcoal).</p>
+                  </div>
+                  <button class="btn-secondary btn-sm" onclick="toggleTheme()">Switch Theme</button>
+                </div>
+
+                <div class="pref-item">
+                  <div class="pref-meta">
+                    <strong>Text Direction (RTL / LTR)</strong>
+                    <p>Switch layout direction between Left-to-Right and Right-to-Left.</p>
+                  </div>
+                  <button class="btn-secondary btn-sm" onclick="toggleDirection()">Switch RTL/LTR</button>
+                </div>
+
+                <div class="pref-item">
+                  <div class="pref-meta">
+                    <strong>Booking Email Confirmations</strong>
+                    <p>Receive immediate PDF invoices and booking pass receipts via email.</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked onchange="showToast('Notification preference saved', 'info')">
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+
+                <div class="pref-item">
+                  <div class="pref-meta">
+                    <strong>SMS Reminder 1-Hour Before Session</strong>
+                    <p>Receive a text alert with your seat PIN and check-in door instructions.</p>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" checked onchange="showToast('Notification preference saved', 'info')">
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <div id="bookingDetailsModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card modal-pass-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Workspace Digital Pass</h3>
+        <button class="modal-close-btn" onclick="closeModal('bookingDetailsModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="bookingDetailsModalBody">
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('bookingDetailsModal')">Close Pass</button>
+        <button class="btn-primary" onclick="printPass()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Print Pass</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="rescheduleModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Reschedule Reservation</h3>
+        <button class="modal-close-btn" onclick="closeModal('rescheduleModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro" id="rescheduleModalIntro">Select a new date and available time slot for your booking.</p>
+        
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label for="rescheduleDateInput" class="form-label">New Booking Date</label>
+          <input type="date" id="rescheduleDateInput" class="form-input" required onchange="handleRescheduleDateChange()">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label class="form-label">Select Available Time Slot</label>
+          <div class="time-slots-grid" id="rescheduleSlotsGrid">
+          </div>
+        </div>
+
+        <input type="hidden" id="rescheduleBookingId" value="">
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('rescheduleModal')">Cancel</button>
+        <button class="btn-primary" id="confirmRescheduleBtn" onclick="confirmReschedule()">
+          <span>Confirm Reschedule</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="cancelBookingModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Cancel Reservation</h3>
+        <button class="modal-close-btn" onclick="closeModal('cancelBookingModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="cancelBookingPrompt" style="margin-bottom: 16px;">
+          Are you sure you want to cancel booking <strong>BK-102</strong>?
+        </p>
+
+        <div class="cancellation-policy-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <strong>Applicable Cancellation Terms</strong>
+            <p>Because your cancellation request is more than 2 hours before the session start time, a full 100% credit will be returned to your account.</p>
+          </div>
+        </div>
+
+        <input type="hidden" id="cancelTargetBookingId" value="">
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('cancelBookingModal')">Keep Booking</button>
+        <button class="btn-primary" style="background:#b91c1c; border-color:#b91c1c;" onclick="confirmCancelBooking()">
+          <span>Confirm Cancellation</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="invoiceModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card modal-invoice-card">
+      <div class="modal-header modal-no-print">
+        <h3 class="modal-title">Tax Invoice &amp; Receipt</h3>
+        <button class="modal-close-btn" onclick="closeModal('invoiceModal')">&times;</button>
+      </div>
+
+      <div class="modal-body invoice-printable-area" id="invoicePrintArea">
+      </div>
+
+      <div class="modal-footer modal-no-print">
+        <button class="btn-secondary" onclick="closeModal('invoiceModal')">Close</button>
+        <button class="btn-primary" onclick="downloadInvoicePDF()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Print / Save PDF</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="membershipModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="membershipModalTitle">Update Membership Plan</h3>
+        <button class="modal-close-btn" onclick="closeModal('membershipModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="membershipModalBody">
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('membershipModal')">Cancel</button>
+        <button class="btn-primary" id="confirmPlanBtn" onclick="confirmPlanUpdate()">
+          <span>Confirm Plan Change</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="supportModal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Campus Member Support</h3>
+        <button class="modal-close-btn" onclick="closeModal('supportModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="support-contact-strip">
+          <div class="sc-item">
+            <strong>Front Desk Phone:</strong>
+            <a href="tel:+18008499675">+1 (800) 849-WORK (9675)</a>
+          </div>
+          <div class="sc-item">
+            <strong>Direct Concierge:</strong>
+            <a href="mailto:concierge@workspacehub.com">concierge@workspacehub.com</a>
+          </div>
+          <div class="sc-item">
+            <strong>Campus Location:</strong>
+            <span>742 Innovation Way, Suite 400</span>
+          </div>
+        </div>
+
+        <h4 style="margin: 20px 0 12px; font-size: 16px;">Frequently Asked Questions</h4>
+        <div class="faq-accordion-simple">
+          <details>
+            <summary>How do I connect to the gigabit member WiFi?</summary>
+            <p>Connect to the <code>WorkspaceHub-Member-Secure</code> network using your registered account email and your 4-digit check-in access PIN.</p>
+          </details>
+          <details>
+            <summary>Can I bring visitors to my meeting room booking?</summary>
+            <p>Yes! Up to your meeting room's capacity. Check in at the front desk concierge to receive temporary visitor lanyards.</p>
+          </details>
+          <details>
+            <summary>How do cancellations and refunds work?</summary>
+            <p>Any reservation cancelled at least 2 hours before the start time is automatically refunded or credited to your balance.</p>
+          </details>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-primary btn-full-width" onclick="closeModal('supportModal')">Got It</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

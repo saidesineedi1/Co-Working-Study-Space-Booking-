@@ -1,0 +1,47 @@
+﻿@import url('login.css');
+
+.signup-card {
+  max-width: 420px;
+  padding: 16px 26px;
+}
+
+.signup-card .auth-brand-center {
+  margin-bottom: 6px;
+}
+
+.signup-card .auth-brand-logo-mark {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.signup-card .auth-card-title {
+  margin: 6px 0 10px;
+  font-size: 0.92rem;
+}
+
+.signup-card .auth-form {
+  gap: 7px;
+}
+
+.signup-card .auth-input {
+  height: 35px;
+  font-size: 0.82rem;
+}
+
+.signup-card .auth-submit-btn {
+  height: 38px;
+  margin-top: 2px;
+}
+
+.signup-card .auth-divider-line {
+  margin: 8px 0 8px;
+}
+
+.signup-card .auth-social-btn {
+  height: 34px;
+}
+
+.signup-card .auth-bottom-switch {
+  margin-top: 8px;
+}

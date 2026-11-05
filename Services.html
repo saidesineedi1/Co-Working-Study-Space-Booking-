@@ -1,0 +1,896 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Hub | Services – Workspace Solutions Designed Around You</title>
+  <meta name="description" content="Discover flexible desks, private cabins, meeting rooms, dedicated workstations, study zones, and virtual office services.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Services.css">
+</head>
+<body class="services-page">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="brand-identity">
+        <div class="brand-logo-mark">
+          <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-name-wrap">
+          <span class="brand-title">WORKSPACE HUB</span>
+          <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Home</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <div>
+                  <strong>Home 1</strong>
+                  <p>Premium Poster Redesign</p>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item">
+                <div>
+                  <strong>Home 2</strong>
+                  <p>Editorial Grid Experience</p>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Services.html" class="nav-link active">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Pricing.html" class="nav-link">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link nav-dashboard-link">
+              <span>Dashboard</span>
+              <span class="pulse-indicator"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="rtlToggleBtn" class="control-btn" title="Toggle RTL/LTR" aria-label="Toggle text direction">
+          <span class="btn-text-badge">LTR</span>
+        </button>
+
+        <button id="themeToggleBtn" class="control-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="login.html" id="headerLoginBtn" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span id="loginBtnText">Login</span>
+        </a>
+
+        <button id="mobileMenuToggle" class="mobile-toggle-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <div class="brand-identity">
+          <div class="brand-logo-mark">
+            <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-name-wrap">
+            <span class="brand-title">WORKSPACE HUB</span>
+            <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-link" onclick="closeMobileDrawer()">Home 1 (Poster Redesign)</a></li>
+          <li><a href="home2.html" class="mobile-link" onclick="closeMobileDrawer()">Home 2 (Editorial Grid)</a></li>
+          <li><a href="about.html" class="mobile-link" onclick="closeMobileDrawer()">About Us</a></li>
+          <li><a href="Services.html" class="mobile-link active" onclick="closeMobileDrawer()">Services</a></li>
+          <li><a href="Pricing.html" class="mobile-link" onclick="closeMobileDrawer()">Pricing &amp; Plans</a></li>
+          <li><a href="contact.html" class="mobile-link" onclick="closeMobileDrawer()">Contact</a></li>
+          <li>
+            <a href="dashboard.html" class="mobile-link mobile-dashboard-btn" onclick="closeMobileDrawer()">
+              Member Dashboard
+            </a>
+          </li>
+        </ul>
+        <div class="drawer-footer-actions">
+          <button class="btn-primary btn-full-width" onclick="closeMobileDrawer()">
+            Login to Member Portal
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="srv-hero-section" id="services-hero">
+      <div class="container srv-hero-container">
+        
+        <div class="srv-hero-visual">
+          <div class="srv-hero-cards-grid">
+            <div class="srv-hero-img-card card-tall">
+              <img src="assets/hero-coworking.jpg" alt="Premium Modern Coworking Environment" class="srv-hero-img" onerror="this.onerror=null;this.src='asstes/hero-coworking.jpg';">
+              <div class="srv-hero-card-overlay"></div>
+              <div class="srv-floating-pill">
+                <div class="srv-pulse-dot"></div>
+                <span>Instant Desk Access</span>
+              </div>
+              <div class="srv-hero-card-caption">
+                <span>OPEN STUDIO</span>
+                <strong>Collaborative Hot Desks</strong>
+              </div>
+            </div>
+
+            <div class="srv-hero-img-card">
+              <img src="assets/private-cabin.jpg" alt="Private Soundproof Office Cabin" class="srv-hero-img" onerror="this.onerror=null;this.src='asstes/private-cabin.jpg';">
+              <div class="srv-hero-card-overlay"></div>
+              <div class="srv-hero-card-caption">
+                <span>QUIET SANCTUARY</span>
+                <strong>Private Cabins &amp; Pods</strong>
+              </div>
+            </div>
+
+            <div class="srv-hero-img-card">
+              <img src="assets/meeting-room.jpg" alt="Executive Conference & Meeting Suite" class="srv-hero-img" onerror="this.onerror=null;this.src='asstes/meeting-room.jpg';">
+              <div class="srv-hero-card-overlay"></div>
+              <div class="srv-hero-card-caption">
+                <span>BOARDROOM SUITE</span>
+                <strong>4K Meeting Rooms</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="srv-hero-text">
+          <div class="srv-hero-kicker">
+            <span class="srv-kicker-dot"></span>
+            <span>OUR SERVICES</span>
+          </div>
+
+          <h1 class="srv-hero-title">
+            Workspace Solutions <span class="srv-highlight">Designed Around</span> <span class="text-terracotta">You.</span>
+          </h1>
+
+          <p class="srv-hero-desc">
+            From flexible desks and private offices to peaceful study zones and professional meeting rooms, discover workspace solutions that support the way you work and learn.
+          </p>
+
+          <div class="srv-hero-cta-group">
+            <a href="#services-cards" class="btn-primary">
+              <span>Explore Our Services</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <button class="btn-secondary" onclick="openBookingModal('all')">
+              <span>Book a Space</span>
+            </button>
+          </div>
+
+          <div class="srv-hero-highlights-strip">
+            <div class="srv-highlight-item">
+              <div class="srv-feat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              </div>
+              <span>Flexible Workspace Options</span>
+            </div>
+
+            <div class="srv-highlight-item">
+              <div class="srv-feat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <span>Easy Online Booking</span>
+            </div>
+
+            <div class="srv-highlight-item">
+              <div class="srv-feat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <span>Comfortable Work Environment</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="srv-section-cards" id="services-cards">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-kicker">OUR OFFERINGS</div>
+          <h2 class="section-title">Explore Our Workspace Services</h2>
+          <p class="section-subtitle">
+            Find the right environment for your productivity, collaboration and learning needs.
+          </p>
+        </div>
+
+        <div class="srv-cards-grid">
+          
+          <article class="srv-card">
+            <div class="srv-card-img-wrap">
+              <img src="assets/open-desk.jpg" alt="Open Desk Workspace" class="srv-card-img" onerror="this.onerror=null;this.src='asstes/open-desk.jpg';">
+              <span class="srv-badge">Flexible</span>
+              <div class="srv-card-icon-floater">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+            </div>
+            <div class="srv-card-body">
+              <h3 class="srv-card-title">Open Desk Workspace</h3>
+              <p class="srv-card-desc">
+                Flexible shared workstations designed for freelancers, remote professionals and students.
+              </p>
+              <ul class="srv-features-list">
+                <li><span class="srv-check">✓</span> Flexible seating options</li>
+                <li><span class="srv-check">✓</span> High-speed 1 Gbps Wi-Fi</li>
+                <li><span class="srv-check">✓</span> Shared workspace atmosphere</li>
+                <li><span class="srv-check">✓</span> Comfortable ergonomic seating</li>
+              </ul>
+              <div class="srv-card-action">
+                <a href="Services Details.html?service=open-desk" class="btn-primary btn-full-width">
+                  <span>Explore Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-card-img-wrap">
+              <img src="assets/private-cabin.jpg" alt="Private Office Cabins" class="srv-card-img" onerror="this.onerror=null;this.src='asstes/private-cabin.jpg';">
+              <span class="srv-badge">High Privacy</span>
+              <div class="srv-card-icon-floater">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+            </div>
+            <div class="srv-card-body">
+              <h3 class="srv-card-title">Private Office Cabins</h3>
+              <p class="srv-card-desc">
+                Private and comfortable office cabins for individuals, startups and teams needing quiet isolation.
+              </p>
+              <ul class="srv-features-list">
+                <li><span class="srv-check">✓</span> Private acoustic soundproof space</li>
+                <li><span class="srv-check">✓</span> Professional collaborative environment</li>
+                <li><span class="srv-check">✓</span> Comfortable executive seating</li>
+                <li><span class="srv-check">✓</span> Secure biometric door access</li>
+              </ul>
+              <div class="srv-card-action">
+                <a href="Services Details.html?service=private-cabin" class="btn-primary btn-full-width">
+                  <span>Explore Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-card-img-wrap">
+              <img src="assets/meeting-room.jpg" alt="Meeting Rooms" class="srv-card-img" onerror="this.onerror=null;this.src='asstes/meeting-room.jpg';">
+              <span class="srv-badge">Collaboration</span>
+              <div class="srv-card-icon-floater">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+            </div>
+            <div class="srv-card-body">
+              <h3 class="srv-card-title">Meeting Rooms</h3>
+              <p class="srv-card-desc">
+                Professional meeting spaces for discussions, presentations and team collaboration.
+              </p>
+              <ul class="srv-features-list">
+                <li><span class="srv-check">✓</span> Complete meeting presentation setup</li>
+                <li><span class="srv-check">✓</span> Ultra HD conference displays</li>
+                <li><span class="srv-check">✓</span> Comfortable executive seating for 6-12</li>
+                <li><span class="srv-check">✓</span> Beverage &amp; barista service</li>
+              </ul>
+              <div class="srv-card-action">
+                <a href="Services Details.html?service=meeting-room" class="btn-primary btn-full-width">
+                  <span>Explore Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-card-img-wrap">
+              <img src="assets/dedicated-desk.jpg" alt="Dedicated Desks" class="srv-card-img" onerror="this.onerror=null;this.src='asstes/dedicated-desk.jpg';">
+              <span class="srv-badge">Permanent Spot</span>
+              <div class="srv-card-icon-floater">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+              </div>
+            </div>
+            <div class="srv-card-body">
+              <h3 class="srv-card-title">Dedicated Desks</h3>
+              <p class="srv-card-desc">
+                Your own dedicated workstation in a productive and professional coworking environment.
+              </p>
+              <ul class="srv-features-list">
+                <li><span class="srv-check">✓</span> Personal workstation with locked storage</li>
+                <li><span class="srv-check">✓</span> Consistent desk available 24/7</li>
+                <li><span class="srv-check">✓</span> Reliable fiber optic internet</li>
+                <li><span class="srv-check">✓</span> Organized, distraction-free setting</li>
+              </ul>
+              <div class="srv-card-action">
+                <a href="Services Details.html?service=dedicated-desk" class="btn-primary btn-full-width">
+                  <span>Explore Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-card-img-wrap">
+              <img src="assets/study-zone.jpg" alt="Quiet Study Zones" class="srv-card-img" onerror="this.onerror=null;this.src='asstes/study-zone.jpg';">
+              <span class="srv-badge">Deep Study</span>
+              <div class="srv-card-icon-floater">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
+            <div class="srv-card-body">
+              <h3 class="srv-card-title">Study Zones</h3>
+              <p class="srv-card-desc">
+                Peaceful study environments designed for students and researchers who need absolute concentration.
+              </p>
+              <ul class="srv-features-list">
+                <li><span class="srv-check">✓</span> Quiet and silent surroundings</li>
+                <li><span class="srv-check">✓</span> Focus-friendly ergonomic chairs</li>
+                <li><span class="srv-check">✓</span> Study-friendly lighting and ambience</li>
+                <li><span class="srv-check">✓</span> Reliable Wi-Fi &amp; laptop power outlets</li>
+              </ul>
+              <div class="srv-card-action">
+                <a href="Services Details.html?service=study-zone" class="btn-primary btn-full-width">
+                  <span>Explore Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-card-img-wrap">
+              <img src="assets/virtual-office.jpg" alt="Virtual Office Services" class="srv-card-img" onerror="this.onerror=null;this.src='asstes/virtual-office.jpg';">
+              <span class="srv-badge">Business Presence</span>
+              <div class="srv-card-icon-floater">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+            </div>
+            <div class="srv-card-body">
+              <h3 class="srv-card-title">Virtual Office Services</h3>
+              <p class="srv-card-desc">
+                Flexible professional business presence, address registration and office support for modern enterprises.
+              </p>
+              <ul class="srv-features-list">
+                <li><span class="srv-check">✓</span> Prestigious business address</li>
+                <li><span class="srv-check">✓</span> Mail handling and package receiving</li>
+                <li><span class="srv-check">✓</span> Dedicated phone line answering</li>
+                <li><span class="srv-check">✓</span> Monthly meeting room credit allowance</li>
+              </ul>
+              <div class="srv-card-action">
+                <a href="Services Details.html?service=virtual-office" class="btn-primary btn-full-width">
+                  <span>Explore Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="srv-section-faq" id="services-faq">
+      <div class="container">
+        
+        <div class="srv-faq-layout">
+          
+          <div class="srv-faq-intro-col">
+            <div class="section-kicker">QUESTIONS &amp; ANSWERS</div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="srv-faq-lead">
+              Everything you need to know about our workspaces, reservations, and membership benefits.
+            </p>
+
+            <div class="srv-faq-visual-box">
+              <img src="assets/faq-workspace.jpg" alt="Support Desk Concierge" class="srv-faq-img" onerror="this.onerror=null;this.src='asstes/faq-workspace.jpg';">
+              <div class="srv-faq-img-overlay">
+                <strong>Still have questions?</strong>
+                <p>Our workspace concierge is on site daily to help you find the right fit.</p>
+                <a href="contact.html" class="btn-primary btn-sm">Contact Support</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="srv-faq-accordion-col">
+            <div class="faq-accordion" id="servicesAccordion">
+              
+              <div class="faq-item active">
+                <button class="faq-question-btn" aria-expanded="true" aria-controls="faq-ans-1">
+                  <span>What types of workspaces do you offer?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-1">
+                  <p>
+                    We offer flexible Open Desks for hot-desking, Private Office Cabins for individuals and small teams, fully equipped Meeting Rooms, Dedicated Desks with lockable pedestals, Silent Study Zones for academic focus, and Virtual Office business packages.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-2">
+                  <span>Can I book a workspace for a few hours?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-2">
+                  <p>
+                    Yes! All our open desks and meeting suites can be reserved on demand by the hour, half-day (4 hours), or full day pass, without long-term commitments.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-3">
+                  <span>How do I reserve a private cabin?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-3">
+                  <p>
+                    You can click "Book a Space" on our website, select the Private Cabin category, choose your preferred date and duration, and confirm your reservation with an instant digital keycard code sent to your phone.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-4">
+                  <span>Are meeting rooms available for teams?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-4">
+                  <p>
+                    Yes, our conference suites accommodate teams from 6 to 12 people and come equipped with 75" 4K presentation displays, Neat Bar video conference cameras, and complimentary espresso coffee.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-5">
+                  <span>Can I change or cancel my booking?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-5">
+                  <p>
+                    Reservations can be freely rescheduled or cancelled directly inside your Member Dashboard up to 2 hours before your scheduled arrival time without any cancellation penalty.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-6">
+                  <span>Do you offer monthly membership plans?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-6">
+                  <p>
+                    Yes, our flexible memberships include monthly Dedicated Desk Pro and Private Cabin memberships which include 24/7 keycard access, meeting room hours, high-speed fiber, and mail handling.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="srv-section-cta">
+      <div class="container">
+        
+        <div class="srv-closing-card">
+          <div class="srv-cta-bg-layer"></div>
+          <div class="srv-cta-terracotta-frame"></div>
+          
+          <div class="srv-cta-grid">
+            <div class="srv-cta-content">
+              <span class="srv-cta-pill">FLEXIBLE &amp; READY</span>
+              <h2 class="srv-cta-heading">Find the Workspace That Works for You.</h2>
+              <p class="srv-cta-description">
+                Explore our flexible workspace solutions and choose the right environment for your next productive day.
+              </p>
+              
+              <div class="srv-cta-buttons">
+                <a href="#services-cards" class="btn-primary">
+                  <span>Explore Spaces</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <button class="btn-secondary srv-cta-outline-btn" onclick="openBookingModal('all')">
+                  <span>Book Your Space</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="srv-cta-visual">
+              <div class="srv-cta-circle-wrap">
+                <div class="srv-cta-circle-ring"></div>
+                <div class="srv-cta-circle-img-box">
+                  <img src="assets/gallery-lounge.jpg" alt="Modern Collaborative Workspace" class="srv-cta-circle-img" onerror="this.onerror=null;this.src='asstes/gallery-lounge.jpg';">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer-contact">
+    <div class="container">
+
+      <div class="footer-columns-grid">
+
+        <div class="footer-col col-brand">
+          <div class="brand-identity footer-brand">
+            <div class="brand-logo-mark">
+              <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-name-wrap">
+              <span class="brand-title light-text">WORKSPACE HUB</span>
+              <span class="brand-subtitle light-text">CO-WORK &amp; STUDY</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            High-performance co-working and solitary study sanctuary engineered for makers, founders, and academic
+            achievers.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="Services.html">Services Overview</a></li>
+            <li><a href="Services Details.html?service=open-desk">Open Desks</a></li>
+            <li><a href="Services Details.html?service=private-cabin">Private Cabins</a></li>
+            <li><a href="Services Details.html?service=meeting-room">Meeting Rooms</a></li>
+            <li><a href="Services Details.html?service=dedicated-desk">Dedicated Desks</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="Pricing.html">Pricing Plans</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="#hero"
+                onclick="openGenericModal('404 Page Preview', 'The page you are looking for has been moved or workspace expired. Click below to return home.')">404
+                Page</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>420 Innovation Way, Suite 500, Tech Quarter</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>hello@workspacehub.com</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 849-WORK</span>
+            </li>
+          </ul>
+          <div class="footer-help-links">
+            <a href="#hero"
+              onclick="openGenericModal('Help & Support', 'Our concierge support team is available on site Mon-Sat 08:00 - 20:00 and 24/7 via member chat.')">Help
+              &amp; Support</a>
+            <span class="sep">•</span>
+            <a href="#hero"
+              onclick="openGenericModal('Frequently Asked Questions', 'Q: Are day passes available?<br>A: Yes, daily access starts from $25.<br><br>Q: Is high-speed internet included?<br>A: Yes, 1 Gbps fiber on all tiers.')">FAQ</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; 2026 Workspace Hub Co-Working &amp; Study Space Booking. All rights reserved.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#hero"
+            onclick="openGenericModal('Privacy Policy', 'Your personal and biometric verification data is strictly encrypted and never shared.')">Privacy
+            Policy</a>
+          <a href="#hero"
+            onclick="openGenericModal('Terms & Conditions', 'Bookings can be rescheduled up to 2 hours before scheduled slot.')">Terms
+            &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="dashboardModal" aria-hidden="true">
+    <div class="modal-dialog dashboard-dialog" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
+      <div class="dashboard-header-bar">
+        <div>
+          <span class="user-greeting-pill">AUTHENTICATED MEMBER</span>
+          <h2 id="dashTitle" class="dashboard-main-heading">Welcome Back, Alex Morgan</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeDashboardModal()" aria-label="Close dashboard">&times;</button>
+      </div>
+
+      <div class="dashboard-body-grid">
+        <div class="dash-card live-status-card">
+          <h4 class="dash-card-title">Live Workspace Availability</h4>
+          <div class="dash-capacity-grid">
+            <div class="capacity-box">
+              <span class="capacity-val text-aqua">12</span>
+              <span class="capacity-label">Open Desks Left</span>
+            </div>
+            <div class="capacity-box">
+              <span class="capacity-val text-terracotta">2</span>
+              <span class="capacity-label">Private Cabins Left</span>
+            </div>
+            <div class="capacity-box">
+              <span class="capacity-val">3</span>
+              <span class="capacity-label">Meeting Rooms Free</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card membership-status-card">
+          <div class="flex-between">
+            <h4 class="dash-card-title">Current Membership</h4>
+            <span class="status-badge-active">Active</span>
+          </div>
+          <div class="membership-info-box">
+            <div class="plan-name-tag">PRO DEDICATED DESK</div>
+            <p class="plan-renew">Renews on: <strong>Nov 28, 2026</strong> • $180/mo</p>
+            <div class="credits-bar-wrap">
+              <div class="credits-label">
+                <span>Meeting Room Credits</span>
+                <span>8 / 10 Hours Used</span>
+              </div>
+              <div class="credits-progress"><div class="progress-fill" style="width: 80%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card full-col-card">
+          <div class="reservations-header">
+            <h4 class="dash-card-title">Your Reservations</h4>
+            <button class="btn-primary btn-sm" onclick="closeDashboardModal(); openBookingModal('all');">
+              + New Reservation
+            </button>
+          </div>
+          
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Space Type</th>
+                  <th>Date &amp; Time</th>
+                  <th>Seat / Room #</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="bookingsTableBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dash-card full-col-card">
+          <h4 class="dash-card-title">Invoices &amp; Receipts</h4>
+          <div class="invoices-list">
+            <div class="invoice-item">
+              <div>
+                <strong>Invoice #NX-2026-1049</strong>
+                <p>Monthly Dedicated Desk — Oct 28, 2026</p>
+              </div>
+              <div class="invoice-actions">
+                <span class="invoice-price">$180.00</span>
+                <button class="btn-secondary btn-sm" onclick="downloadInvoiceMock('NX-2026-1049')">
+                  Download PDF
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog booking-dialog" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close booking">&times;</button>
+      
+      <div class="booking-dialog-header">
+        <span class="booking-step-badge">INSTANT RESERVATION</span>
+        <h3 id="bookingTitle" class="modal-title">Book Your Workspace</h3>
+        <p class="modal-sub">Select your space, schedule your time, and lock in your seat immediately.</p>
+      </div>
+
+      <form id="spaceBookingForm" onsubmit="handleConfirmBooking(event)">
+        <div class="booking-section">
+          <label class="form-label">1. Choose Space Category</label>
+          <div class="space-type-selector">
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="open-desk" checked onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Open Desk</strong>
+                <span>$5 / hour</span>
+              </div>
+            </label>
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="private-cabin" onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Private Cabin</strong>
+                <span>$18 / hour</span>
+              </div>
+            </label>
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="meeting-room" onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Meeting Room</strong>
+                <span>$35 / hour</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="booking-section form-row-2">
+          <div class="form-group">
+            <label for="bookingDate" class="form-label">2. Booking Date</label>
+            <input type="date" id="bookingDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="bookingTime" class="form-label">3. Start Time Slot</label>
+            <select id="bookingTime" class="form-input" required>
+              <option value="09:00 AM">09:00 AM - Morning Slot</option>
+              <option value="11:00 AM">11:00 AM - Midday Slot</option>
+              <option value="02:00 PM">02:00 PM - Afternoon Slot</option>
+              <option value="04:00 PM">04:00 PM - Evening Slot</option>
+              <option value="06:00 PM">06:00 PM - Night Owl Slot</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-section">
+          <label for="bookingDuration" class="form-label">4. Duration</label>
+          <select id="bookingDuration" class="form-input" onchange="updateBookingPricing()">
+            <option value="1">1 Hour</option>
+            <option value="2">2 Hours</option>
+            <option value="4" selected>4 Hours (Half Day)</option>
+            <option value="8">8 Hours (Full Day Pass)</option>
+          </select>
+        </div>
+
+        <div class="booking-summary-box">
+          <div class="summary-line">
+            <span>Selected Space:</span>
+            <strong id="summarySpaceName">Open Desk</strong>
+          </div>
+          <div class="summary-line">
+            <span>Calculated Total:</span>
+            <span class="summary-total-price" id="summaryPrice">$20.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full-width">
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="genericModal" aria-hidden="true">
+    <div class="modal-dialog generic-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeGenericModal()" aria-label="Close">&times;</button>
+      <h3 id="genericModalTitle" class="modal-title">Space Details</h3>
+      <div id="genericModalBody" class="modal-body-content"></div>
+      <div class="modal-footer-cta">
+        <button class="btn-primary" onclick="closeGenericModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="Services.js"></script>
+</body>
+</html>

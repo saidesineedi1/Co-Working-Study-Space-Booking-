@@ -1,0 +1,1236 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Hub | Premium Co-Working &amp; Study Space Booking</title>
+  <meta name="description"
+    content="Discover inspiring workspaces, peaceful study zones and flexible meeting rooms designed to help you achieve more every day.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="home1-page">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <a href="index.html" class="brand-identity">
+        <div class="brand-logo-mark">
+          <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-name-wrap">
+          <span class="brand-title">WORKSPACE HUB</span>
+          <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle active" aria-expanded="false">
+              <span>Home</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item current-page">
+                <span class="dropdown-badge">Current</span>
+                <div>
+                  <strong>Home 1</strong>
+                  <p>Premium Poster Redesign</p>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item">
+                <div>
+                  <strong>Home 2</strong>
+                  <p>Editorial Grid Experience</p>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Services.html" class="nav-link">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Pricing.html" class="nav-link">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link nav-dashboard-link">
+              <span>Dashboard</span>
+              <span class="pulse-indicator"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="rtlToggleBtn" class="control-btn" title="Toggle RTL/LTR" aria-label="Toggle text direction">
+          <span class="btn-text-badge">LTR</span>
+        </button>
+
+        <button id="themeToggleBtn" class="control-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+
+        <a href="login.html" id="headerLoginBtn" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+            <polyline points="10 17 15 12 10 7" />
+            <line x1="15" y1="12" x2="3" y2="12" />
+          </svg>
+          <span id="loginBtnText">Login</span>
+        </a>
+
+        <button id="mobileMenuToggle" class="mobile-toggle-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <div class="brand-identity">
+          <div class="brand-logo-mark">
+            <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-name-wrap">
+            <span class="brand-title">WORKSPACE HUB</span>
+            <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-link active" onclick="closeMobileDrawer()">Home 1 (Current)</a></li>
+          <li><a href="home2.html" class="mobile-link" onclick="closeMobileDrawer()">Home 2 (Editorial Grid)</a></li>
+          <li><a href="about.html" class="mobile-link" onclick="closeMobileDrawer()">About Us</a></li>
+          <li><a href="Services.html" class="mobile-link" onclick="closeMobileDrawer()">Services</a></li>
+          <li><a href="Pricing.html" class="mobile-link" onclick="closeMobileDrawer()">Pricing &amp; Plans</a></li>
+          <li><a href="contact.html" class="mobile-link" onclick="closeMobileDrawer()">Contact</a></li>
+          <li>
+            <a href="dashboard.html" class="mobile-link mobile-dashboard-btn" onclick="closeMobileDrawer()">
+              Member Dashboard
+            </a>
+          </li>
+        </ul>
+        <div class="drawer-footer-actions">
+          <button class="btn-primary btn-full-width" onclick="closeMobileDrawer()">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="section-hero" id="hero">
+      <div class="hero-angled-panel" aria-hidden="true"></div>
+
+      <div class="hero-pendant-lamps" aria-hidden="true">
+        <svg viewBox="0 0 220 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="55" y1="0" x2="55" y2="54" stroke="currentColor" stroke-width="2" />
+          <rect x="46" y="54" width="18" height="8" rx="2" fill="#FFFFFF" stroke="currentColor" stroke-width="1.8" />
+          <path d="M20 96C20 75 35 62 55 62C75 62 90 75 90 96H20Z" fill="#FFFFFF" stroke="currentColor"
+            stroke-width="1.8" />
+          <ellipse cx="55" cy="96" rx="35" ry="6" fill="#E8E1D5" stroke="currentColor" stroke-width="1.8" />
+          <path d="M46 99C46 104.5 50 109 55 109C60 109 64 104.5 64 99" fill="#D6A756" stroke="currentColor"
+            stroke-width="1.8" />
+
+          <line x1="155" y1="0" x2="155" y2="82" stroke="currentColor" stroke-width="2" />
+          <rect x="146" y="82" width="18" height="8" rx="2" fill="#FFFFFF" stroke="currentColor" stroke-width="1.8" />
+          <path d="M120 124C120 103 135 90 155 90C175 90 190 103 190 124H120Z" fill="#FFFFFF" stroke="currentColor"
+            stroke-width="1.8" />
+          <ellipse cx="155" cy="124" rx="35" ry="6" fill="#E8E1D5" stroke="currentColor" stroke-width="1.8" />
+          <path d="M146 127C146 132.5 150 137 155 137C160 137 164 132.5 164 127" fill="#D6A756" stroke="currentColor"
+            stroke-width="1.8" />
+        </svg>
+      </div>
+
+      <svg class="hero-brick-decor brick-top-left" viewBox="0 0 110 64" fill="none" aria-hidden="true">
+        <rect x="26" y="2" width="54" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="2" y="23" width="50" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="56" y="23" width="50" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="22" y="44" width="54" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+
+      <svg class="hero-brick-decor brick-bottom-left" viewBox="0 0 110 64" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="52" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="20" y="23" width="56" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="2" y="44" width="44" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="50" y="44" width="52" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+
+      <svg class="hero-brick-decor brick-mid-right" viewBox="0 0 110 64" fill="none" aria-hidden="true">
+        <rect x="26" y="2" width="54" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="2" y="23" width="50" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="56" y="23" width="50" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+        <rect x="22" y="44" width="54" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+
+      <div class="container hero-poster-container">
+        <div class="hero-poster-grid">
+
+          <div class="hero-illustration-col">
+            <div class="hero-cowork-illustration">
+              <svg viewBox="0 0 680 470" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Coworking Space Desk Illustration">
+                <path d="M36 392 H644 V412 C644 432 508 448 340 448 C172 448 36 432 36 412 Z" fill="#101B2D" />
+                <ellipse cx="340" cy="392" rx="304" ry="26" fill="#243B53" />
+
+                <rect x="100" y="195" width="96" height="74" rx="34" fill="#1C1917" />
+                <path d="M126 268 L104 392 M172 268 L192 392 M148 268 L148 392" stroke="#9A5B32" stroke-width="6"
+                  stroke-linecap="round" />
+                <line x1="114" y1="340" x2="182" y2="340" stroke="#9A5B32" stroke-width="5" stroke-linecap="round" />
+                <rect x="102" y="274" width="110" height="14" rx="7" fill="#2A2421" />
+
+                <rect x="295" y="198" width="96" height="72" rx="34" fill="#1C1917" />
+                <path d="M320 268 L298 392 M368 268 L390 392 M344 268 L344 392" stroke="#9A5B32" stroke-width="6"
+                  stroke-linecap="round" />
+                <line x1="308" y1="340" x2="378" y2="340" stroke="#9A5B32" stroke-width="5" stroke-linecap="round" />
+                <rect x="296" y="274" width="106" height="14" rx="7" fill="#2A2421" />
+
+                <path d="M168 102 C164 84 185 75 202 82 C214 78 222 92 216 106 Z" fill="#682D27" />
+                <rect x="182" y="114" width="16" height="22" rx="6" fill="#F09273" />
+                <path d="M174 96 C174 88 212 88 212 104 C212 122 204 130 193 130 C182 130 174 120 174 96 Z"
+                  fill="#F6A283" />
+                <circle cx="198" cy="106" r="2" fill="#241C19" />
+                <circle cx="209" cy="106" r="2" fill="#241C19" />
+                <path d="M204 108 L206 115 L201 116" stroke="#C86D51" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M197 121 Q202 124 206 121" stroke="#682D27" stroke-width="1.6" stroke-linecap="round" />
+
+                <path d="M138 140 C142 132 162 128 190 128 C218 128 232 134 238 144 L252 198 H126 L138 140 Z"
+                  fill="#5E6484" />
+                <path d="M178 128 L190 142 L202 128" fill="#464B66" />
+                <rect x="125" y="190" width="26" height="10" fill="#FFFFFF" />
+                <rect x="226" y="190" width="25" height="10" fill="#FFFFFF" />
+
+                <path d="M130 198 L142 225 L202 225" stroke="#F6A283" stroke-width="16" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M242 198 L254 222 L212 224" stroke="#F09273" stroke-width="14" stroke-linecap="round"
+                  stroke-linejoin="round" />
+
+                <path d="M132 252 H218 L248 356 L216 364 L172 278 H132 Z" fill="#638ECB" />
+                <path d="M138 256 H196 L312 332 L292 356 L160 282 Z" fill="#77A1DC" />
+                <rect x="284" y="328" width="16" height="32" transform="rotate(34 284 328)" fill="#527BB4" />
+                <rect x="212" y="352" width="34" height="12" rx="3" fill="#4E75AB" />
+
+                <path d="M222 364 L222 384 L274 396 C278 390 272 380 258 374 L238 364 Z" fill="#1C1917" />
+                <line x1="221" y1="386" x2="273" y2="398" stroke="#FFFFFF" stroke-width="3.5" />
+                <path d="M312 346 L332 326 C340 330 344 342 336 350 L296 382 L284 368 Z" fill="#1C1917" />
+                <line x1="296" y1="384" x2="338" y2="351" stroke="#FFFFFF" stroke-width="3.5" />
+
+                <path
+                  d="M352 92 C360 72 396 72 408 90 C422 108 428 136 420 148 C406 154 342 154 334 142 C328 128 340 106 352 92 Z"
+                  fill="#F9BE6E" />
+                <rect x="372" y="122" width="14" height="20" rx="5" fill="#F49777" />
+                <path d="M364 102 C364 90 398 90 398 106 C398 124 390 132 381 132 C370 132 364 122 364 102 Z"
+                  fill="#FCA88A" />
+                <path d="M360 98 C368 84 392 84 402 102 C392 98 384 94 376 102 C368 108 362 106 360 98 Z"
+                  fill="#FBD08D" />
+                <circle cx="378" cy="111" r="1.8" fill="#241C19" />
+                <circle cx="390" cy="111" r="1.8" fill="#241C19" />
+                <path d="M380 122 Q384 125 388 122" stroke="#C85A44" stroke-width="1.6" stroke-linecap="round" />
+
+                <path d="M336 146 C344 138 362 135 380 135 C398 135 414 139 422 148 L434 198 H324 L336 146 Z"
+                  fill="#FFFFFF" />
+                <path d="M368 135 L380 152 L392 135" stroke="#DCE4EE" stroke-width="2" fill="none" />
+
+                <path d="M328 198 L334 226 L388 226" stroke="#FCA88A" stroke-width="14" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M426 198 L438 224 L404 224" stroke="#F49777" stroke-width="13" stroke-linecap="round"
+                  stroke-linejoin="round" />
+
+                <path d="M334 236 H422 L432 296 C404 304 352 304 328 294 Z" fill="#EC6853" />
+                <path d="M384 268 L412 268 L398 378 L382 378 Z" fill="#F28B6D" />
+                <path d="M366 262 L394 262 L364 368 L348 366 Z" fill="#FCA88A" />
+                <path d="M346 364 L364 366 L356 388 C346 390 340 382 346 364 Z" fill="#FFFFFF" />
+                <path d="M382 374 L398 376 L402 396 C390 398 380 390 382 374 Z" fill="#FFFFFF" />
+
+                <path d="M214 230 L262 230 L278 182 L230 182 Z" fill="#FFFFFF" stroke="#243B53" stroke-width="1.6" />
+                <line x1="214" y1="230" x2="230" y2="182" stroke="#1C1917" stroke-width="3" />
+                <rect x="180" y="227" width="84" height="4" rx="2" fill="#243B53" />
+
+                <path d="M276 212 H298 L294 231 H280 Z" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="1.2" />
+                <path d="M287 212 C282 198 274 190 276 182 C282 186 286 198 287 212 Z" fill="#3B7A75" />
+                <path d="M287 212 C287 194 289 180 293 174 C296 184 293 198 287 212 Z" fill="#2A5C58" />
+                <path d="M287 212 C294 200 302 194 304 186 C296 188 291 198 287 212 Z" fill="#3B7A75" />
+
+                <path d="M402 230 L452 230 L468 182 L418 182 Z" fill="#FFFFFF" stroke="#243B53" stroke-width="1.6" />
+                <line x1="402" y1="230" x2="418" y2="182" stroke="#1C1917" stroke-width="3" />
+                <rect x="368" y="227" width="86" height="4" rx="2" fill="#243B53" />
+
+                <path d="M498 212 H520 L516 231 H502 Z" fill="#FFFFFF" stroke="#DCE4EE" stroke-width="1.2" />
+                <path d="M509 212 C504 198 496 190 498 182 C504 186 508 198 509 212 Z" fill="#3B7A75" />
+                <path d="M509 212 C509 194 511 180 515 174 C518 184 515 198 509 212 Z" fill="#2A5C58" />
+                <path d="M509 212 C516 200 524 194 526 186 C518 188 513 198 509 212 Z" fill="#3B7A75" />
+
+                <rect x="44" y="231" width="536" height="8" rx="2" fill="#6E3524" />
+                <path d="M126 239 V330 L70 392 H84 L132 338 L180 392 H194 L138 330 V239 Z" fill="#FFFFFF" />
+                <path d="M488 239 V330 L432 392 H446 L494 338 L542 392 H556 L500 330 V239 Z" fill="#FFFFFF" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="hero-poster-right">
+
+            <div class="hero-noteboard" aria-hidden="true">
+              <svg viewBox="0 0 185 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="181" height="114" rx="2" stroke="#FFFFFF" stroke-width="2" />
+                <line x1="32" y1="2" x2="32" y2="116" stroke="#FFFFFF" stroke-width="1.5" />
+                <line x1="62" y1="2" x2="62" y2="116" stroke="#FFFFFF" stroke-width="1.5" />
+                <line x1="92" y1="2" x2="92" y2="116" stroke="#FFFFFF" stroke-width="1.5" />
+                <line x1="122" y1="2" x2="122" y2="116" stroke="#FFFFFF" stroke-width="1.5" />
+                <line x1="152" y1="2" x2="152" y2="116" stroke="#FFFFFF" stroke-width="1.5" />
+                <line x1="2" y1="30" x2="183" y2="30" stroke="#FFFFFF" stroke-width="1.5" />
+                <line x1="2" y1="58" x2="183" y2="58" stroke="#FFFFFF" stroke-width="1.5" />
+                <line x1="2" y1="86" x2="183" y2="86" stroke="#FFFFFF" stroke-width="1.5" />
+                <rect x="18" y="68" width="26" height="32" transform="rotate(-3 18 68)" fill="#101B2D" />
+                <rect x="46" y="38" width="28" height="38" transform="rotate(-6 46 38)" fill="#D6A756" />
+                <rect x="80" y="54" width="30" height="40" transform="rotate(-4 80 54)" fill="#243B53" />
+                <rect x="130" y="20" width="28" height="38" transform="rotate(4 130 20)" fill="#526174" />
+              </svg>
+            </div>
+
+            <div class="hero-poster-copy">
+              <p class="hero-poster-kicker">
+                HOW TO MAKE<br>
+                THE BEST OUT OF
+              </p>
+              <h1 class="hero-poster-title">
+                COWORKING<br>
+                SPACE
+              </h1>
+              <p class="hero-poster-desc">
+                Discover inspiring workspaces, peaceful study zones and flexible meeting rooms designed to help you
+                achieve more every day.
+              </p>
+
+              <div class="hero-cta-group">
+                <button class="btn-primary" onclick="openBookingModal('all')">
+                  <span>Book a Space</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </button>
+                <a href="#spaces" class="btn-secondary">
+                  <span>Explore Spaces</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-timeline" id="how-it-works">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-kicker">SIMPLE &amp; SEAMLESS</div>
+          <h2 class="section-title">Your Workspace, Just a Few Steps Away</h2>
+          <p class="section-subtitle">
+            From discovering the perfect desk to working in your zone — fast, hassle-free booking.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-track-line" aria-hidden="true"></div>
+
+          <div class="timeline-steps-grid">
+
+            <div class="timeline-card-wrapper" data-step="1">
+              <div class="timeline-indicator">
+                <span class="indicator-number">01</span>
+              </div>
+              <div class="timeline-card">
+                <div class="card-icon-aqua">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                </div>
+                <h3 class="step-card-title">Explore Spaces</h3>
+                <p class="step-card-text">Browse available desks, cabins and meeting rooms tailored to your daily
+                  schedule.</p>
+              </div>
+            </div>
+
+            <div class="timeline-card-wrapper" data-step="2">
+              <div class="timeline-indicator">
+                <span class="indicator-number">02</span>
+              </div>
+              <div class="timeline-card">
+                <div class="card-icon-aqua">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
+                </div>
+                <h3 class="step-card-title">Choose Your Plan</h3>
+                <p class="step-card-text">Select your preferred membership or flexible booking option with transparent
+                  pricing.</p>
+              </div>
+            </div>
+
+            <div class="timeline-card-wrapper" data-step="3">
+              <div class="timeline-indicator">
+                <span class="indicator-number">03</span>
+              </div>
+              <div class="timeline-card">
+                <div class="card-icon-aqua">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                </div>
+                <h3 class="step-card-title">Book Your Time</h3>
+                <p class="step-card-text">Choose your booking date and available time slot with instant seat
+                  confirmation.</p>
+              </div>
+            </div>
+
+            <div class="timeline-card-wrapper" data-step="4">
+              <div class="timeline-indicator">
+                <span class="indicator-number">04</span>
+              </div>
+              <div class="timeline-card">
+                <div class="card-icon-aqua">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <h3 class="step-card-title">Start Working</h3>
+                <p class="step-card-text">Visit your workspace and enjoy a productive, calm, and fully-equipped
+                  environment.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-spaces" id="spaces">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-kicker">TAILORED WORK ENVIRONMENTS</div>
+          <h2 class="section-title">Find the Perfect Space for Your Needs</h2>
+          <p class="section-subtitle">
+            Curated environments engineered for high cognitive throughput, collaborative synergy, and solitary study.
+          </p>
+        </div>
+
+        <div class="spaces-grid">
+
+          <article class="space-card">
+            <div class="space-card-image-wrap">
+              <img src="assets/open-desk.jpg" alt="Flexible Open Desks" class="space-card-img"
+                onerror="this.onerror=null;this.src='asstes/open-desk.jpg';">
+              <span class="space-badge">Popular for Freelancers</span>
+              <div class="space-price-tag">From $5<small>/hr</small></div>
+            </div>
+            <div class="space-card-content">
+              <h3 class="space-category-title">Open Desks</h3>
+              <p class="space-description">
+                Flexible shared workstations for freelancers and students seeking productivity with a collaborative
+                pulse.
+              </p>
+              <ul class="space-features-list">
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Ergonomic Herman Miller seating
+                </li>
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Dedicated power &amp; USB-C fast charging
+                </li>
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Access to quiet phone booths &amp; lounge
+                </li>
+              </ul>
+              <div class="space-card-actions">
+                <button class="link-view-details" onclick="openSpaceDetails('open-desk')">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+                <button class="btn-primary" onclick="openBookingModal('open-desk')">
+                  Explore Space
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="space-card">
+            <div class="space-card-image-wrap">
+              <img src="assets/private-cabin.jpg" alt="Acoustic Private Office Cabin" class="space-card-img"
+                onerror="this.onerror=null;this.src='asstes/private-cabin.jpg';">
+              <span class="space-badge">High Privacy</span>
+              <div class="space-price-tag">From $18<small>/hr</small></div>
+            </div>
+            <div class="space-card-content">
+              <h3 class="space-category-title">Private Cabins</h3>
+              <p class="space-description">
+                Quiet and comfortable private workspaces for individuals and teams needing sound isolation and focus.
+              </p>
+              <ul class="space-features-list">
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Acoustic soundproof glass architecture
+                </li>
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Dual 4K display arm &amp; whiteboard
+                </li>
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Smart biometric door lock &amp; 24/7 key
+                </li>
+              </ul>
+              <div class="space-card-actions">
+                <button class="link-view-details" onclick="openSpaceDetails('private-cabin')">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+                <button class="btn-primary" onclick="openBookingModal('private-cabin')">
+                  Explore Space
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="space-card">
+            <div class="space-card-image-wrap">
+              <img src="assets/meeting-room.jpg" alt="High Tech Meeting Conference Room" class="space-card-img"
+                onerror="this.onerror=null;this.src='asstes/meeting-room.jpg';">
+              <span class="space-badge">Collaborative</span>
+              <div class="space-price-tag">From $35<small>/hr</small></div>
+            </div>
+            <div class="space-card-content">
+              <h3 class="space-category-title">Meeting Rooms</h3>
+              <p class="space-description">
+                Professional meeting spaces for client pitches, team sprint sessions and executive discussions.
+              </p>
+              <ul class="space-features-list">
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  75" Ultra-HD conference display &amp; camera
+                </li>
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Up to 12 comfortable executive leather chairs
+                </li>
+                <li>
+                  <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Complimentary barista coffee service
+                </li>
+              </ul>
+              <div class="space-card-actions">
+                <button class="link-view-details" onclick="openSpaceDetails('meeting-room')">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+                <button class="btn-primary" onclick="openBookingModal('meeting-room')">
+                  Explore Space
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-membership" id="membership">
+      <div class="container">
+
+        <div class="membership-split-grid">
+
+          <div class="membership-visual-col">
+            <div class="membership-image-container">
+              <img src="assets/membership-split.jpg" alt="Members collaborating in premium lounge"
+                class="membership-img" onerror="this.onerror=null;this.src='asstes/membership-split.jpg';">
+              <div class="membership-terracotta-badge">
+                <span class="badge-num">100%</span>
+                <span class="badge-lbl">Flexible Terms</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="membership-content-col">
+            <div class="section-kicker">ALL-INCLUSIVE MEMBERSHIP</div>
+            <h2 class="section-title">Flexible Memberships. Better Productivity.</h2>
+            <p class="membership-lead">
+              Whether you need a dedicated desk for your semester or an on-demand private cabin for strategic sprints,
+              our flexible memberships adapt to you.
+            </p>
+
+            <div class="membership-benefits-grid">
+              <div class="benefit-item">
+                <div class="benefit-check">✓</div>
+                <span>Flexible hourly and daily bookings</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-check">✓</div>
+                <span>Monthly memberships with no long leases</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-check">✓</div>
+                <span>Dedicated personal desks</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-check">✓</div>
+                <span>Private cabins for confidential calls</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-check">✓</div>
+                <span>Meeting room credits included</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-check">✓</div>
+                <span>Ultra-high speed 1 Gbps fiber optic internet</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-check">✓</div>
+                <span>Comfortable ergonomic seating</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-check">✓</div>
+                <span>Curated professional &amp; student environment</span>
+              </div>
+            </div>
+
+            <div class="membership-cta-wrapper">
+              <button class="btn-primary" onclick="openPlansModal()">
+                <span>Explore Membership Plans</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-why-us" id="why-us">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-kicker">WHY CHOOSE WORKSPACE HUB</div>
+          <h2 class="section-title">Everything You Need to Do Your Best Work</h2>
+          <p class="section-subtitle">
+            Every facility is calibrated for zero distraction, effortless comfort, and deep focus.
+          </p>
+        </div>
+
+        <div class="why-us-grid">
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <line x1="12" y1="20" x2="12.01" y2="20" />
+              </svg>
+            </div>
+            <div class="terracotta-accent-line"></div>
+            <h3 class="why-card-title">High-Speed Wi-Fi</h3>
+            <p class="why-card-text">
+              Dual-band enterprise fiber with 99.9% uptime, low latency, and isolated encrypted channels for utmost
+              security.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                <line x1="6" y1="1" x2="6" y2="4" />
+                <line x1="10" y1="1" x2="10" y2="4" />
+                <line x1="14" y1="1" x2="14" y2="4" />
+              </svg>
+            </div>
+            <div class="terracotta-accent-line"></div>
+            <h3 class="why-card-title">Free Coffee &amp; Refreshments</h3>
+            <p class="why-card-text">
+              Freshly ground single-origin espresso, artisan organic teas, infused water, and nutrient-rich focus snacks
+              all day.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <div class="terracotta-accent-line"></div>
+            <h3 class="why-card-title">Flexible Desk &amp; Cabin Booking</h3>
+            <p class="why-card-text">
+              Reserve by the hour, day, or month with zero rigid contracts. Seamless check-in through your member phone
+              pass.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <div class="terracotta-accent-line"></div>
+            <h3 class="why-card-title">Secure &amp; Comfortable Environment</h3>
+            <p class="why-card-text">
+              24/7 smart biometric locks, monitored CCTV, silent acoustic pods, and climate-controlled air filtration
+              systems.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-testimonials" id="testimonials">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-kicker">COMMUNITY STORIES</div>
+          <h2 class="section-title">What Our Members Say</h2>
+          <p class="section-subtitle">
+            Discover how founders, researchers, and remote professionals achieve their best work at Workspace Hub.
+          </p>
+        </div>
+
+        <div class="testimonials-track-wrapper">
+          <div class="testimonials-track" id="testimonialTrack">
+
+            <div class="testimonial-slide active">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "Workspace Hub solved my biggest freelance frustration: finding a quiet space with enterprise internet
+                  and great coffee. I finished my client deliverable 2 days ahead of deadline thanks to their private
+                  cabin."
+                </p>
+                <div class="testimonial-author">
+                  <img src="assets/user-1.jpg" alt="Sarah Chen" class="author-avatar"
+                    onerror="this.onerror=null;this.src='asstes/user-1.jpg';">
+                  <div class="author-meta">
+                    <strong class="author-name">Sarah Chen</strong>
+                    <span class="author-role">Full-Stack Developer &amp; Remote Freelancer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "As a postgraduate student preparing for medical boards, campus libraries were always overcrowded. The
+                  silent study zone here gave me 8 hours of uninterrupted deep focus every single day."
+                </p>
+                <div class="testimonial-author">
+                  <img src="assets/user-2.jpg" alt="David Rodriguez" class="author-avatar"
+                    onerror="this.onerror=null;this.src='asstes/user-2.jpg';">
+                  <div class="author-meta">
+                    <strong class="author-name">David Rodriguez</strong>
+                    <span class="author-role">Medical Researcher &amp; Graduate Student</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">★★★★★</div>
+                <p class="testimonial-quote">
+                  "We hosted our angel investor demo day in the 12-person meeting room. The 4K presentation setup,
+                  wireless airplay, and immaculate room service left our investors truly impressed."
+                </p>
+                <div class="testimonial-author">
+                  <img src="assets/user-3.jpg" alt="Elena Rostova" class="author-avatar"
+                    onerror="this.onerror=null;this.src='asstes/user-3.jpg';">
+                  <div class="author-meta">
+                    <strong class="author-name">Elena Rostova</strong>
+                    <span class="author-role">Founder, Synthetix AI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-cta-banner">
+      <div class="container">
+
+        <div class="premium-cta-card">
+          <div class="cta-bg-image-overlay"></div>
+          <div class="cta-terracotta-frame-line"></div>
+
+          <div class="cta-content-inner">
+            <span class="cta-aqua-pill">GET STARTED TODAY</span>
+            <h2 class="cta-heading">Ready to Find Your Perfect Workspace?</h2>
+            <p class="cta-supporting-text">
+              Book your ideal workspace today and create a better environment for productivity, learning and
+              collaboration.
+            </p>
+            <div class="cta-button-row">
+              <button class="btn-primary" onclick="openBookingModal('all')">
+                <span>Book Your Space</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+              <button class="btn-secondary cta-outline-btn" onclick="openDashboardModal()">
+                <span>View Member Portal</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer-contact">
+    <div class="container">
+
+      <div class="footer-columns-grid">
+
+        <div class="footer-col col-brand">
+          <div class="brand-identity footer-brand">
+            <div class="brand-logo-mark">
+              <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-name-wrap">
+              <span class="brand-title light-text">WORKSPACE HUB</span>
+              <span class="brand-subtitle light-text">CO-WORK &amp; STUDY</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            High-performance co-working and solitary study sanctuary engineered for makers, founders, and academic
+            achievers.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="Services.html">Services Overview</a></li>
+            <li><a href="Services Details.html?service=open-desk">Open Desks</a></li>
+            <li><a href="Services Details.html?service=private-cabin">Private Cabins</a></li>
+            <li><a href="Services Details.html?service=meeting-room">Meeting Rooms</a></li>
+            <li><a href="Services Details.html?service=dedicated-desk">Dedicated Desks</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="Pricing.html">Pricing Plans</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="#hero"
+                onclick="openGenericModal('404 Page Preview', 'The page you are looking for has been moved or workspace expired. Click below to return home.')">404
+                Page</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>420 Innovation Way, Suite 500, Tech Quarter</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>hello@workspacehub.com</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 849-WORK</span>
+            </li>
+          </ul>
+          <div class="footer-help-links">
+            <a href="#hero"
+              onclick="openGenericModal('Help & Support', 'Our concierge support team is available on site Mon-Sat 08:00 - 20:00 and 24/7 via member chat.')">Help
+              &amp; Support</a>
+            <span class="sep">•</span>
+            <a href="#hero"
+              onclick="openGenericModal('Frequently Asked Questions', 'Q: Are day passes available?<br>A: Yes, daily access starts from $25.<br><br>Q: Is high-speed internet included?<br>A: Yes, 1 Gbps fiber on all tiers.')">FAQ</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; 2026 Workspace Hub Co-Working &amp; Study Space Booking. All rights reserved.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#hero"
+            onclick="openGenericModal('Privacy Policy', 'Your personal and biometric verification data is strictly encrypted and never shared.')">Privacy
+            Policy</a>
+          <a href="#hero"
+            onclick="openGenericModal('Terms & Conditions', 'Bookings can be rescheduled up to 2 hours before scheduled slot.')">Terms
+            &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="dashboardModal" aria-hidden="true">
+    <div class="modal-dialog dashboard-dialog" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
+      <div class="dashboard-header-bar">
+        <div>
+          <span class="user-greeting-pill">AUTHENTICATED MEMBER</span>
+          <h2 id="dashTitle" class="dashboard-main-heading">Welcome Back, Alex Morgan</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeDashboardModal()" aria-label="Close dashboard">&times;</button>
+      </div>
+
+      <div class="dashboard-body-grid">
+
+        <div class="dash-card live-status-card">
+          <h4 class="dash-card-title">Live Workspace Availability</h4>
+          <div class="dash-capacity-grid">
+            <div class="capacity-box">
+              <span class="capacity-val text-aqua">12</span>
+              <span class="capacity-label">Open Desks Left</span>
+            </div>
+            <div class="capacity-box">
+              <span class="capacity-val text-terracotta">2</span>
+              <span class="capacity-label">Private Cabins Left</span>
+            </div>
+            <div class="capacity-box">
+              <span class="capacity-val">3</span>
+              <span class="capacity-label">Meeting Rooms Free</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card membership-status-card">
+          <div class="flex-between">
+            <h4 class="dash-card-title">Current Membership</h4>
+            <span class="status-badge-active">Active</span>
+          </div>
+          <div class="membership-info-box">
+            <div class="plan-name-tag">PRO DEDICATED DESK</div>
+            <p class="plan-renew">Renews on: <strong>Nov 28, 2026</strong> • $180/mo</p>
+            <div class="credits-bar-wrap">
+              <div class="credits-label">
+                <span>Meeting Room Credits</span>
+                <span>8 / 10 Hours Used</span>
+              </div>
+              <div class="credits-progress">
+                <div class="progress-fill" style="width: 80%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card full-col-card">
+          <div class="reservations-header">
+            <h4 class="dash-card-title">Your Reservations</h4>
+            <button class="btn-primary btn-sm" onclick="closeDashboardModal(); openBookingModal('all');">
+              + New Reservation
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Space Type</th>
+                  <th>Date &amp; Time</th>
+                  <th>Seat / Room #</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="bookingsTableBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dash-card full-col-card">
+          <h4 class="dash-card-title">Invoices &amp; Receipts</h4>
+          <div class="invoices-list">
+            <div class="invoice-item">
+              <div>
+                <strong>Invoice #NX-2026-1049</strong>
+                <p>Monthly Dedicated Desk — Oct 28, 2026</p>
+              </div>
+              <div class="invoice-actions">
+                <span class="invoice-price">$180.00</span>
+                <button class="btn-secondary btn-sm" onclick="downloadInvoiceMock('NX-2026-1049')">
+                  Download PDF
+                </button>
+              </div>
+            </div>
+            <div class="invoice-item">
+              <div>
+                <strong>Invoice #NX-2026-0922</strong>
+                <p>Executive Meeting Room (3 hrs) — Oct 14, 2026</p>
+              </div>
+              <div class="invoice-actions">
+                <span class="invoice-price">$105.00</span>
+                <button class="btn-secondary btn-sm" onclick="downloadInvoiceMock('NX-2026-0922')">
+                  Download PDF
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog booking-dialog" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close booking">&times;</button>
+
+      <div class="booking-dialog-header">
+        <span class="booking-step-badge">INSTANT RESERVATION</span>
+        <h3 id="bookingTitle" class="modal-title">Book Your Workspace</h3>
+        <p class="modal-sub">Select your space, schedule your time, and lock in your seat immediately.</p>
+      </div>
+
+      <form id="spaceBookingForm" onsubmit="handleConfirmBooking(event)">
+        <div class="booking-section">
+          <label class="form-label">1. Choose Space Category</label>
+          <div class="space-type-selector">
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="open-desk" checked onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Open Desk</strong>
+                <span>$5 / hour</span>
+              </div>
+            </label>
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="private-cabin" onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Private Cabin</strong>
+                <span>$18 / hour</span>
+              </div>
+            </label>
+            <label class="space-radio-card">
+              <input type="radio" name="spaceCategory" value="meeting-room" onchange="updateBookingPricing()">
+              <div class="radio-card-content">
+                <strong>Meeting Room</strong>
+                <span>$35 / hour</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="booking-section form-row-2">
+          <div class="form-group">
+            <label for="bookingDate" class="form-label">2. Booking Date</label>
+            <input type="date" id="bookingDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="bookingTime" class="form-label">3. Start Time Slot</label>
+            <select id="bookingTime" class="form-input" required>
+              <option value="09:00 AM">09:00 AM - Morning Slot</option>
+              <option value="11:00 AM">11:00 AM - Midday Slot</option>
+              <option value="02:00 PM">02:00 PM - Afternoon Slot</option>
+              <option value="04:00 PM">04:00 PM - Evening Slot</option>
+              <option value="06:00 PM">06:00 PM - Night Owl Slot</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-section">
+          <label for="bookingDuration" class="form-label">4. Duration</label>
+          <select id="bookingDuration" class="form-input" onchange="updateBookingPricing()">
+            <option value="1">1 Hour</option>
+            <option value="2">2 Hours</option>
+            <option value="4" selected>4 Hours (Half Day)</option>
+            <option value="8">8 Hours (Full Day Pass)</option>
+          </select>
+        </div>
+
+        <div class="booking-summary-box">
+          <div class="summary-line">
+            <span>Selected Space:</span>
+            <strong id="summarySpaceName">Open Desk</strong>
+          </div>
+          <div class="summary-line">
+            <span>Calculated Total:</span>
+            <span class="summary-total-price" id="summaryPrice">$20.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full-width">
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="genericModal" aria-hidden="true">
+    <div class="modal-dialog generic-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeGenericModal()" aria-label="Close">&times;</button>
+      <h3 id="genericModalTitle" class="modal-title">Space Details</h3>
+      <div id="genericModalBody" class="modal-body-content"></div>
+      <div class="modal-footer-cta">
+        <button class="btn-primary" onclick="closeGenericModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

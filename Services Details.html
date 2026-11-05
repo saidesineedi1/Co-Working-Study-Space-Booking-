@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Workspace Hub | Service Details</title>
+  <meta name="description" id="pageMetaDesc" content="Explore detailed specifications, amenities, and hourly/monthly booking options for our premium workspaces.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Services details.css">
+</head>
+<body class="service-details-page">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="brand-identity">
+        <div class="brand-logo-mark">
+          <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-name-wrap">
+          <span class="brand-title">WORKSPACE HUB</span>
+          <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Home</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <div>
+                  <strong>Home 1</strong>
+                  <p>Premium Poster Redesign</p>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item">
+                <div>
+                  <strong>Home 2</strong>
+                  <p>Editorial Grid Experience</p>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Services.html" class="nav-link active">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Pricing.html" class="nav-link">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link nav-dashboard-link">
+              <span>Dashboard</span>
+              <span class="pulse-indicator"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="rtlToggleBtn" class="control-btn" title="Toggle RTL/LTR" aria-label="Toggle text direction">
+          <span class="btn-text-badge">LTR</span>
+        </button>
+
+        <button id="themeToggleBtn" class="control-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="login.html" id="headerLoginBtn" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span id="loginBtnText">Login</span>
+        </a>
+
+        <button id="mobileMenuToggle" class="mobile-toggle-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <div class="brand-identity">
+          <div class="brand-logo-mark">
+            <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-name-wrap">
+            <span class="brand-title">WORKSPACE HUB</span>
+            <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-link" onclick="closeMobileDrawer()">Home 1 (Poster Redesign)</a></li>
+          <li><a href="home2.html" class="mobile-link" onclick="closeMobileDrawer()">Home 2 (Editorial Grid)</a></li>
+          <li><a href="about.html" class="mobile-link" onclick="closeMobileDrawer()">About Us</a></li>
+          <li><a href="Services.html" class="mobile-link active" onclick="closeMobileDrawer()">Services</a></li>
+          <li><a href="Pricing.html" class="mobile-link" onclick="closeMobileDrawer()">Pricing &amp; Plans</a></li>
+          <li><a href="contact.html" class="mobile-link" onclick="closeMobileDrawer()">Contact</a></li>
+          <li>
+            <a href="dashboard.html" class="mobile-link mobile-dashboard-btn" onclick="closeMobileDrawer()">
+              Member Dashboard
+            </a>
+          </li>
+        </ul>
+        <div class="drawer-footer-actions">
+          <button class="btn-primary btn-full-width" onclick="closeMobileDrawer()">
+            Login to Member Portal
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div id="serviceDetailContent" class="service-detail-content-wrap">
+      
+      <section class="sd-hero-section" id="detailHero">
+        <div class="container sd-hero-container">
+          
+          <div class="sd-hero-text">
+            <div class="sd-hero-kicker" id="heroKicker">
+              <span class="sd-kicker-dot"></span>
+              <span id="heroCategoryText">WORKSPACE SOLUTION</span>
+            </div>
+
+            <h1 class="sd-hero-title" id="heroTitle">
+              Premium Workspace
+            </h1>
+
+            <p class="sd-hero-desc" id="heroDescription">
+              Loading service details...
+            </p>
+
+            <div class="sd-hero-meta-strip" id="heroMetaStrip">
+            </div>
+
+            <div class="sd-hero-cta-group">
+              <button class="btn-primary" id="heroBookBtn" onclick="handleBookThisService()">
+                <span>Book This Service</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+              <a href="Services.html#services-cards" class="btn-secondary">
+                <span>Explore Other Services</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="sd-hero-visual">
+            <div class="sd-asymmetric-frame">
+              <div class="sd-terracotta-diagonal-border"></div>
+              <div class="sd-aqua-decor-block"></div>
+              
+              <div class="sd-image-cutout">
+                <img id="heroImage" src="assets/hero-coworking.jpg" alt="Workspace Detail" class="sd-hero-img" onerror="this.onerror=null;this.src='asstes/hero-coworking.jpg';">
+              </div>
+
+              <div class="sd-floating-pill" id="heroFloatingPill">
+                <div class="sd-pulse-dot"></div>
+                <span id="heroFloatingPillText">Instant Access Available</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="sd-section-why" id="detailWhy">
+        <div class="container">
+          <div class="sd-why-layout">
+            
+            <div class="sd-why-visual-col">
+              <div class="sd-why-img-frame">
+                <img id="whyImage" src="assets/open-desk.jpg" alt="Why Choose Workspace" class="sd-why-img" onerror="this.onerror=null;this.src='asstes/open-desk.jpg';">
+                <div class="sd-why-accent-tag" id="whyBadge">Engineered For Focus</div>
+              </div>
+            </div>
+
+            <div class="sd-why-text-col">
+              <div class="section-kicker" id="whyKicker">ADVANTAGES</div>
+              <h2 class="section-title" id="whyTitle">Why Choose This Workspace?</h2>
+              <p class="sd-why-desc" id="whyDescription">
+                Discover why professionals, freelancers, and students excel in this thoughtfully curated environment.
+              </p>
+
+              <div class="sd-why-points-grid" id="whyPointsGrid">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="sd-section-benefits" id="detailBenefits">
+        <div class="container">
+          <div class="section-header text-center">
+            <div class="section-kicker">KEY BENEFITS</div>
+            <h2 class="section-title" id="benefitsTitle">Benefits of This Workspace</h2>
+            <p class="section-subtitle" id="benefitsSubtitle">
+              Everything included to empower your workflow and elevate productivity.
+            </p>
+          </div>
+
+          <div class="sd-benefits-grid" id="benefitsGrid">
+          </div>
+        </div>
+      </section>
+
+      <section class="sd-section-split" id="detailSplit">
+        <div class="container">
+          <div class="sd-split-layout">
+            
+            <div class="sd-split-visual-col">
+              <div class="sd-split-frame">
+                <img id="splitImage" src="assets/gallery-focus.jpg" alt="Workspace Features" class="sd-split-img" onerror="this.onerror=null;this.src='asstes/gallery-focus.jpg';">
+                <div class="sd-split-badge-card">
+                  <div class="sd-split-badge-num">100%</div>
+                  <div class="sd-split-badge-text">Satisfaction &amp; Uptime Guarantee</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sd-split-text-col">
+              <div class="section-kicker">HOW IT WORKS</div>
+              <h2 class="section-title" id="splitTitle">Seamless Arrival &amp; Premium Amenities</h2>
+              <p class="sd-split-desc" id="splitDescription">
+                Simple reservations, frictionless digital check-in, and full access to building amenities from the moment you step through our doors.
+              </p>
+
+              <div class="sd-amenities-list" id="splitAmenitiesList">
+              </div>
+
+              <div class="sd-split-cta">
+                <button class="btn-primary" onclick="handleBookThisService()">
+                  <span>Reserve This Space Today</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="sd-section-related" id="detailRelated">
+        <div class="container">
+          <div class="section-header text-center">
+            <div class="section-kicker">EXPLORE MORE</div>
+            <h2 class="section-title">Related Workspace Solutions</h2>
+            <p class="section-subtitle">
+              Need more privacy, larger capacity, or a specialized study sanctuary? Explore adjacent spaces.
+            </p>
+          </div>
+
+          <div class="sd-related-grid" id="relatedCardsGrid">
+          </div>
+        </div>
+      </section>
+
+      <section class="sd-section-cta" id="detailCTA">
+        <div class="container">
+          <div class="sd-closing-card">
+            <div class="sd-cta-bg-layer"></div>
+            <div class="sd-cta-terracotta-frame"></div>
+            
+            <div class="sd-cta-content">
+              <span class="sd-cta-pill">INSTANT CONFIRMATION</span>
+              <h2 class="sd-cta-heading" id="ctaHeading">Ready to Book Your Workspace?</h2>
+              <p class="sd-cta-description" id="ctaDescription">
+                Reserve your spot in minutes. Enjoy high-speed fiber, ergonomic chairs, and complimentary craft coffee.
+              </p>
+              
+              <div class="sd-cta-buttons">
+                <button class="btn-primary" onclick="handleBookThisService()">
+                  <span id="ctaBookBtnText">Book This Service Now</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <a href="Services.html" class="btn-secondary sd-cta-outline-btn">
+                  <span>Browse All Services</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div id="serviceNotFound" class="service-not-found-container" style="display: none;">
+      <div class="container">
+        <div class="not-found-card">
+          <div class="not-found-icon-wrap">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h1 class="not-found-title">Workspace Category Not Found</h1>
+          <p class="not-found-text">
+            We couldn't locate the specific service or workspace category you requested. It may have been moved, renamed, or is currently unavailable.
+          </p>
+          <div class="not-found-actions">
+            <a href="Services.html" class="btn-primary">
+              <span>Return to Services Overview</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="index.html" class="btn-secondary">
+              <span>Go to Homepage</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer" id="footer-contact">
+    <div class="container">
+
+      <div class="footer-columns-grid">
+
+        <div class="footer-col col-brand">
+          <div class="brand-identity footer-brand">
+            <div class="brand-logo-mark">
+              <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-name-wrap">
+              <span class="brand-title light-text">WORKSPACE HUB</span>
+              <span class="brand-subtitle light-text">CO-WORK &amp; STUDY</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            High-performance co-working and solitary study sanctuary engineered for makers, founders, and academic
+            achievers.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="Services.html">Services Overview</a></li>
+            <li><a href="Services Details.html?service=open-desk">Open Desks</a></li>
+            <li><a href="Services Details.html?service=private-cabin">Private Cabins</a></li>
+            <li><a href="Services Details.html?service=meeting-room">Meeting Rooms</a></li>
+            <li><a href="Services Details.html?service=dedicated-desk">Dedicated Desks</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="Pricing.html">Pricing Plans</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="#hero"
+                onclick="openGenericModal('404 Page Preview', 'The page you are looking for has been moved or workspace expired. Click below to return home.')">404
+                Page</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>420 Innovation Way, Suite 500, Tech Quarter</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>hello@workspacehub.com</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 849-WORK</span>
+            </li>
+          </ul>
+          <div class="footer-help-links">
+            <a href="#hero"
+              onclick="openGenericModal('Help & Support', 'Our concierge support team is available on site Mon-Sat 08:00 - 20:00 and 24/7 via member chat.')">Help
+              &amp; Support</a>
+            <span class="sep">•</span>
+            <a href="#hero"
+              onclick="openGenericModal('Frequently Asked Questions', 'Q: Are day passes available?<br>A: Yes, daily access starts from $25.<br><br>Q: Is high-speed internet included?<br>A: Yes, 1 Gbps fiber on all tiers.')">FAQ</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; 2026 Workspace Hub Co-Working &amp; Study Space Booking. All rights reserved.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#hero"
+            onclick="openGenericModal('Privacy Policy', 'Your personal and biometric verification data is strictly encrypted and never shared.')">Privacy
+            Policy</a>
+          <a href="#hero"
+            onclick="openGenericModal('Terms & Conditions', 'Bookings can be rescheduled up to 2 hours before scheduled slot.')">Terms
+            &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="dashboardModal" aria-hidden="true">
+    <div class="modal-dialog dashboard-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeDashboardModal()" aria-label="Close dialog">&times;</button>
+      
+      <div class="dashboard-header-bar">
+        <div class="user-profile-summary">
+          <div class="user-avatar-circle">AM</div>
+          <div>
+            <h3 class="dash-user-name" id="dashUserName">Alex Morgan</h3>
+            <span class="dash-user-plan" id="dashUserPlan">Pro Dedicated Desk</span>
+          </div>
+        </div>
+        <button class="btn-secondary btn-sm" onclick="handleLogout()">Logout</button>
+      </div>
+
+      <div class="dashboard-stats-row">
+        <div class="stat-card">
+          <span class="stat-num">3</span>
+          <span class="stat-lbl">Active Bookings</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">12 hrs</span>
+          <span class="stat-lbl">Meeting Credits</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">24/7</span>
+          <span class="stat-lbl">Access Card</span>
+        </div>
+      </div>
+
+      <div class="dashboard-bookings-section">
+        <div class="d-flex justify-between align-center mb-3">
+          <h4 class="section-subheading">Your Workspace Reservations</h4>
+          <button class="btn-primary btn-sm" onclick="closeDashboardModal(); openBookingModal('open-desk');">
+            + New Booking
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Space Category</th>
+                <th>Date &amp; Time</th>
+                <th>Seat / Room</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="dashboardBookingsList">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog booking-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+      
+      <div class="modal-header">
+        <h3 class="modal-title">Reserve Workspace</h3>
+        <p class="modal-subtitle">Select your preferred space and duration for instant digital access.</p>
+      </div>
+
+      <form id="spaceBookingForm" class="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="spaceTypeSelect" class="form-label">Workspace Category</label>
+            <select id="spaceTypeSelect" class="form-select" onchange="updateBookingPricing()">
+              <option value="open-desk">Open Desk ($5/hr)</option>
+              <option value="private-cabin">Private Cabin ($18/hr)</option>
+              <option value="meeting-room">Meeting Room ($35/hr)</option>
+              <option value="dedicated-desk">Dedicated Desk ($12/hr)</option>
+              <option value="study-zone">Quiet Study Zone ($4/hr)</option>
+              <option value="virtual-office">Virtual Office Package ($25/day)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookingDuration" class="form-label">Duration</label>
+            <select id="bookingDuration" class="form-select" onchange="updateBookingPricing()">
+              <option value="2">2 Hours</option>
+              <option value="4" selected>4 Hours (Half Day)</option>
+              <option value="8">8 Hours (Full Day Pass)</option>
+              <option value="24">Weekly / Monthly Plan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="bookingDate" class="form-label">Date</label>
+            <input type="date" id="bookingDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="bookingTime" class="form-label">Arrival Time</label>
+            <select id="bookingTime" class="form-select">
+              <option value="09:00">09:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="14:00" selected>02:00 PM</option>
+              <option value="16:00">04:00 PM</option>
+              <option value="18:00">06:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-summary-box">
+          <div class="summary-line">
+            <span>Selected Space:</span>
+            <strong id="summarySpaceName">Open Desk</strong>
+          </div>
+          <div class="summary-line">
+            <span>Calculated Total:</span>
+            <span class="summary-total-price" id="summaryPrice">$20.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full-width">
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="genericModal" aria-hidden="true">
+    <div class="modal-dialog generic-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeGenericModal()" aria-label="Close">&times;</button>
+      <h3 id="genericModalTitle" class="modal-title">Space Details</h3>
+      <div id="genericModalBody" class="modal-body-content"></div>
+      <div class="modal-footer-cta">
+        <button class="btn-primary" onclick="closeGenericModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="Services details.js"></script>
+</body>
+</html>

@@ -1,0 +1,993 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Hub | Transparent Pricing &amp; Flexible Membership Plans</title>
+  <meta name="description" content="Discover flexible workspace plans designed for students, freelancers, startups and professionals. Compare hourly passes, day passes, monthly memberships, and private cabins.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Pricing.css">
+</head>
+<body class="pricing-page">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="brand-identity">
+        <div class="brand-logo-mark">
+          <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-name-wrap">
+          <span class="brand-title">WORKSPACE HUB</span>
+          <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Home</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <div>
+                  <strong>Home 1</strong>
+                  <p>Premium Poster Redesign</p>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item">
+                <div>
+                  <strong>Home 2</strong>
+                  <p>Editorial Grid Experience</p>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Services.html" class="nav-link">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Pricing.html" class="nav-link active">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link nav-dashboard-link">
+              <span>Dashboard</span>
+              <span class="pulse-indicator"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="rtlToggleBtn" class="control-btn" title="Toggle RTL/LTR" aria-label="Toggle text direction">
+          <span class="btn-text-badge">LTR</span>
+        </button>
+
+        <button id="themeToggleBtn" class="control-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="login.html" id="headerLoginBtn" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span id="loginBtnText">Login</span>
+        </a>
+
+        <button id="mobileMenuToggle" class="mobile-toggle-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <div class="brand-identity">
+          <div class="brand-logo-mark">
+            <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-name-wrap">
+            <span class="brand-title">WORKSPACE HUB</span>
+            <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-link" onclick="closeMobileDrawer()">Home 1 (Poster Redesign)</a></li>
+          <li><a href="home2.html" class="mobile-link" onclick="closeMobileDrawer()">Home 2 (Editorial Grid)</a></li>
+          <li><a href="about.html" class="mobile-link" onclick="closeMobileDrawer()">About Us</a></li>
+          <li><a href="Services.html" class="mobile-link" onclick="closeMobileDrawer()">Services</a></li>
+          <li><a href="Pricing.html" class="mobile-link active" onclick="closeMobileDrawer()">Pricing &amp; Plans</a></li>
+          <li><a href="contact.html" class="mobile-link" onclick="closeMobileDrawer()">Contact</a></li>
+          <li>
+            <a href="dashboard.html" class="mobile-link mobile-dashboard-btn" onclick="closeMobileDrawer()">
+              Member Dashboard
+            </a>
+          </li>
+        </ul>
+        <div class="drawer-footer-actions">
+          <button class="btn-primary btn-full-width" onclick="closeMobileDrawer()">
+            Login to Member Portal
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="pricing-hero-section" id="pricing-hero">
+      <div class="container pricing-hero-container">
+        
+        <div class="pricing-hero-text">
+          <div class="pricing-hero-kicker">
+            <span class="pricing-kicker-dot"></span>
+            <span>FLEXIBLE MEMBERSHIP PLANS</span>
+          </div>
+
+          <h1 class="pricing-hero-title">
+            Find the Right Space. <br>
+            <span class="pricing-highlight">Choose the</span> <span class="text-terracotta">Right Plan.</span>
+          </h1>
+
+          <p class="pricing-hero-desc">
+            Flexible workspace solutions designed for students, freelancers, startups and professionals. Choose a plan that fits your schedule, needs and productivity goals.
+          </p>
+
+          <div class="pricing-hero-cta-group">
+            <a href="#pricing-plans" class="btn-primary">
+              <span>Explore Pricing Plans</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </a>
+            <button class="btn-secondary" onclick="openBookingModal('all')">
+              <span>Book a Space</span>
+            </button>
+          </div>
+
+          <div class="pricing-hero-highlights-strip">
+            <div class="pricing-highlight-item">
+              <div class="pricing-feat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span>Flexible Workspace Access</span>
+            </div>
+
+            <div class="pricing-highlight-item">
+              <div class="pricing-feat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              </div>
+              <span>Transparent Pricing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-hero-visual">
+          <div class="pricing-asymmetric-frame">
+            <div class="pricing-terracotta-diagonal-border"></div>
+            <div class="pricing-aqua-decor-block"></div>
+            
+            <div class="pricing-hero-slider" id="pricingHeroSlider" aria-roledescription="carousel" aria-label="Workspace Membership Plans Showcase">
+              <div class="pricing-hero-slider-track" id="pricingHeroSliderTrack">
+                <article class="pricing-hero-slide-card active" data-slide="0">
+                  <img src="assets/open-desk.jpg" alt="Hourly & Daily Open Desk Workspace" class="pricing-hero-img" onerror="this.onerror=null;this.src='asstes/open-desk.jpg';">
+                  <div class="pricing-slide-overlay">
+                    <span class="pricing-slide-tag">01 / HOURLY &amp; DAILY PASS</span>
+                    <div class="pricing-slide-meta">
+                      <h4>Flexible Open Desks</h4>
+                      <span class="pricing-slide-rate">From $5 / hr</span>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="pricing-hero-slide-card" data-slide="1">
+                  <img src="assets/dedicated-desk.jpg" alt="Dedicated Monthly Membership Desk" class="pricing-hero-img" onerror="this.onerror=null;this.src='asstes/dedicated-desk.jpg';">
+                  <div class="pricing-slide-overlay">
+                    <span class="pricing-slide-tag">02 / MONTHLY MEMBERSHIP</span>
+                    <div class="pricing-slide-meta">
+                      <h4>Dedicated Personal Desk</h4>
+                      <span class="pricing-slide-rate">$180 / mo</span>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="pricing-hero-slide-card" data-slide="2">
+                  <img src="assets/private-cabin.jpg" alt="Private Executive Team Suite" class="pricing-hero-img" onerror="this.onerror=null;this.src='asstes/private-cabin.jpg';">
+                  <div class="pricing-slide-overlay">
+                    <span class="pricing-slide-tag">03 / PRIVATE WORKSPACE</span>
+                    <div class="pricing-slide-meta">
+                      <h4>Executive Team Cabins</h4>
+                      <span class="pricing-slide-rate">$550 / mo</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="pricing-slider-dots" id="pricingSliderDots">
+                <button type="button" class="pricing-slider-dot active" data-index="0" aria-label="View Card 1"></button>
+                <button type="button" class="pricing-slider-dot" data-index="1" aria-label="View Card 2"></button>
+                <button type="button" class="pricing-slider-dot" data-index="2" aria-label="View Card 3"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pricing-section-plans" id="pricing-plans">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-kicker">MEMBERSHIP TIERS</div>
+          <h2 class="section-title">Choose Your Perfect Workspace Plan</h2>
+          <p class="section-subtitle">
+            Discover flexible plans designed to support the way you work, study and collaborate.
+          </p>
+
+          <div class="billing-toggle-container" role="group" aria-label="Billing frequency toggle">
+            <span class="billing-toggle-label" id="labelMonthly">Monthly Billing</span>
+            <button type="button" class="billing-switch-btn" id="billingToggleBtn" role="switch" aria-checked="false" aria-labelledby="labelYearly">
+              <span class="switch-handle"></span>
+            </button>
+            <div class="billing-yearly-wrap">
+              <span class="billing-toggle-label" id="labelYearly">Yearly Commitment</span>
+              <span class="savings-chip">Save 20%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-cards-grid" id="pricingCardsGrid">
+          
+          <article class="pricing-card" data-plan="hourly">
+            <div class="pricing-card-header">
+              <div class="plan-badge-slot">
+                <span class="plan-type-pill">DROP-IN FLEX</span>
+              </div>
+              <h3 class="plan-name">Hourly Pass</h3>
+              <p class="plan-desc">For short-term workspace requirements, deep work sprints and transient visits.</p>
+              
+              <div class="plan-price-wrap">
+                <span class="plan-currency">$</span>
+                <span class="plan-amount" data-monthly="5" data-yearly="5">5</span>
+                <span class="plan-period">/ hour</span>
+              </div>
+              <span class="plan-sub-billing">Minimum 2-hour session • No contract</span>
+            </div>
+
+            <div class="pricing-card-body">
+              <ul class="plan-features-list">
+                <li><span class="feat-check">✓</span> Flexible hourly workspace access</li>
+                <li><span class="feat-check">✓</span> Shared desk access in open zones</li>
+                <li><span class="feat-check">✓</span> High-speed 1 Gbps Wi-Fi 6</li>
+                <li><span class="feat-check">✓</span> Comfortable ergonomic seating</li>
+                <li><span class="feat-check">✓</span> Standard power outlets &amp; USB ports</li>
+              </ul>
+              
+              <div class="plan-action-wrap">
+                <button class="btn-primary btn-full-width" onclick="handlePlanSelection('hourly')">
+                  <span>Book Hourly Pass</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pricing-card" data-plan="daily">
+            <div class="pricing-card-header">
+              <div class="plan-badge-slot">
+                <span class="plan-type-pill">FULL DAY PASS</span>
+              </div>
+              <h3 class="plan-name">Daily Pass</h3>
+              <p class="plan-desc">For full-day productivity marathons, project deadlines and mobile professionals.</p>
+              
+              <div class="plan-price-wrap">
+                <span class="plan-currency">$</span>
+                <span class="plan-amount" data-monthly="25" data-yearly="25">25</span>
+                <span class="plan-period">/ day</span>
+              </div>
+              <span class="plan-sub-billing">Access from 8:00 AM – 9:00 PM • Single Day</span>
+            </div>
+
+            <div class="pricing-card-body">
+              <ul class="plan-features-list">
+                <li><span class="feat-check">✓</span> Full-day workspace access (13 hrs)</li>
+                <li><span class="feat-check">✓</span> Shared desk availability across all floors</li>
+                <li><span class="feat-check">✓</span> High-speed redundant fiber Wi-Fi</li>
+                <li><span class="feat-check">✓</span> Artisan coffee &amp; beverage refreshments</li>
+                <li><span class="feat-check">✓</span> Comfortable focus-optimized environment</li>
+              </ul>
+              
+              <div class="plan-action-wrap">
+                <button class="btn-primary btn-full-width" onclick="handlePlanSelection('daily')">
+                  <span>Choose Daily Pass</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pricing-card featured-card" data-plan="monthly">
+            <div class="featured-ribbon">
+              <span>POPULAR PLAN</span>
+            </div>
+            <div class="pricing-card-header">
+              <div class="plan-badge-slot">
+                <span class="plan-type-pill pill-featured">MOST FLEXIBLE</span>
+              </div>
+              <h3 class="plan-name">Monthly Membership</h3>
+              <p class="plan-desc">For regular workspace users, creators, and freelancers wanting a consistent base.</p>
+              
+              <div class="plan-price-wrap">
+                <span class="plan-currency">$</span>
+                <span class="plan-amount" id="monthlyPriceVal" data-monthly="180" data-yearly="144">180</span>
+                <span class="plan-period" id="monthlyPeriodVal">/ month</span>
+              </div>
+              <span class="plan-sub-billing" id="monthlyBillingNote">Billed monthly • Cancel anytime</span>
+            </div>
+
+            <div class="pricing-card-body">
+              <ul class="plan-features-list">
+                <li><span class="feat-check">✓</span> 24/7 Unlimited monthly workspace access</li>
+                <li><span class="feat-check">✓</span> Flexible desk booking &amp; reserved quiet zones</li>
+                <li><span class="feat-check">✓</span> Full member facilities &amp; shower amenities</li>
+                <li><span class="feat-check">✓</span> Gigabit fiber Wi-Fi + dedicated VLAN</li>
+                <li><span class="feat-check">✓</span> 5 hours/month meeting room credits included</li>
+              </ul>
+              
+              <div class="plan-action-wrap">
+                <button class="btn-primary btn-full-width" onclick="handlePlanSelection('monthly')">
+                  <span>Get Monthly Plan</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pricing-card" data-plan="private">
+            <div class="pricing-card-header">
+              <div class="plan-badge-slot">
+                <span class="plan-type-pill">EXECUTIVE SUITE</span>
+              </div>
+              <h3 class="plan-name">Private Workspace</h3>
+              <p class="plan-desc">For individuals, startups or teams requiring acoustic isolation, privacy and prestige.</p>
+              
+              <div class="plan-price-wrap">
+                <span class="plan-currency">$</span>
+                <span class="plan-amount" id="privatePriceVal" data-monthly="550" data-yearly="440">550</span>
+                <span class="plan-period" id="privatePeriodVal">/ month</span>
+              </div>
+              <span class="plan-sub-billing" id="privateBillingNote">Billed monthly • Up to 4 team members</span>
+            </div>
+
+            <div class="pricing-card-body">
+              <ul class="plan-features-list">
+                <li><span class="feat-check">✓</span> Dedicated soundproof private cabin suite</li>
+                <li><span class="feat-check">✓</span> Biometric smart door lock access 24/7</li>
+                <li><span class="feat-check">✓</span> 15 hours/month conference suite credits</li>
+                <li><span class="feat-check">✓</span> Business address &amp; daily mail handling</li>
+                <li><span class="feat-check">✓</span> Herman Miller executive task seating</li>
+              </ul>
+              
+              <div class="plan-action-wrap">
+                <button class="btn-primary btn-full-width" onclick="handlePlanSelection('private')">
+                  <span>Explore Private Plan</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="comparison-section-wrapper">
+          <div class="comparison-header text-center">
+            <div class="section-kicker">FEATURE BY FEATURE</div>
+            <h3 class="comparison-title">Compare Plans &amp; Find Your Best Fit</h3>
+            <p class="comparison-subtitle">
+              Detailed breakdown of workspace privileges, amenities, allowances, and support included with each tier.
+            </p>
+          </div>
+
+          <div class="comparison-table-wrapper" tabindex="0" role="region" aria-label="Pricing feature comparison table">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col" class="th-feature">Workspace Features</th>
+                  <th scope="col" class="th-plan">Hourly Pass</th>
+                  <th scope="col" class="th-plan">Daily Pass</th>
+                  <th scope="col" class="th-plan th-featured">
+                    <span class="th-highlight-badge">Popular</span>
+                    Monthly Membership
+                  </th>
+                  <th scope="col" class="th-plan">Private Workspace</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Workspace Access</strong>
+                    <span>Building hours and admittance permissions</span>
+                  </th>
+                  <td class="td-val">Standard Hours (8am - 9pm)</td>
+                  <td class="td-val">Full Day (8am - 9pm)</td>
+                  <td class="td-val td-featured"><strong>24/7 Unlimited Access</strong></td>
+                  <td class="td-val"><strong>24/7 Biometric Suite</strong></td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Booking Duration</strong>
+                    <span>Minimum and maximum session validity</span>
+                  </th>
+                  <td class="td-val">2 Hours Minimum</td>
+                  <td class="td-val">Single Full Day</td>
+                  <td class="td-val td-featured">Monthly / Annual Renewable</td>
+                  <td class="td-val">Monthly / Annual Lease</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Shared Desk Access</strong>
+                    <span>Hot-desking availability in community zones</span>
+                  </th>
+                  <td class="td-val"><span class="table-check">✓</span> Included</td>
+                  <td class="td-val"><span class="table-check">✓</span> Included</td>
+                  <td class="td-val td-featured"><span class="table-check">✓</span> Priority Choice</td>
+                  <td class="td-val"><span class="table-check">✓</span> Plus Private Suite</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Private Workspace Access</strong>
+                    <span>Acoustic soundproof office cabin</span>
+                  </th>
+                  <td class="td-val"><span class="table-dash">—</span></td>
+                  <td class="td-val"><span class="table-dash">—</span></td>
+                  <td class="td-val td-featured">Phone Pods Access</td>
+                  <td class="td-val"><span class="table-check">✓</span> Dedicated Private Cabin</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>High-Speed Wi-Fi</strong>
+                    <span>Fiber optic connection speed and security</span>
+                  </th>
+                  <td class="td-val">300 Mbps Shared</td>
+                  <td class="td-val">500 Mbps Shared</td>
+                  <td class="td-val td-featured"><strong>1 Gbps Wi-Fi 6</strong></td>
+                  <td class="td-val"><strong>1 Gbps + Private VLAN</strong></td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Meeting Room Access</strong>
+                    <span>Monthly complimentary conference hours</span>
+                  </th>
+                  <td class="td-val">Add-on ($35/hr)</td>
+                  <td class="td-val">Add-on ($35/hr)</td>
+                  <td class="td-val td-featured"><strong>5 Hours / Month</strong></td>
+                  <td class="td-val"><strong>15 Hours / Month</strong></td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Flexible Booking</strong>
+                    <span>Reschedule or cancel policy</span>
+                  </th>
+                  <td class="td-val">Up to 2 hrs prior</td>
+                  <td class="td-val">Up to 4 hrs prior</td>
+                  <td class="td-val td-featured">Instant Mobile Re-booking</td>
+                  <td class="td-val">Dedicated Account Rep</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Membership Benefits</strong>
+                    <span>Community events, café &amp; postal perks</span>
+                  </th>
+                  <td class="td-val"><span class="table-dash">—</span></td>
+                  <td class="td-val">Barista Coffee</td>
+                  <td class="td-val td-featured">Artisan Café, Events &amp; Mail</td>
+                  <td class="td-val">All Perks + Business Address</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Invoice Availability</strong>
+                    <span>Automated corporate tax receipts</span>
+                  </th>
+                  <td class="td-val">Digital Receipt</td>
+                  <td class="td-val">Digital Receipt</td>
+                  <td class="td-val td-featured">Automated Monthly Tax Invoice</td>
+                  <td class="td-val">Itemized Corporate Billing</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" class="td-feature-title">
+                    <strong>Customer Support</strong>
+                    <span>On-site concierge and assistance tier</span>
+                  </th>
+                  <td class="td-val">Help Desk</td>
+                  <td class="td-val">On-site Concierge</td>
+                  <td class="td-val td-featured"><strong>Priority Member Support</strong></td>
+                  <td class="td-val"><strong>24/7 Dedicated Concierge</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pricing-section-faq" id="pricing-faq">
+      <div class="container">
+        
+        <div class="pricing-faq-layout">
+          
+          <div class="pricing-faq-intro-col">
+            <div class="section-kicker">QUESTIONS &amp; ANSWERS</div>
+            <h2 class="section-title">Questions About Our Pricing?</h2>
+            <p class="pricing-faq-lead">
+              Find answers to common questions about workspace plans, bookings and membership options.
+            </p>
+
+            <div class="pricing-faq-visual-card">
+              <img src="assets/faq-workspace.jpg" alt="Workspace Hub Front Desk Concierge Support" class="pricing-faq-img" onerror="this.onerror=null;this.src='asstes/faq-workspace.jpg';">
+              <div class="pricing-faq-overlay">
+                <strong>Need custom enterprise terms?</strong>
+                <p>Our workspace managers craft bespoke packages for teams of 5 to 50.</p>
+                <a href="contact.html" class="btn-primary btn-sm">Contact Support</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-faq-accordion-col">
+            <div class="faq-accordion" id="pricingAccordion">
+              
+              <div class="faq-item active">
+                <button class="faq-question-btn" aria-expanded="true" aria-controls="faq-ans-1">
+                  <span>1. What is included in each membership plan?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-1">
+                  <p>
+                    All plans include high-speed Wi-Fi, ergonomic Herman Miller seating, universal power hubs, and access to common lounge areas. Full Day and Monthly plans add complimentary craft espresso, while Monthly and Private Workspace plans include meeting room credits, 24/7 keycard access, and mail services.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-2">
+                  <span>2. Can I book a workspace by the hour?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-2">
+                  <p>
+                    Yes! Our Hourly Pass gives you complete flexibility starting at $5 per hour (with a 2-hour minimum). You can drop in, select any open workstation, and work on demand without long-term contracts.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-3">
+                  <span>3. Can I upgrade or change my membership?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-3">
+                  <p>
+                    Yes. You can upgrade from an Hourly or Day Pass to a Monthly Membership or Private Suite at any time directly in your Member Dashboard. Any unused prepaid fees can be prorated toward your new membership tier.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-4">
+                  <span>4. Are private cabins included in monthly plans?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-4">
+                  <p>
+                    Standard Monthly Memberships provide hot-desk and dedicated desk access within our quiet and open community zones, along with access to soundproof phone booths. For a dedicated, lockable private suite, please select our Private Workspace plan.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-5">
+                  <span>5. Can I book meeting rooms separately?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-5">
+                  <p>
+                    Yes. Meeting rooms can be reserved on demand at $35 per hour by both non-members and members. Monthly Members receive 5 complimentary hours each month, while Private Workspace suites receive 15 complimentary hours.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-6">
+                  <span>6. What payment methods are accepted?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-6">
+                  <p>
+                    We accept all major credit and debit cards (Visa, MasterCard, American Express), Apple Pay, Google Pay, and direct corporate ACH transfers for monthly and yearly contracts.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-7">
+                  <span>7. Can I cancel or reschedule my booking?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-7">
+                  <p>
+                    Yes. Hourly and daily bookings can be rescheduled or cancelled up to 2 hours before your scheduled arrival time directly from your Member Dashboard with no penalty. Monthly memberships can be cancelled with 14 days notice before the next billing cycle.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-8">
+                  <span>8. Will I receive an invoice after payment?</span>
+                  <div class="faq-toggle-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </button>
+                <div class="faq-answer-panel" id="faq-ans-8">
+                  <p>
+                    Yes. A formal tax-compliant digital invoice is automatically generated and emailed immediately upon transaction completion. You can also download historical PDF statements anytime from your Member Dashboard.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pricing-section-cta">
+      <div class="container">
+        
+        <div class="pricing-closing-card">
+          <div class="pricing-cta-bg-layer"></div>
+          <div class="pricing-cta-terracotta-frame"></div>
+          
+          <div class="pricing-cta-content">
+            <span class="pricing-cta-pill">MEMBERSHIPS &amp; ON-DEMAND</span>
+            <h2 class="pricing-cta-heading">Ready to Find Your Perfect Workspace?</h2>
+            <p class="pricing-cta-description">
+              Choose a plan that matches your needs and experience a better way to work, study and collaborate.
+            </p>
+            
+            <div class="pricing-cta-buttons">
+              <a href="Services.html" class="btn-primary">
+                <span>Explore Our Spaces</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <button class="btn-secondary pricing-cta-outline-btn" onclick="openBookingModal('all')">
+                <span>Book Your Workspace</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer-contact">
+    <div class="container">
+
+      <div class="footer-columns-grid">
+
+        <div class="footer-col col-brand">
+          <div class="brand-identity footer-brand">
+            <div class="brand-logo-mark">
+              <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-name-wrap">
+              <span class="brand-title light-text">WORKSPACE HUB</span>
+              <span class="brand-subtitle light-text">CO-WORK &amp; STUDY</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            High-performance co-working and solitary study sanctuary engineered for makers, founders, and academic
+            achievers.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="Services.html">Services Overview</a></li>
+            <li><a href="Services Details.html?service=open-desk">Open Desks</a></li>
+            <li><a href="Services Details.html?service=private-cabin">Private Cabins</a></li>
+            <li><a href="Services Details.html?service=meeting-room">Meeting Rooms</a></li>
+            <li><a href="Services Details.html?service=dedicated-desk">Dedicated Desks</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="Pricing.html">Pricing Plans</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="#hero"
+                onclick="openGenericModal('404 Page Preview', 'The page you are looking for has been moved or workspace expired. Click below to return home.')">404
+                Page</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>420 Innovation Way, Suite 500, Tech Quarter</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>hello@workspacehub.com</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 849-WORK</span>
+            </li>
+          </ul>
+          <div class="footer-help-links">
+            <a href="#hero"
+              onclick="openGenericModal('Help & Support', 'Our concierge support team is available on site Mon-Sat 08:00 - 20:00 and 24/7 via member chat.')">Help
+              &amp; Support</a>
+            <span class="sep">•</span>
+            <a href="#hero"
+              onclick="openGenericModal('Frequently Asked Questions', 'Q: Are day passes available?<br>A: Yes, daily access starts from $25.<br><br>Q: Is high-speed internet included?<br>A: Yes, 1 Gbps fiber on all tiers.')">FAQ</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; 2026 Workspace Hub Co-Working &amp; Study Space Booking. All rights reserved.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#hero"
+            onclick="openGenericModal('Privacy Policy', 'Your personal and biometric verification data is strictly encrypted and never shared.')">Privacy
+            Policy</a>
+          <a href="#hero"
+            onclick="openGenericModal('Terms & Conditions', 'Bookings can be rescheduled up to 2 hours before scheduled slot.')">Terms
+            &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="dashboardModal" aria-hidden="true">
+    <div class="modal-dialog dashboard-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeDashboardModal()" aria-label="Close dialog">&times;</button>
+      
+      <div class="dashboard-header-bar">
+        <div class="user-profile-summary">
+          <div class="user-avatar-circle">AM</div>
+          <div>
+            <h3 class="dash-user-name" id="dashUserName">Alex Morgan</h3>
+            <span class="dash-user-plan" id="dashUserPlan">Monthly Member Plan</span>
+          </div>
+        </div>
+        <button class="btn-secondary btn-sm" onclick="handleLogout()">Logout</button>
+      </div>
+
+      <div class="dashboard-stats-row">
+        <div class="stat-card">
+          <span class="stat-num">3</span>
+          <span class="stat-lbl">Active Bookings</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">5 hrs</span>
+          <span class="stat-lbl">Meeting Credits</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">24/7</span>
+          <span class="stat-lbl">Active Keycard</span>
+        </div>
+      </div>
+
+      <div class="dashboard-bookings-section">
+        <div class="d-flex justify-between align-center mb-3">
+          <h4 class="section-subheading">Your Workspace Reservations</h4>
+          <button class="btn-primary btn-sm" onclick="closeDashboardModal(); openBookingModal('open-desk');">
+            + New Booking
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Space Category</th>
+                <th>Date &amp; Time</th>
+                <th>Seat / Room</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="dashboardBookingsList">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog booking-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+      
+      <div class="modal-header">
+        <h3 class="modal-title" id="bookingModalHeading">Reserve Workspace</h3>
+        <p class="modal-subtitle">Select your preferred space and duration for instant digital access.</p>
+      </div>
+
+      <form id="spaceBookingForm" class="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="spaceTypeSelect" class="form-label">Workspace Category</label>
+            <select id="spaceTypeSelect" class="form-select" onchange="updateBookingPricing()">
+              <option value="open-desk">Hourly Pass – Open Desk ($5/hr)</option>
+              <option value="daily-pass">Daily Pass – Full Day ($25/day)</option>
+              <option value="monthly-membership">Monthly Membership ($180/mo)</option>
+              <option value="private-cabin">Private Workspace Suite ($550/mo)</option>
+              <option value="meeting-room">Executive Meeting Room ($35/hr)</option>
+              <option value="study-zone">Quiet Study Zone ($4/hr)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookingDuration" class="form-label">Duration / Commitment</label>
+            <select id="bookingDuration" class="form-select" onchange="updateBookingPricing()">
+              <option value="2">2 Hours ($10)</option>
+              <option value="4" selected>4 Hours – Half Day ($20)</option>
+              <option value="8">8 Hours – Full Day Pass ($25)</option>
+              <option value="1">1 Month Plan ($180)</option>
+              <option value="12">12 Months (Annual 20% Off)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="bookingDate" class="form-label">Start Date</label>
+            <input type="date" id="bookingDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="bookingTime" class="form-label">Arrival Time</label>
+            <select id="bookingTime" class="form-select">
+              <option value="08:00">08:00 AM</option>
+              <option value="09:00" selected>09:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="14:00">02:00 PM</option>
+              <option value="16:00">04:00 PM</option>
+              <option value="18:00">06:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-summary-box">
+          <div class="summary-line">
+            <span>Selected Plan / Space:</span>
+            <strong id="summarySpaceName">Monthly Membership</strong>
+          </div>
+          <div class="summary-line">
+            <span>Calculated Total:</span>
+            <span class="summary-total-price" id="summaryPrice">$180.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full-width">
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="genericModal" aria-hidden="true">
+    <div class="modal-dialog generic-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeGenericModal()" aria-label="Close">&times;</button>
+      <h3 id="genericModalTitle" class="modal-title">Plan Details</h3>
+      <div id="genericModalBody" class="modal-body-content"></div>
+      <div class="modal-footer-cta">
+        <button class="btn-primary" onclick="closeGenericModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="Pricing.js"></script>
+</body>
+</html>

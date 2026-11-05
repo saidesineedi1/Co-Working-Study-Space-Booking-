@@ -1,0 +1,813 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Hub | Contact Us – Let's Start a Conversation</title>
+  <meta name="description" content="Get in touch with our team for workspace inquiries, membership tours, private cabin bookings, and customer support. Visit us at 742 Innovation Way.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body class="contact-page">
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <a href="index.html" class="brand-identity">
+        <div class="brand-logo-mark">
+          <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-name-wrap">
+          <span class="brand-title">WORKSPACE HUB</span>
+          <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Home</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <div>
+                  <strong>Home 1</strong>
+                  <p>Premium Poster Redesign</p>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item">
+                <div>
+                  <strong>Home 2</strong>
+                  <p>Editorial Grid Experience</p>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Services.html" class="nav-link">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Pricing.html" class="nav-link">Pricing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link nav-dashboard-link">
+              <span>Dashboard</span>
+              <span class="pulse-indicator"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="rtlToggleBtn" class="control-btn" title="Toggle RTL/LTR" aria-label="Toggle text direction">
+          <span class="btn-text-badge">LTR</span>
+        </button>
+
+        <button id="themeToggleBtn" class="control-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="login.html" id="headerLoginBtn" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span id="loginBtnText">Login</span>
+        </a>
+
+        <button id="mobileMenuToggle" class="mobile-toggle-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="drawer-header">
+        <div class="brand-identity">
+          <div class="brand-logo-mark">
+            <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-name-wrap">
+            <span class="brand-title">WORKSPACE HUB</span>
+            <span class="brand-subtitle">CO-WORK &amp; STUDY</span>
+          </div>
+        </div>
+        <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-link" onclick="closeMobileDrawer()">Home 1 (Poster Redesign)</a></li>
+          <li><a href="home2.html" class="mobile-link" onclick="closeMobileDrawer()">Home 2 (Editorial Grid)</a></li>
+          <li><a href="about.html" class="mobile-link" onclick="closeMobileDrawer()">About Us</a></li>
+          <li><a href="Services.html" class="mobile-link" onclick="closeMobileDrawer()">Services</a></li>
+          <li><a href="Pricing.html" class="mobile-link" onclick="closeMobileDrawer()">Pricing &amp; Plans</a></li>
+          <li><a href="contact.html" class="mobile-link active" onclick="closeMobileDrawer()">Contact</a></li>
+          <li>
+            <a href="dashboard.html" class="mobile-link mobile-dashboard-btn" onclick="closeMobileDrawer()">
+              Member Dashboard
+            </a>
+          </li>
+        </ul>
+        <div class="drawer-footer-actions">
+          <button class="btn-primary btn-full-width" onclick="closeMobileDrawer()">
+            Login to Member Portal
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="contact-hero-section" id="contact-hero">
+      <div class="container contact-hero-container">
+        
+        <div class="contact-hero-text">
+          <div class="contact-hero-kicker">
+            <span class="contact-kicker-dot"></span>
+            <span>GET IN TOUCH</span>
+          </div>
+
+          <h1 class="contact-hero-title">
+            Let's Start a <br>
+            <span class="contact-highlight">Conversation.</span>
+          </h1>
+
+          <div class="contact-hero-rule" aria-hidden="true"></div>
+
+          <p class="contact-hero-desc">
+            Have questions about our workspaces, memberships or bookings? Our team is here to help you find the perfect space for your needs.
+          </p>
+
+          <div class="contact-hero-cta-group">
+            <a href="#contact-form-section" class="btn-primary">
+              <span>Send Us a Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
+            <a href="Services.html" class="btn-secondary">
+              <span>Explore Our Spaces</span>
+            </a>
+          </div>
+
+          <div class="contact-hero-highlights-strip">
+            <div class="contact-highlight-item">
+              <div class="contact-feat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <span>Friendly Support</span>
+            </div>
+
+            <div class="contact-highlight-item">
+              <div class="contact-feat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <span>Workspace Assistance</span>
+            </div>
+
+            <div class="contact-highlight-item">
+              <div class="contact-feat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              </div>
+              <span>Membership Guidance</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="contact-hero-visual">
+        <div class="contact-diagonal-image-wrap">
+          <img src="assets/faq-workspace.jpg" alt="Workspace Hub Front Desk Concierge Team" class="contact-hero-img" onerror="this.onerror=null;this.src='asstes/faq-workspace.jpg';">
+        </div>
+
+        <svg class="contact-diagonal-line-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="16" y1="0" x2="0" y2="100" class="contact-diagonal-stroke" />
+        </svg>
+
+        <div class="contact-floating-pill">
+          <div class="contact-pulse-dot"></div>
+          <span>Support Concierge On Duty</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section-split" id="contact-form-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-kicker">CONTACT DETAILS</div>
+          <h2 class="section-title">We'd Love to Hear From You</h2>
+          <p class="section-subtitle">
+            Whether you need help choosing a workspace, understanding membership plans or managing a booking, get in touch with our team.
+          </p>
+        </div>
+
+        <div class="contact-split-grid">
+          
+          <div class="contact-cards-stack">
+            
+            <article class="contact-info-card">
+              <div class="info-card-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="info-card-content">
+                <span class="info-card-badge">LOCATION</span>
+                <h3 class="info-card-title">Visit Us</h3>
+                <address class="info-card-detail">
+                  742 Innovation Way, Tech Corridor, Metro City
+                </address>
+                <p class="info-card-desc">
+                  Conveniently situated 2 minutes from Metro Central station with secure on-site underground parking and bicycle bays.
+                </p>
+                <a href="#map-section" class="info-card-link">
+                  <span>Get Directions</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="contact-info-card">
+              <div class="info-card-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="info-card-content">
+                <span class="info-card-badge">EMAIL INQUIRIES</span>
+                <h3 class="info-card-title">Email Us</h3>
+                <div class="info-card-detail">
+                  <a href="mailto:concierge@workspacehub.com" class="contact-direct-link">concierge@workspacehub.com</a>
+                </div>
+                <p class="info-card-desc">
+                  Drop us a note anytime. Our member relations team reviews messages daily and responds within two business hours.
+                </p>
+                <a href="mailto:concierge@workspacehub.com" class="info-card-link">
+                  <span>Send Direct Email</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="contact-info-card">
+              <div class="info-card-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="info-card-content">
+                <span class="info-card-badge">PHONE LINE</span>
+                <h3 class="info-card-title">Call Us</h3>
+                <div class="info-card-detail">
+                  <a href="tel:+18008499675" class="contact-direct-link">+1 (800) 849-WORK (9675)</a>
+                </div>
+                <p class="info-card-desc">
+                  Direct line to our front desk concierge for immediate room availability, booking changes, and corporate tours.
+                </p>
+                <a href="tel:+18008499675" class="info-card-link">
+                  <span>Call Front Desk</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="contact-info-card">
+              <div class="info-card-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="info-card-content">
+                <span class="info-card-badge">AVAILABILITY</span>
+                <h3 class="info-card-title">Working Hours</h3>
+                <div class="info-card-detail hours-detail">
+                  <div class="hours-row">
+                    <span>Monday – Friday:</span>
+                    <strong>08:00 AM – 09:00 PM</strong>
+                  </div>
+                  <div class="hours-row">
+                    <span>Saturday – Sunday:</span>
+                    <strong>09:00 AM – 06:00 PM</strong>
+                  </div>
+                </div>
+                <p class="info-card-desc">
+                  Registered Monthly &amp; Cabin members enjoy unrestricted 24/7 keycard &amp; smartphone NFC access 365 days a year.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="contact-form-column">
+            <div class="contact-form-card">
+              <div class="form-card-header">
+                <span class="form-kicker-tag">DIRECT INQUIRY</span>
+                <h3 class="form-title">Send Us a Message</h3>
+                <p class="form-subtitle">Fill in the details below and our team will get back to you.</p>
+              </div>
+
+              <form id="nexusContactForm" class="contact-form" novalidate onsubmit="handleContactSubmit(event)">
+                
+                <div class="form-group" id="groupName">
+                  <label for="contactFullName" class="form-label">Full Name <span class="required-star">*</span></label>
+                  <div class="input-wrap">
+                    <input type="text" id="contactFullName" name="fullName" class="form-input" placeholder="e.g. Eleanor Vance" required autocomplete="name">
+                  </div>
+                  <span class="field-error-msg" id="errorName">Please enter your full name.</span>
+                </div>
+
+                <div class="form-group" id="groupEmail">
+                  <label for="contactEmail" class="form-label">Email Address <span class="required-star">*</span></label>
+                  <div class="input-wrap">
+                    <input type="email" id="contactEmail" name="email" class="form-input" placeholder="eleanor@company.com" required autocomplete="email">
+                  </div>
+                  <span class="field-error-msg" id="errorEmail">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group" id="groupPhone">
+                  <label for="contactPhone" class="form-label">Phone Number</label>
+                  <div class="input-wrap">
+                    <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" autocomplete="tel">
+                  </div>
+                  <span class="field-error-msg" id="errorPhone">Please enter a valid phone number.</span>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group" id="groupSubject">
+                    <label for="contactSubject" class="form-label">Subject</label>
+                    <select id="contactSubject" name="subject" class="form-select">
+                      <option value="General Inquiry" selected>General Inquiry</option>
+                      <option value="Workspace Booking">Workspace Booking</option>
+                      <option value="Membership Plans">Membership Plans</option>
+                      <option value="Private Cabins">Private Cabins</option>
+                      <option value="Meeting Rooms">Meeting Rooms</option>
+                      <option value="Study Zones">Study Zones</option>
+                      <option value="Technical Support">Technical Support</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group" id="groupService">
+                    <label for="contactService" class="form-label">Interested Service</label>
+                    <select id="contactService" name="service" class="form-select">
+                      <option value="Open Desk">Open Desk</option>
+                      <option value="Private Cabin">Private Cabin</option>
+                      <option value="Meeting Room">Meeting Room</option>
+                      <option value="Dedicated Desk">Dedicated Desk</option>
+                      <option value="Study Zone">Study Zone</option>
+                      <option value="Virtual Office">Virtual Office</option>
+                      <option value="Not Sure Yet" selected>Not Sure Yet</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group" id="groupMessage">
+                  <label for="contactMessage" class="form-label">Message <span class="required-star">*</span></label>
+                  <textarea id="contactMessage" name="message" class="form-textarea" rows="4" placeholder="Tell us about your team size, target dates, or specific workspace requirements..." required></textarea>
+                  <span class="field-error-msg" id="errorMessage">Please write a message with at least 10 characters.</span>
+                </div>
+
+                <div class="form-group form-checkbox-group" id="groupConsent">
+                  <label class="checkbox-label" for="contactConsent">
+                    <input type="checkbox" id="contactConsent" name="consent" class="form-checkbox" required>
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-text">
+                      I agree to the <a href="#map-section" onclick="openGenericModal('Privacy Policy', 'Your contact information is safely stored and only used to respond to your inquiry. We never share or sell personal data.'); return false;">Privacy Policy</a> and consent to receiving email responses regarding my inquiry. <span class="required-star">*</span>
+                    </span>
+                  </label>
+                  <span class="field-error-msg" id="errorConsent">You must accept the privacy policy to submit.</span>
+                </div>
+
+                <div class="form-submit-row">
+                  <button type="submit" id="contactSubmitBtn" class="btn-primary btn-full-width">
+                    <span class="btn-text">Send Message</span>
+                    <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    <span class="spinner-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+
+                <div id="formStatusBanner" class="form-status-banner" style="display: none;" role="status"></div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-section-map" id="map-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-kicker">LOCATION &amp; ACCESS</div>
+          <h2 class="section-title">Find Us &amp; Visit Our Workspace</h2>
+          <p class="section-subtitle">
+            Come experience our workspace environment and discover a place designed for productivity and collaboration.
+          </p>
+        </div>
+
+        <div class="map-split-grid">
+          
+          <div class="map-info-col">
+            <div class="map-info-card">
+              <span class="map-kicker-tag">FLAGSHIP CAMPUS</span>
+              <h3 class="map-info-title">Workspace Hub Tech Corridor</h3>
+              <p class="map-info-address">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>742 Innovation Way, Suite 400, Tech Corridor, Metro City, 94105</span>
+              </p>
+
+              <p class="map-info-desc">
+                Located in the heart of the innovation district, surrounded by coffee roasteries, parks, and rapid transit lines.
+              </p>
+
+              <div class="map-transit-features">
+                <div class="transit-item">
+                  <div class="transit-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/><path d="M8 15h0"/><path d="M16 15h0"/></svg>
+                  </div>
+                  <div>
+                    <strong>Transit Hub</strong>
+                    <span>2-minute walk from Tech Quarter Metro Station (Line 1 &amp; 3)</span>
+                  </div>
+                </div>
+
+                <div class="transit-item">
+                  <div class="transit-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                  </div>
+                  <div>
+                    <strong>Secure Parking</strong>
+                    <span>Complimentary 2-hour underground parking for verified guests</span>
+                  </div>
+                </div>
+
+                <div class="transit-item">
+                  <div class="transit-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
+                  </div>
+                  <div>
+                    <strong>Bike Storage &amp; Showers</strong>
+                    <span>Secured indoor bike room with repair stands and locker rooms</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="map-action-wrap">
+                <a href="https://maps.google.com/?q=742+Innovation+Way+Tech+Corridor" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <span>Get Directions</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-display-col">
+            <div class="interactive-map-frame">
+              <iframe 
+                class="osm-map-iframe"
+                title="Workspace Hub Co-Working &amp; Study Space Location Map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-122.408%2C37.785%2C-122.395%2C37.795&amp;layer=mapnik&amp;marker=37.790%2C-122.401"
+                loading="lazy"
+                aria-label="Map showing Workspace Hub location at 742 Innovation Way">
+              </iframe>
+              <div class="map-frame-badge">
+                <span class="map-badge-dot"></span>
+                <span>Workspace Hub Flagship Campus</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-section-cta" id="contact-closing-cta">
+      <div class="container">
+        
+        <div class="contact-closing-card">
+          <div class="contact-cta-bg-layer"></div>
+          <div class="contact-cta-terracotta-frame"></div>
+          
+          <div class="contact-cta-content">
+            <div class="contact-cta-left">
+              <span class="contact-cta-pill">
+                <span class="contact-cta-pill-dot"></span>
+                RESERVE OR INQUIRE
+              </span>
+              <h2 class="contact-cta-heading">Your Next Productive Space Is Waiting.</h2>
+              <p class="contact-cta-description">
+                Explore our flexible workspaces, discover membership options and find the perfect environment for your next big idea.
+              </p>
+            </div>
+            
+            <div class="contact-cta-right">
+              <div class="contact-cta-buttons">
+                <a href="Services.html" class="btn-primary">
+                  <span>Explore Our Services</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <button class="btn-secondary contact-cta-outline-btn" onclick="openBookingModal('all')">
+                  <span>Book Your Space</span>
+                </button>
+              </div>
+              <div class="contact-cta-trust-note">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Instant digital pass • Zero setup fees • 24/7 member support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer-contact">
+    <div class="container">
+
+      <div class="footer-columns-grid">
+
+        <div class="footer-col col-brand">
+          <div class="brand-identity footer-brand">
+            <div class="brand-logo-mark">
+              <img src="assets/logo.png" alt="Workspace Hub Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-name-wrap">
+              <span class="brand-title light-text">WORKSPACE HUB</span>
+              <span class="brand-subtitle light-text">CO-WORK &amp; STUDY</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            High-performance co-working and solitary study sanctuary engineered for makers, founders, and academic
+            achievers.
+          </p>
+          <div class="social-links-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="Services.html">Services Overview</a></li>
+            <li><a href="Services Details.html?service=open-desk">Open Desks</a></li>
+            <li><a href="Services Details.html?service=private-cabin">Private Cabins</a></li>
+            <li><a href="Services Details.html?service=meeting-room">Meeting Rooms</a></li>
+            <li><a href="Services Details.html?service=dedicated-desk">Dedicated Desks</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Additional Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="Pricing.html">Pricing Plans</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="#hero"
+                onclick="openGenericModal('404 Page Preview', 'The page you are looking for has been moved or workspace expired. Click below to return home.')">404
+                Page</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact &amp; Support</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>420 Innovation Way, Suite 500, Tech Quarter</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>hello@workspacehub.com</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D6A756" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 849-WORK</span>
+            </li>
+          </ul>
+          <div class="footer-help-links">
+            <a href="#hero"
+              onclick="openGenericModal('Help & Support', 'Our concierge support team is available on site Mon-Sat 08:00 - 20:00 and 24/7 via member chat.')">Help
+              &amp; Support</a>
+            <span class="sep">•</span>
+            <a href="#hero"
+              onclick="openGenericModal('Frequently Asked Questions', 'Q: Are day passes available?<br>A: Yes, daily access starts from $25.<br><br>Q: Is high-speed internet included?<br>A: Yes, 1 Gbps fiber on all tiers.')">FAQ</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; 2026 Workspace Hub Co-Working &amp; Study Space Booking. All rights reserved.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#hero"
+            onclick="openGenericModal('Privacy Policy', 'Your personal and biometric verification data is strictly encrypted and never shared.')">Privacy
+            Policy</a>
+          <a href="#hero"
+            onclick="openGenericModal('Terms & Conditions', 'Bookings can be rescheduled up to 2 hours before scheduled slot.')">Terms
+            &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="dashboardModal" aria-hidden="true">
+    <div class="modal-dialog dashboard-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeDashboardModal()" aria-label="Close dialog">&times;</button>
+      
+      <div class="dashboard-header-bar">
+        <div class="user-profile-summary">
+          <div class="user-avatar-circle">AM</div>
+          <div>
+            <h3 class="dash-user-name" id="dashUserName">Alex Morgan</h3>
+            <span class="dash-user-plan" id="dashUserPlan">Monthly Member Plan</span>
+          </div>
+        </div>
+        <button class="btn-secondary btn-sm" onclick="handleLogout()">Logout</button>
+      </div>
+
+      <div class="dashboard-stats-row">
+        <div class="stat-card">
+          <span class="stat-num">3</span>
+          <span class="stat-lbl">Active Bookings</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">5 hrs</span>
+          <span class="stat-lbl">Meeting Credits</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">24/7</span>
+          <span class="stat-lbl">Active Keycard</span>
+        </div>
+      </div>
+
+      <div class="dashboard-bookings-section">
+        <div class="d-flex justify-between align-center mb-3">
+          <h4 class="section-subheading">Your Workspace Reservations</h4>
+          <button class="btn-primary btn-sm" onclick="closeDashboardModal(); openBookingModal('open-desk');">
+            + New Booking
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Space Category</th>
+                <th>Date &amp; Time</th>
+                <th>Seat / Room</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="dashboardBookingsList">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+    <div class="modal-dialog booking-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+      
+      <div class="modal-header">
+        <h3 class="modal-title">Reserve Workspace</h3>
+        <p class="modal-subtitle">Select your preferred space and duration for instant digital access.</p>
+      </div>
+
+      <form id="spaceBookingForm" class="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="spaceTypeSelect" class="form-label">Workspace Category</label>
+            <select id="spaceTypeSelect" class="form-select" onchange="updateBookingPricing()">
+              <option value="open-desk">Open Desk ($5/hr)</option>
+              <option value="private-cabin">Private Cabin ($18/hr)</option>
+              <option value="meeting-room">Meeting Room ($35/hr)</option>
+              <option value="dedicated-desk">Dedicated Desk ($12/hr)</option>
+              <option value="study-zone">Quiet Study Zone ($4/hr)</option>
+              <option value="virtual-office">Virtual Office Package ($25/day)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bookingDuration" class="form-label">Duration</label>
+            <select id="bookingDuration" class="form-select" onchange="updateBookingPricing()">
+              <option value="2">2 Hours</option>
+              <option value="4" selected>4 Hours (Half Day)</option>
+              <option value="8">8 Hours (Full Day Pass)</option>
+              <option value="24">Weekly / Monthly Plan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="bookingDate" class="form-label">Date</label>
+            <input type="date" id="bookingDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="bookingTime" class="form-label">Arrival Time</label>
+            <select id="bookingTime" class="form-select">
+              <option value="08:00">08:00 AM</option>
+              <option value="09:00" selected>09:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="14:00">02:00 PM</option>
+              <option value="16:00">04:00 PM</option>
+              <option value="18:00">06:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="booking-summary-box">
+          <div class="summary-line">
+            <span>Selected Space:</span>
+            <strong id="summarySpaceName">Open Desk</strong>
+          </div>
+          <div class="summary-line">
+            <span>Calculated Total:</span>
+            <span class="summary-total-price" id="summaryPrice">$20.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full-width">
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="genericModal" aria-hidden="true">
+    <div class="modal-dialog generic-dialog" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeGenericModal()" aria-label="Close">&times;</button>
+      <h3 id="genericModalTitle" class="modal-title">Information</h3>
+      <div id="genericModalBody" class="modal-body-content"></div>
+      <div class="modal-footer-cta">
+        <button class="btn-primary" onclick="closeGenericModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <script src="contact.js"></script>
+</body>
+</html>
