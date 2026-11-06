@@ -1,4 +1,4 @@
-﻿const APP_STATE = {
+const APP_STATE = {
   theme: localStorage.getItem('nexus_theme') || 'light',
   direction: localStorage.getItem('nexus_dir') || 'ltr',
   user: JSON.parse(localStorage.getItem('nexus_user')) || {
@@ -136,10 +136,11 @@ function initMobileDrawer() {
   const closeBtn = document.getElementById('closeDrawerBtn');
   const drawer = document.getElementById('mobileDrawer');
 
-  if (toggleBtn && drawer) {
-    toggleBtn.addEventListener('click', () => {
-      const isOpen = drawer.classList.contains('active');
-      if (isOpen) {
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (drawer && drawer.classList.contains('open')) {
         closeMobileDrawer();
       } else {
         openMobileDrawer();
@@ -148,12 +149,22 @@ function initMobileDrawer() {
   }
 
   if (closeBtn) {
-    closeBtn.addEventListener('click', closeMobileDrawer);
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeMobileDrawer();
+    });
+  }
+
+  if (drawer) {
+    drawer.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
   }
 
   document.addEventListener('click', (e) => {
-    if (drawer && drawer.classList.contains('active')) {
-      if (!drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
+    if (drawer && drawer.classList.contains('open')) {
+      if (!drawer.contains(e.target) && (!toggleBtn || !toggleBtn.contains(e.target))) {
         closeMobileDrawer();
       }
     }
@@ -164,7 +175,7 @@ function openMobileDrawer() {
   const drawer = document.getElementById('mobileDrawer');
   const toggleBtn = document.getElementById('mobileMenuToggle');
   if (drawer) {
-    drawer.classList.add('active');
+    drawer.classList.add('open');
     drawer.setAttribute('aria-hidden', 'false');
   }
   if (toggleBtn) {
@@ -177,7 +188,7 @@ function closeMobileDrawer() {
   const drawer = document.getElementById('mobileDrawer');
   const toggleBtn = document.getElementById('mobileMenuToggle');
   if (drawer) {
-    drawer.classList.remove('active');
+    drawer.classList.remove('open');
     drawer.setAttribute('aria-hidden', 'true');
   }
   if (toggleBtn) {
@@ -185,6 +196,9 @@ function closeMobileDrawer() {
   }
   document.body.style.overflow = '';
 }
+
+window.openMobileDrawer = openMobileDrawer;
+window.closeMobileDrawer = closeMobileDrawer;
 
 function initUserStatus() {
   const user = APP_STATE.user;
@@ -769,3 +783,4 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
+

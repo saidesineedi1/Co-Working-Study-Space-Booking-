@@ -1,0 +1,382 @@
+html {
+  overflow-x: clip;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+img,
+video,
+iframe,
+canvas {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container,
+  .header-container {
+    padding-inline: 20px;
+  }
+
+  .header-container {
+    padding-block: 12px;
+    gap: 12px;
+  }
+
+  .nav-desktop {
+    display: none !important;
+  }
+
+  .mobile-toggle-btn {
+    display: flex !important;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .mobile-toggle-btn span {
+    pointer-events: none;
+  }
+
+  .header-controls {
+    gap: 8px;
+  }
+
+  .site-header ~ * section,
+  main > section {
+    scroll-margin-top: 70px;
+  }
+
+  .hero-poster-grid,
+  .h2-hero-wrapper,
+  .h2-categories-asymm-grid,
+  .h2-booking-layout,
+  .pricing-hero-container,
+  .pricing-faq-layout,
+  .srv-hero-container,
+  .srv-faq-layout,
+  .srv-cta-grid,
+  .sd-hero-container,
+  .sd-why-layout,
+  .sd-split-layout,
+  .about-cta-content,
+  .contact-split-grid,
+  .map-split-grid,
+  .contact-cta-content,
+  .membership-split-grid,
+  .overview-split-layout,
+  .step2-split-grid,
+  .summary-confirmation-grid,
+  .current-membership-card,
+  .dashboard-body-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+
+  .about-milestones-grid,
+  .about-team-grid,
+  .pricing-cards-grid,
+  .dashboard-stats-grid,
+  .dashboard-plans-grid,
+  .about-principles-grid,
+  .h2-membership-cards-grid,
+  .srv-cards-grid,
+  .sd-benefits-grid,
+  .sd-related-grid,
+  .meters-grid,
+  .spaces-grid,
+  .why-us-grid,
+  .testimonials-track,
+  .timeline-steps-grid,
+  .footer-columns-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .h2-gallery-masonry-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .srv-hero-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .hero-cta-group,
+  .pricing-hero-actions,
+  .srv-hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .mobile-drawer {
+    width: min(300px, 86vw);
+    right: calc(-1 * min(320px, 92vw));
+  }
+
+  [dir="rtl"] .mobile-drawer {
+    right: auto;
+    left: calc(-1 * min(320px, 92vw));
+  }
+
+  .mobile-drawer.open,
+  [dir="rtl"] .mobile-drawer.open {
+    right: 0;
+  }
+
+  [dir="rtl"] .mobile-drawer.open {
+    right: auto;
+    left: 0;
+  }
+
+  .modal-dialog {
+    width: calc(100% - 32px);
+    max-width: 560px;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .header-container {
+    padding-inline: 16px;
+  }
+
+  .about-mv-grid,
+  .sd-why-points-grid,
+  .cm-benefits-grid,
+  .profile-cards-grid,
+  .preferences-grid,
+  .inv-meta-grid,
+  .contact-hero-highlights-strip,
+  .srv-hero-cards-grid,
+  .h2-cat-card.cat-horizontal,
+  .membership-benefits-grid,
+  .form-row-2,
+  .space-type-selector,
+  .spaces-grid,
+  .testimonials-track,
+  .footer-columns-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .section-timeline,
+  .section-spaces,
+  .section-membership,
+  .section-why-us,
+  .section-testimonials {
+    padding-block: 56px;
+  }
+
+  .brand-logo-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .header-controls .btn-primary,
+  .header-controls #headerLoginBtn {
+    height: 38px;
+    padding: 0 14px !important;
+  }
+
+  .control-btn,
+  .mobile-toggle-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero-cta-group,
+  .hero-cta-group > * {
+    width: 100%;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta-group > a,
+  .hero-cta-group > button {
+    justify-content: center;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .premium-cta-card {
+    padding: 36px 20px;
+  }
+
+  .h2-kpi-strip {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px;
+  }
+
+  .dashboard-stats-grid,
+  .dashboard-plans-grid,
+  .meters-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .workspace-selection-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-milestones-grid,
+  .about-team-grid,
+  .about-principles-grid,
+  .pricing-cards-grid,
+  .h2-membership-cards-grid,
+  .srv-cards-grid,
+  .sd-benefits-grid,
+  .sd-related-grid,
+  .why-us-grid,
+  .timeline-steps-grid,
+  .h2-gallery-masonry-grid,
+  .dashboard-stats-grid,
+  .dashboard-plans-grid,
+  .meters-grid,
+  .mockup-slots-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .h2-kpi-strip {
+    grid-template-columns: 1fr !important;
+  }
+
+  .time-slots-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .header-container {
+    padding-inline: 14px;
+  }
+
+  .header-container {
+    gap: 8px;
+  }
+
+  .brand-identity {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .brand-logo-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+    line-height: 1.1;
+  }
+
+  .brand-subtitle {
+    display: block !important;
+    font-size: 0.54rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: var(--color-terracotta);
+    line-height: 1;
+    margin-top: 1px;
+    white-space: nowrap;
+  }
+
+  .header-controls {
+    gap: 6px;
+  }
+
+  .control-btn,
+  .mobile-toggle-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-controls .btn-primary,
+  .header-controls #headerLoginBtn {
+    width: 34px;
+    height: 34px;
+    padding: 0 !important;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .header-controls #loginBtnText {
+    display: none;
+  }
+
+  .btn-text-badge {
+    font-size: 0.68rem;
+  }
+
+  .modal-dialog {
+    padding: 22px 16px;
+  }
+
+  .plan-amount {
+    font-size: 2.2rem;
+  }
+
+  .toast-container {
+    left: 12px;
+    right: 12px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-title {
+    font-size: 0.74rem;
+    letter-spacing: 0.3px;
+    line-height: 1.1;
+  }
+
+  .brand-subtitle {
+    font-size: 0.48rem;
+    letter-spacing: 0.5px;
+  }
+
+  .brand-logo-mark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .control-btn,
+  .mobile-toggle-btn,
+  .header-controls .btn-primary,
+  .header-controls #headerLoginBtn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-controls {
+    gap: 5px;
+  }
+}
+
